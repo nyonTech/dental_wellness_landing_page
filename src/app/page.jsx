@@ -1,35 +1,15 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import NavBar from "@/components/NavBar";
+import DoctorProfile from "@/components/DoctorProfile";
 
 export default function ComingSoon3() {
 
   return (
-    <div className="bg-background-light font-display text-slate-900 antialiased overflow-x-hidden min-h-screen">
+    <div className="bg-background-light font-display text-slate-900 antialiased  min-h-screen">
       <div className="relative flex min-h-screen w-full flex-col">
         {/* Background Decor */}
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-wave-pattern -z-10 opacity-50"></div>
         <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-wave-pattern -z-10 opacity-50"></div>
-        {/* TopNavBar */}
-        <header className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-6 lg:px-20 py-4 bg-background-light/80 backdrop-blur-md sticky top-0 z-50">
-          <div className="flex items-center gap-3">
-            <div className="w-10 overflow-hidden rounded-lg">
-              <img alt="Clinic Logo" className="w-full h-full object-cover" src="/logo.png" />
-            </div>
-            <h2 className="text-slate-900 text-xl leading-tight tracking-tight uppercase">
-              <span className="font-bold text-[var(--color-primary)]">Dental </span>
-              Wellness
-            </h2>
-          </div>
-          <div className="flex items-center gap-6">
-            {/* <nav className="hidden md:flex items-center gap-8">
-              <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
-              <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
-              <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
-            </nav> */}
-            {/* <button className="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-11 px-6 bg-primary text-slate-900 text-sm font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20">
-              Contact Us
-            </button> */}
-          </div>
-        </header>
         {/* Hero Section - Comprehensive Dental Services */}
         <section className="hero-section">
           {/* Decorative blurred orbs */}
@@ -116,6 +96,9 @@ export default function ComingSoon3() {
           </div>
         </section>
 
+
+        {/* Doctor Profile Section */}
+        <DoctorProfile />
 
         {/* Footer */}
         <footer className="mt-auto py-12 px-6 lg:px-20 bg-white border-t border-slate-200">

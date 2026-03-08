@@ -1,5 +1,6 @@
 import { Manrope, Playfair_Display, Lora, Montserrat, Outfit } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -58,8 +59,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${manrope.variable} ${playfair.variable} ${lora.variable} ${montserrat.variable} ${outfit.variable} antialiased`}
+        className={`${montserrat.variable} ${manrope.variable} ${playfair.variable} ${lora.variable} ${outfit.variable} antialiased`}
       >
+        <NavBar/>
         {children}
       </body>
     </html>
