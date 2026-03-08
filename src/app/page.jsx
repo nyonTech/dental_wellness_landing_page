@@ -1,38 +1,7 @@
-"use client";
-
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import { ShieldCheck, HeartPulse, User, Mail, MessageSquare, Send, Stethoscope, Sparkles, Activity, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function ComingSoon3() {
-  const form = useRef();
-  const [status, setStatus] = useState(null);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setStatus("sending");
-
-    // Replace the strings below with your actual EmailJS credentials
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID", // YOUR_SERVICE_ID
-        "YOUR_TEMPLATE_ID", // YOUR_TEMPLATE_ID
-        form.current,
-        "YOUR_PUBLIC_KEY" // YOUR_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setStatus("success");
-          form.current.reset();
-          setTimeout(() => setStatus(null), 5000);
-        },
-        (error) => {
-          console.error("FAILED...", error.text);
-          setStatus("error");
-          setTimeout(() => setStatus(null), 5000);
-        }
-      );
-  };
   return (
     <div className="bg-background-light font-display text-slate-900 antialiased overflow-x-hidden min-h-screen">
       <div className="relative flex min-h-screen w-full flex-col">
@@ -61,191 +30,93 @@ export default function ComingSoon3() {
             </button> */}
           </div>
         </header>
-        <main className="flex-1 flex flex-col items-center justify-center px-4 py-12 lg:py-24">
-          <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content: Hero Text */}
-            <div className="flex flex-col gap-6 text-center lg:text-left">
-              <div className="inline-flex items-center justify-center lg:justify-start gap-2 text-primary font-bold tracking-widest uppercase text-xs">
-                <span className="w-8 h-[2px] bg-primary"></span>
-                13 Years of Restoring Smiles
-              </div>
-              <h1 className="text-slate-900 text-5xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">
-                Our New Website is <br /> <span className="text-primary">Almost Ready</span>
-              </h1>
-              <p className="text-slate-600 text-lg md:text-xl leading-relaxed max-w-xl mx-auto lg:mx-0">
-                We're revamping our digital presence to better serve you. Meanwhile, we continue to provide the trusted, world-class dental care our community has relied on for over a decade.
-              </p>
-              {/* Trust Badges */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mt-4">
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-primary" />
-                  <span className="text-sm font-semibold text-slate-700">Certified Experts</span>
+        {/* Hero Section - Comprehensive Dental Services */}
+        <section className="hero-section">
+          {/* Decorative blurred orbs */}
+          <div className="hero-orb hero-orb--amber"></div>
+          <div className="hero-orb hero-orb--yellow"></div>
+
+          <div className="hero-inner">
+            {/* Left: text content */}
+            <div className="hero-content">
+              <div className="hero-heading">
+                <h1 className="hero-title-dark">Comprehensive</h1>
+                <div className="hero-title-highlight-wrapper">
+                  <span className="hero-title-amber">Dental Services</span>
+                  <svg className="hero-underline-svg" width="498" height="12" viewBox="0 0 498 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clipPath="url(#clip0_hero)">
+                      <path d="M0 6C165.677 10 331.353 10 497.03 6" stroke="black" strokeWidth="6.1703" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_hero">
+                        <rect width="497.03" height="12" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
                 </div>
-                <div className="flex items-center gap-2">
-                  <HeartPulse className="w-5 h-5 text-primary" />
-                  <span className="text-sm font-semibold text-slate-700">Modern Technology</span>
+              </div>
+
+              <div className="hero-description-wrapper">
+                <p className="hero-description">
+                  Few orthodontists in New York City have treated more patients with the Invisalign appliance than Dr. Adam Goodman. This vast experience leads to efficient treatment with outstanding results.
+                </p>
+              </div>
+
+              <div className="hero-cta-row">
+                {/* Book Online button */}
+                <a href="#" className="hero-book-btn">
+                  Book Online
+                </a>
+
+                {/* Consultation card */}
+                <div className="hero-consultation-card">
+                  <div className="hero-consultation-icon">
+                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V4C0 3.45 0.195833 2.97917 0.5875 2.5875C0.979167 2.19583 1.45 2 2 2H3V0H5V2H13V0H15V2H16C16.55 2 17.0208 2.19583 17.4125 2.5875C17.8042 2.97917 18 3.45 18 4V18C18 18.55 17.8042 19.0208 17.4125 19.4125C17.0208 19.8042 16.55 20 16 20H2ZM2 18H16V8H2V18ZM2 6H16V4H2V6ZM2 6V4V6ZM9 12C8.71667 12 8.47917 11.9042 8.2875 11.7125C8.09583 11.5208 8 11.2833 8 11C8 10.7167 8.09583 10.4792 8.2875 10.2875C8.47917 10.0958 8.71667 10 9 10C9.28333 10 9.52083 10.0958 9.7125 10.2875C9.90417 10.4792 10 10.7167 10 11C10 11.2833 9.90417 11.5208 9.7125 11.7125C9.52083 11.9042 9.28333 12 9 12ZM5 12C4.71667 12 4.47917 11.9042 4.2875 11.7125C4.09583 11.5208 4 11.2833 4 11C4 10.7167 4.09583 10.4792 4.2875 10.2875C4.47917 10.0958 4.71667 10 5 10C5.28333 10 5.52083 10.0958 5.7125 10.2875C5.90417 10.4792 6 10.7167 6 11C6 11.2833 5.90417 11.5208 5.7125 11.7125C5.52083 11.9042 5.28333 12 5 12ZM13 12C12.7167 12 12.4792 11.9042 12.2875 11.7125C12.0958 11.5208 12 11.2833 12 11C12 10.7167 12.0958 10.4792 12.2875 10.2875C12.4792 10.0958 12.7167 10 13 10C13.2833 10 13.5208 10.0958 13.7125 10.2875C13.9042 10.4792 14 10.7167 14 11C14 11.2833 13.9042 11.5208 13.7125 11.7125C13.5208 11.9042 13.2833 12 13 12ZM9 16C8.71667 16 8.47917 15.9042 8.2875 15.7125C8.09583 15.5208 8 15.2833 8 15C8 14.7167 8.09583 14.4792 8.2875 14.2875C8.47917 14.0958 8.71667 14 9 14C9.28333 14 9.52083 14.0958 9.7125 14.2875C9.90417 14.4792 10 14.7167 10 15C10 15.2833 9.90417 15.5208 9.7125 15.7125C9.52083 15.9042 9.28333 16 9 16ZM5 16C4.71667 16 4.47917 15.9042 4.2875 15.7125C4.09583 15.5208 4 15.2833 4 15C4 14.7167 4.09583 14.4792 4.2875 14.2875C4.47917 14.0958 4.71667 14 5 14C5.28333 14 5.52083 14.0958 5.7125 14.2875C5.90417 14.4792 6 14.7167 6 15C6 15.2833 5.90417 15.5208 5.7125 15.7125C5.52083 15.9042 5.28333 16 5 16ZM13 16C12.7167 16 12.4792 15.9042 12.2875 15.7125C12.0958 15.5208 12 15.2833 12 15C12 14.7167 12.0958 14.4792 12.2875 14.2875C12.4792 14.0958 12.7167 14 13 14C13.2833 14 13.5208 14.0958 13.7125 14.2875C13.9042 14.4792 14 14.7167 14 15C14 15.2833 13.9042 15.5208 13.7125 15.7125C13.5208 15.9042 13.2833 16 13 16Z" fill="white" />
+                    </svg>
+                  </div>
+                  <div className="hero-consultation-text">
+                    <span className="hero-consultation-label">Consultation</span>
+                    <span className="hero-consultation-cta">Do you want a quick chat?</span>
+                  </div>
                 </div>
               </div>
             </div>
-            {/* Right Content: Appointment Form */}
-            <div className="w-full max-w-md mx-auto lg:ml-auto">
-              <div className="bg-white rounded-xl p-8 soft-shadow border border-slate-100 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Request Appointment</h3>
-                <p className="text-sm text-slate-500 mb-8">Schedule an appointment with our experienced team.</p>
-                <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-sm font-semibold text-slate-700 ml-1">Full Name</label>
-                    <div className="relative group">
-                      <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
-                        <User className="w-5 h-5" />
-                      </div>
-                      <input name="user_name" required className="w-full pl-11 pr-4 py-4 rounded-lg bg-background-light border-none focus:ring-2 focus:ring-primary/50 text-slate-900 placeholder:text-slate-400 soft-shadow transition-all" placeholder="John Doe" type="text" />
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-sm font-semibold text-slate-700 ml-1">Phone or Email</label>
-                    <div className="relative group">
-                      <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
-                        <Mail className="w-5 h-5" />
-                      </div>
-                      <input name="user_email" required className="w-full pl-11 pr-4 py-4 rounded-lg bg-background-light border-none focus:ring-2 focus:ring-primary/50 text-slate-900 placeholder:text-slate-400 soft-shadow transition-all" placeholder="hello@example.com" type="text" />
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-sm font-semibold text-slate-700 ml-1">Message (Optional)</label>
-                    <div className="relative group">
-                      <div className="absolute top-4 left-0 pl-4 flex items-start pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
-                        <MessageSquare className="w-5 h-5" />
-                      </div>
-                      <textarea name="message" className="w-full pl-11 pr-4 py-4 rounded-lg bg-background-light border-none focus:ring-2 focus:ring-primary/50 text-slate-900 placeholder:text-slate-400 soft-shadow transition-all resize-none" placeholder="Tell us about your dental needs..." rows="3"></textarea>
-                    </div>
-                  </div>
-                  <button disabled={status === "sending"} className="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold py-4 rounded-lg transition-all transform active:scale-[0.98] shadow-lg shadow-primary/30 flex items-center justify-center gap-2 mt-2 disabled:opacity-70 disabled:cursor-not-allowed" type="submit">
-                    <Send className="w-5 h-5" />
-                    {status === "sending" ? "Booking..." : "Book Now"}
-                  </button>
-                  {status === "success" && (
-                    <div className="text-center text-green-600 bg-green-50 p-3 rounded-lg text-sm font-semibold mt-2">
-                      Request sent successfully! We'll be in touch soon.
-                    </div>
-                  )}
-                  {status === "error" && (
-                    <div className="text-center text-red-600 bg-red-50 p-3 rounded-lg text-sm font-semibold mt-2">
-                      Failed to send request. Please try again later.
-                    </div>
-                  )}
-                  <p className="text-[11px] text-center text-slate-400 mt-2 px-4">
-                    By submitting, you agree to be contacted regarding your appointment request.
-                  </p>
-                </form>
-              </div>
-            </div>
-          </div>
-        </main>
-        {/* Specialized Services Section */}
-        <section className="relative w-full px-4 lg:px-20 py-12 overflow-hidden bg-background-light">
-          {/* Decorative background elements */}
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-[#5ba4a4]/5 rounded-l-[100px] -z-10"></div>
 
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col items-center text-center mb-16">
-              <div className="inline-flex items-center justify-center gap-2 text-primary font-bold tracking-widest uppercase text-xs mb-4">
-                <span className="w-12 h-[2px] bg-primary"></span>
-                Excellence in Dental Care
-                <span className="w-12 h-[2px] bg-primary"></span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 font-display">
-                Signature Treatments
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-              {/* Specialized Dentistry Card */}
-              <div className="lg:col-span-7 group">
-                <div className="h-full relative bg-white rounded-[2rem] p-8 md:p-12 soft-shadow border border-slate-100 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 group-hover:bg-primary/10 transition-colors duration-500"></div>
-
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-8 border border-primary/20">
-                      <Sparkles className="w-8 h-8 text-primary" />
-                    </div>
-
-                    <h3 className="text-3xl font-bold text-slate-900 mb-6 font-display">Specialized Dentistry</h3>
-                    <p className="text-slate-600 mb-10 max-w-md text-lg">
-                      Elevate your smile with our premium cosmetic and restorative procedures tailored to perfection.
-                    </p>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-8">
-                      {[
-                        'Cosmetic Dentistry & Smile Makeover',
-                        'Teeth Whitening',
-                        'Invisalign & Braces',
-                        'Dental Implants & Veneers',
-                        'Cosmetic Fillings/Composite Bonding',
-                        'Crowns and Bridges',
-                        'Wisdom Teeth Removal',
-                        'Pediatric Dentistry',
-                        'Laser Dentistry',
-                        'Dental Checkups & Hygiene'
-                      ].map((item, i) => (
-                        <div key={i} className="flex items-start gap-4">
-                          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary shrink-0 mt-0.5">
-                            <ShieldCheck className="w-4 h-4" />
-                          </div>
-                          <span className="text-slate-800 font-medium text-[15px] leading-snug">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+            {/* Right: image with floating cards */}
+            <div className="hero-image-area">
+              <div className="hero-image-circle">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/f67e765b353f5fe921b990e3b4bb2f51073872a0?width=1152"
+                  alt="Happy dental patient smiling holding a cup"
+                  className="hero-doctor-img"
+                />
               </div>
 
-              {/* Root Canal Card */}
-              <div className="lg:col-span-5 flex flex-col gap-8">
-                <div className="group relative bg-slate-900 rounded-[2rem] p-8 md:p-12 soft-shadow overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-slate-900/20 flex-1">
-                  <div className="absolute inset-0 bg-wave-pattern opacity-10"></div>
-                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#5ba4a4]/20 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 group-hover:bg-[#5ba4a4]/30 transition-colors duration-500"></div>
+              {/* Floating tooth icon card */}
+              <div className="hero-tooth-card">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/7f1696c1025b3dbde1cdedd7e1c83b14152f8fdb?width=128"
+                  alt="3D Tooth Icon"
+                  className="hero-tooth-icon"
+                />
+              </div>
 
-                  <div className="relative z-10 flex flex-col h-full">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-2 border border-white/10">
-                        <Activity className="w-6 h-6 text-white" />
-                      </div>
-                      <h3 className="text-3xl font-bold text-white mb-3 font-display">Root Canal Treatment</h3>
-                    </div>
-
-                    <p className="text-slate-300 leading-relaxed text-lg mb-2">
-                      Experience painless, precise, and efficient treatments designed to save your natural teeth. Our specialists utilize state-of-the-art technology to ensure absolute precision, fast recovery, and lasting relief from severe tooth pain.
-                    </p>
-
-                    {/* <div className="mt-auto inline-flex items-center text-primary font-bold text-sm uppercase tracking-wider group-hover:translate-x-2 transition-transform duration-300 cursor-pointer">
-                      Learn More <span className="ml-2">→</span>
-                    </div> */}
-                  </div>
+              {/* Floating patients stats card */}
+              <div className="hero-stats-card">
+                <div className="hero-stats-avatars">
+                  <div className="hero-avatar hero-avatar--1"></div>
+                  <div className="hero-avatar hero-avatar--2"></div>
+                  <div className="hero-avatar hero-avatar--3"></div>
+                  <span className="hero-stats-count">+2k</span>
                 </div>
-
-                {/* General Checkup Card */}
-                <div className="group relative bg-white/60 backdrop-blur-md rounded-[2rem] p-8 md:p-12 soft-shadow border border-slate-200/60 overflow-hidden transition-all duration-500 hover:bg-white hover:shadow-xl hover:shadow-primary/5">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/20 transition-colors duration-500"></div>
-
-                  <div className="relative z-10 flex flex-col">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
-                        <Stethoscope className="w-6 h-6 text-primary" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-slate-900 font-display">General Care</h3>
-                    </div>
-
-                    <p className="text-slate-600 leading-relaxed text-base">
-                      Comprehensive checkups, scaling, polishing, and preventative care to maintain your perfect smile.
-                    </p>
-                  </div>
-                </div>
+                <p className="hero-stats-label">Happy patients served this year.</p>
               </div>
             </div>
           </div>
         </section>
+
+
         {/* Footer */}
         <footer className="mt-auto py-12 px-6 lg:px-20 bg-white border-t border-slate-200">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">

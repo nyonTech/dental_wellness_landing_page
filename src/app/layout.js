@@ -1,4 +1,4 @@
-import { Manrope, Playfair_Display, Lora } from "next/font/google";
+import { Manrope, Playfair_Display, Lora, Montserrat, Outfit } from "next/font/google";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -13,6 +13,16 @@ const playfair = Playfair_Display({
 
 const lora = Lora({
   variable: "--font-lora",
+  subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+});
+
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
 });
 
@@ -48,7 +58,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${manrope.variable} ${playfair.variable} ${lora.variable} antialiased`}
+        className={`${manrope.variable} ${playfair.variable} ${lora.variable} ${montserrat.variable} ${outfit.variable} antialiased`}
       >
         {children}
       </body>
