@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coming Soon | Premium Dental Care</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dcb32e",
+                        "medical-accent": "#5ba4a4",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#201d12",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .soft-gradient {
+            background: radial-gradient(circle at top right, rgba(220, 179, 46, 0.08), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(91, 164, 164, 0.05), transparent 40%),
+                        #f8f7f6;
+        }
+        .line-art-bg {
+            position: fixed;
+            z-index: -1;
+            opacity: 0.04;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light text-slate-900 selection:bg-primary/30">
+<!-- Decorative Line Art -->
+<div class="line-art-bg top-0 right-0 p-10">
+<span class="material-symbols-outlined text-[300px]">dentistry</span>
+</div>
+<div class="line-art-bg bottom-0 left-0 p-10">
+<span class="material-symbols-outlined text-[250px]">eco</span>
+</div>
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 glass-nav border-b border-slate-200/50 shadow-sm">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Clinic Logo" class="w-10 h-10 object-contain" data-alt="Minimalist dental clinic logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2dK8K6WcQrc7dJRQF5b8OgFWZR3uaJtkfgOURWjiChM5zVN1cvR1yqJuf9j3bmWWbYwZHWk5uRMe_UOiLxXp08wBb8slmgeEcSZ1CyV3PITE1ukzhJ_IZ31PFQPZE6zCiK8X0hpYRqRrwAnv3B9c7WuFEnLKWPps_6eO27eu7BEPPKEL0C2Vm0diTGDrlAwwASyzVoc6yS0qayDc8UjyyLWFMz-V5HXy0Alo3X1xH_3239HYf721vyRq1w-GKhKIrGiKC3IatPQ"/>
+<span class="text-xl font-bold tracking-tight text-slate-800">EliteDental</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center gap-2 text-slate-600">
+<span class="material-symbols-outlined text-primary">call</span>
+<span class="font-medium">+1 (555) 000-1234</span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full font-bold transition-all shadow-md flex items-center gap-2">
+                    Call Now
+                </button>
+</div>
+</div>
+</nav>
+<main class="relative min-h-[calc(100vh-80px)] flex flex-col items-center justify-center px-6 py-20 soft-gradient">
+<!-- Hero Content -->
+<div class="max-w-3xl w-full text-center mb-16">
+<h1 class="font-serif text-5xl md:text-7xl text-slate-900 leading-[1.1] mb-8">
+                Our Website is <br/>
+<span class="italic text-primary/80">Almost Ready</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-600 leading-relaxed font-light">
+                We are currently preparing our new website to bring you a premium dental experience online. 
+                If you would like to book an appointment or have a question, please leave your details below 
+                 and our team will contact you shortly.
+            </p>
+</div>
+<!-- Appointment Form -->
+<div class="w-full max-w-xl bg-white/60 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border border-white/80">
+<form action="#" class="flex flex-col gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 ml-1">Your Name</label>
+<input class="w-full h-14 px-5 rounded-2xl border-slate-200 bg-white focus:ring-primary/20 focus:border-primary transition-all shadow-sm" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 ml-1">Phone Number or Email</label>
+<input class="w-full h-14 px-5 rounded-2xl border-slate-200 bg-white focus:ring-primary/20 focus:border-primary transition-all shadow-sm" placeholder="hello@example.com" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 ml-1">Requirement</label>
+<textarea class="w-full px-5 py-4 rounded-2xl border-slate-200 bg-white focus:ring-primary/20 focus:border-primary transition-all shadow-sm resize-none" placeholder="Tell us your requirement or appointment request..." rows="4"></textarea>
+</div>
+<button class="w-full bg-medical-accent hover:bg-medical-accent/90 text-white h-14 rounded-2xl font-bold text-lg shadow-lg shadow-medical-accent/20 transition-all flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined">calendar_month</span>
+                    Request Appointment
+                </button>
+</form>
+</div>
+<!-- Contact Info Footer-style -->
+<div class="mt-24 grid grid-cols-1 md:grid-cols-4 gap-8 w-full max-w-5xl">
+<div class="flex items-start gap-4 p-6 rounded-2xl bg-white/40 hover:bg-white/60 transition-colors">
+<div class="bg-primary/10 p-3 rounded-xl text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Call Us</p>
+<p class="text-slate-800 font-medium">+1 (555) 000-1234</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-6 rounded-2xl bg-white/40 hover:bg-white/60 transition-colors">
+<div class="bg-primary/10 p-3 rounded-xl text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Address</p>
+<p class="text-slate-800 font-medium leading-tight">123 Medical Plaza,<br/>Suite 400, NY</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-6 rounded-2xl bg-white/40 hover:bg-white/60 transition-colors">
+<div class="bg-primary/10 p-3 rounded-xl text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Email</p>
+<p class="text-slate-800 font-medium">hello@elitedental.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-6 rounded-2xl bg-white/40 hover:bg-white/60 transition-colors">
+<div class="bg-green-100 p-3 rounded-xl text-green-600">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">WhatsApp</p>
+<p class="text-slate-800 font-medium">Message us</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-background-light py-10 border-t border-slate-200/50">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<p class="text-slate-500 text-sm">© 2024 EliteDental Clinic. All rights reserved. Exceptional care for your smile.</p>
+</div>
+</footer>
+</body></html>

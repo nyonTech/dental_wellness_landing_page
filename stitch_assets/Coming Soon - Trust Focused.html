@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dental Clinic - Coming Soon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dcb32e",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#201d12",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .bg-wave-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(220, 179, 46, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .soft-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Background Decor -->
+<div class="absolute top-0 right-0 w-1/3 h-1/3 bg-wave-pattern -z-10 opacity-50"></div>
+<div class="absolute bottom-0 left-0 w-1/4 h-1/4 bg-wave-pattern -z-10 opacity-50"></div>
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="size-10 overflow-hidden rounded-lg">
+<img alt="Clinic Logo" class="w-full h-full object-cover" data-alt="Modern minimalist dental clinic logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPqH-KxjFJG4Z0nF_EKWXSPgCdSIC47rVmDHcN9i930WpyLXSb1_m5bQCVV-arnK36YVbdSaKcaqZeia1A1KraaDQxEUUBpOE4fZHo2ZWkMJd3x1vB9qWVtCTtsWh_yn8uDlPEm81lEIMn1h6y_CmYvQbqaSHMJP0Hvi-hAnJofEIvUR7RP1IW_w7faAMvfQ2PFIXMdI8CWchOMdrbGFQA8BMX-skqladdRW98CXi_ow4ahpBBBhfe2tvT5jh0FIr5y-VFaQTsOQ"/>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Dental Excellence</h2>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+</nav>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-11 px-6 bg-primary text-slate-900 text-sm font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20">
+                    Contact Us
+                </button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center px-4 py-12 lg:py-24">
+<div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Left Content: Hero Text -->
+<div class="flex flex-col gap-6 text-center lg:text-left">
+<div class="inline-flex items-center justify-center lg:justify-start gap-2 text-primary font-bold tracking-widest uppercase text-xs">
+<span class="w-8 h-[2px] bg-primary"></span>
+                        Opening Soon in Your City
+                    </div>
+<h1 class="text-slate-900 dark:text-slate-100 text-5xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">
+                        Our Website is <br/> <span class="text-primary">Almost Ready</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg md:text-xl leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        We're refining our digital presence to match our world-class dental care. Subscribe to get notified and be the first to book your appointment.
+                    </p>
+<!-- Trust Badges -->
+<div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 mt-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Certified Experts</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">health_and_safety</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Modern Technology</span>
+</div>
+</div>
+</div>
+<!-- Right Content: Appointment Form -->
+<div class="w-full max-w-md mx-auto lg:ml-auto">
+<div class="bg-white dark:bg-slate-900 rounded-xl p-8 soft-shadow border border-slate-100 dark:border-slate-800 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Request Appointment</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-8">Secure your spot for our grand opening week.</p>
+<form class="flex flex-col gap-5">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Full Name</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+<input class="w-full pl-11 pr-4 py-4 rounded-lg bg-background-light dark:bg-background-dark border-none focus:ring-2 focus:ring-primary/50 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 soft-shadow transition-all" placeholder="John Doe" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Phone or Email</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">contact_mail</span>
+</div>
+<input class="w-full pl-11 pr-4 py-4 rounded-lg bg-background-light dark:bg-background-dark border-none focus:ring-2 focus:ring-primary/50 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 soft-shadow transition-all" placeholder="hello@example.com" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Message (Optional)</label>
+<div class="relative group">
+<div class="absolute top-4 left-0 pl-4 flex items-start pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+</div>
+<textarea class="w-full pl-11 pr-4 py-4 rounded-lg bg-background-light dark:bg-background-dark border-none focus:ring-2 focus:ring-primary/50 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 soft-shadow transition-all resize-none" placeholder="Tell us about your dental needs..." rows="3"></textarea>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold py-4 rounded-lg transition-all transform active:scale-[0.98] shadow-lg shadow-primary/30 flex items-center justify-center gap-2 mt-2" type="submit">
+<span class="material-symbols-outlined">send</span>
+                                Notify Me &amp; Request
+                            </button>
+<p class="text-[11px] text-center text-slate-400 dark:text-slate-500 mt-2 px-4">
+                                By submitting, you agree to receive a one-time notification about our opening and appointment availability.
+                            </p>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Image Gallery / Secondary Visuals -->
+<section class="w-full px-4 lg:px-20 py-16 bg-white/50 dark:bg-background-dark/50 backdrop-blur-sm border-t border-slate-100 dark:border-slate-800">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col items-center text-center p-6 gap-4">
+<div class="size-16 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+</div>
+<h4 class="text-lg font-bold">General Dentistry</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Comprehensive check-ups and cleanings for a lifetime of healthy smiles.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 gap-4 border-x border-slate-100 dark:border-slate-800">
+<div class="size-16 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">auto_fix_high</span>
+</div>
+<h4 class="text-lg font-bold">Cosmetic Care</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Whitening, veneers, and smile makeovers tailored to your unique beauty.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 gap-4">
+<div class="size-16 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">emergency</span>
+</div>
+<h4 class="text-lg font-bold">Emergency Help</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Urgent dental care when you need it most, with quick response times.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="mt-auto py-10 border-t border-slate-200 dark:border-slate-800 px-6 lg:px-20 text-center">
+<div class="flex flex-col items-center gap-6">
+<div class="flex gap-4">
+<a class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all" href="#">
+<svg class="size-5" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all" href="#">
+<svg class="size-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.352 2.612 6.765 6.97 6.965 1.28.058 1.688.072 4.948.072s3.667-.014 4.947-.072c4.351-.2 6.765-2.612 6.965-6.97.058-1.28.072-1.688.072-4.948s-.014-3.667-.072-4.947c-.2-4.352-2.612-6.765-6.97-6.965C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+</a>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-600">
+                    © 2024 Dental Excellence Clinic. All rights reserved. Professional healthcare services.
+                </p>
+</div>
+</footer>
+</div>
+</body></html>

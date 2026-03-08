@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@24,400,0..1&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -10,17 +11,73 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: #dcb32e;
+  --color-medical-accent: #5ba4a4;
+  --color-secondary: #2e8b8b;
+  --color-background-light: #f8f7f6;
+  --color-background-dark: #201d12;
+  --font-display: var(--font-manrope), sans-serif;
+  --font-serif: var(--font-playfair), var(--font-lora), serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(220, 179, 46, 0.1);
+  }
+
+  .soft-gradient-1 {
+    background: radial-gradient(circle at 0% 0%, rgba(220, 179, 46, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(220, 179, 46, 0.05) 0%, transparent 50%);
+  }
+
+  .soft-gradient-2 {
+    background: radial-gradient(circle at top right, rgba(220, 179, 46, 0.08), transparent 40%),
+      radial-gradient(circle at bottom left, rgba(91, 164, 164, 0.05), transparent 40%),
+      #f8f7f6;
+  }
+
+  .bg-wave-pattern {
+    background-image: radial-gradient(circle at 2px 2px, rgba(220, 179, 46, 0.05) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  .soft-shadow {
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .organic-shape {
+    position: absolute;
+    z-index: -1;
+    filter: blur(60px);
+    opacity: 0.4;
+  }
+
+  .line-art-bg {
+    position: fixed;
+    z-index: -1;
+    opacity: 0.04;
+    pointer-events: none;
+  }
 }

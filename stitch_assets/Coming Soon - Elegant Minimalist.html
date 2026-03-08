@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coming Soon | Premium Dental Clinic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dcb32e",
+                        "secondary": "#2e8b8b", // Soft teal for CTA
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#201d12",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(220, 179, 46, 0.1);
+        }
+        .organic-shape {
+            position: absolute;
+            z-index: -1;
+            filter: blur(60px);
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen overflow-x-hidden relative">
+<!-- Background Decoration -->
+<div class="organic-shape bg-primary/20 w-[500px] h-[500px] rounded-full -top-20 -left-20"></div>
+<div class="organic-shape bg-secondary/10 w-[400px] h-[400px] rounded-full bottom-0 -right-20"></div>
+<!-- Navigation -->
+<nav class="w-full px-6 py-6 md:px-12 flex items-center justify-between sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<img alt="Logo" class="h-10 w-auto" data-alt="Minimalist dental clinic logo with tooth silhouette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDthOiJ6XRBMs3AjkQr6RE4zYDhZftRewnHugiQ-VZueWER8D9JK43nVcBh6TYvKSVwV1Cow14WsmN-c-zzK2SaB4FTryma1gl7vEfQFSBlEOj9mceZqY1nXLiRmyAjJF2scZz2_CzwpQVi0PIKrPxgCpNf93-T1OT1kFphvflyWuZuy6PNMbKW_4d7LKjSf4BFxNw6N7O1pjRQVWTnbpz4KTCQvBz1XACvJsEyB7JvsY-QIKxK4Di87l3w8aC_tHQzf3I1zvUccw"/>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">DENTAL<span class="text-primary font-light">ART</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-medium">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>(555) 123-4567</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>Elite Medical Plaza, Suite 402</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<main class="relative flex flex-col items-center justify-center pt-20 pb-12 px-6">
+<div class="max-w-4xl w-full text-center mb-16">
+<span class="inline-block py-1 px-4 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-6">Coming Soon to New York</span>
+<h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-slate-900 dark:text-white leading-[1.1] mb-8">
+                Our Website is <br/>
+<span class="italic font-normal text-primary">Almost Ready</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Experience the next generation of boutique dental care. We're putting the finishing touches on a digital experience as refined as our practice.
+            </p>
+</div>
+<!-- Appointment / Contact Block -->
+<div class="w-full max-w-xl mx-auto mb-24">
+<div class="glass-morphism rounded-xl p-8 md:p-12 shadow-2xl shadow-primary/5 dark:shadow-none">
+<div class="flex flex-col gap-6">
+<div class="space-y-2 text-center mb-4">
+<h3 class="text-2xl font-bold">Request Priority Booking</h3>
+<p class="text-slate-500 text-sm">Be the first to know when we open our schedule.</p>
+</div>
+<div class="grid grid-cols-1 gap-5">
+<div class="relative group">
+<label class="text-xs font-bold text-slate-400 uppercase tracking-tighter ml-1 mb-1 block">Full Name</label>
+<input class="w-full bg-white/50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 rounded-lg h-14 px-4 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-300" placeholder="John Doe" type="text"/>
+</div>
+<div class="relative group">
+<label class="text-xs font-bold text-slate-400 uppercase tracking-tighter ml-1 mb-1 block">Contact Information</label>
+<input class="w-full bg-white/50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 rounded-lg h-14 px-4 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-300" placeholder="email@address.com" type="email"/>
+</div>
+<div class="relative group">
+<label class="text-xs font-bold text-slate-400 uppercase tracking-tighter ml-1 mb-1 block">Inquiry Type</label>
+<textarea class="w-full bg-white/50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 rounded-lg p-4 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-300 resize-none" placeholder="How can we help you?" rows="3"></textarea>
+</div>
+</div>
+<button class="w-full bg-secondary hover:bg-secondary/90 text-white font-bold py-5 rounded-lg shadow-lg shadow-secondary/20 transition-all flex items-center justify-center gap-2 group">
+<span>Request Appointment</span>
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">calendar_today</span>
+</button>
+<p class="text-[10px] text-center text-slate-400 uppercase tracking-widest">Safe &amp; Secure Patient Data Handling</p>
+</div>
+</div>
+</div>
+<!-- Features/Soft Art Section -->
+<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto opacity-80">
+<div class="flex flex-col items-center text-center p-6 rounded-xl hover:bg-white/40 transition-colors">
+<div class="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl text-primary">biotech</span>
+</div>
+<h4 class="font-bold mb-2">Advanced Tech</h4>
+<p class="text-sm text-slate-500">State-of-the-art 3D imaging and pain-free laser technology.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 rounded-xl hover:bg-white/40 transition-colors border-x border-slate-100 dark:border-slate-800">
+<div class="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl text-primary">auto_awesome</span>
+</div>
+<h4 class="font-bold mb-2">Esthetic Care</h4>
+<p class="text-sm text-slate-500">Master-level cosmetic dentistry including porcelain veneers and whitening.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 rounded-xl hover:bg-white/40 transition-colors">
+<div class="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl text-primary">spa</span>
+</div>
+<h4 class="font-bold mb-2">Patient Comfort</h4>
+<p class="text-sm text-slate-500">Luxury amenities designed for a calm and stress-free environment.</p>
+</div>
+</div>
+</main>
+<!-- Floating Background Art (Dental Line Art Symbols) -->
+<div class="fixed top-[20%] right-[-50px] rotate-12 opacity-[0.05] pointer-events-none hidden lg:block">
+<span class="material-symbols-outlined text-[200px] text-slate-900">dentistry</span>
+</div>
+<div class="fixed bottom-[10%] left-[-80px] -rotate-12 opacity-[0.05] pointer-events-none hidden lg:block">
+<span class="material-symbols-outlined text-[250px] text-slate-900">medication_liquid</span>
+</div>
+<!-- Footer -->
+<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 px-6 py-12 text-center">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-slate-400 text-sm">
+                © 2024 DentalArt Clinic. All rights reserved.
+            </div>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</footer>
+</body></html>
