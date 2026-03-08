@@ -197,7 +197,7 @@ export default function ComingSoon3() {
 
             <div className="flex flex-col gap-4 text-center md:text-left lg:col-span-2 lg:pl-16">
               <h3 className="text-lg font-bold text-slate-900 mb-2">Contact Us</h3>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                   <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -223,7 +223,7 @@ export default function ComingSoon3() {
               </div>
             </div>
           </div>
-          
+
           <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-slate-500">
               © 2024 Dental Wellness Clinic. All rights reserved.
