@@ -1,6 +1,8 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import NavBar from "@/components/NavBar";
 import DoctorProfile from "@/components/DoctorProfile";
+import UniqueOfferings from "@/components/UniqueOfferings";
+import EducationCenter from "@/components/EducationCenter";
 
 export default function ComingSoon3() {
 
@@ -99,6 +101,11 @@ export default function ComingSoon3() {
 
         {/* Doctor Profile Section */}
         <DoctorProfile />
+
+        {/* Unique Offerings Section */}
+        <UniqueOfferings />
+
+        <EducationCenter />
 
         {/* Footer */}
         <footer className="mt-auto py-12 px-6 lg:px-20 bg-white border-t border-slate-200">
