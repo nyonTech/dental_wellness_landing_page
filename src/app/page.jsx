@@ -67,7 +67,7 @@ export default function ComingSoon3() {
             <div className="flex flex-col gap-6 text-center lg:text-left">
               <div className="inline-flex items-center justify-center lg:justify-start gap-2 text-primary font-bold tracking-widest uppercase text-xs">
                 <span className="w-8 h-[2px] bg-primary"></span>
-                13 Years of Restoring Smiles
+                18 Years of Restoring Smiles
               </div>
               <h1 className="text-slate-900 text-5xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">
                 Our New Website is <br /> <span className="text-primary">Almost Ready</span>
@@ -281,8 +281,8 @@ export default function ComingSoon3() {
                   <div className="text-sm text-slate-600">
                     <p className="font-semibold text-slate-800">Dental Wellness</p>
                     <p>#177, A Block, AECS Layout,</p>
-                    <p>Next to Kundalahalli P.O.</p>
-                    <p>Brookfields, Bangalore-560037</p>
+                    <p>Diagonally opposite to Bangalore One</p>
+                    <p>Brookefield, Bangalore-560037</p>
                   </div>
                 </div>
 
@@ -303,7 +303,7 @@ export default function ComingSoon3() {
 
           <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-slate-500">
-              © 2024 Dental Wellness Clinic. All rights reserved.
+              © 2026 Dental Wellness. All rights reserved.
             </p>
             <p className="text-sm text-slate-400">
               Professional healthcare services.
