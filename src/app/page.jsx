@@ -1,6 +1,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import NavBar from "@/components/NavBar";
 import DoctorProfile from "@/components/DoctorProfile";
+import ServicesPortfolio from "@/components/ServicesPortfolio";
 
 export default function ComingSoon3() {
 
@@ -96,6 +97,9 @@ export default function ComingSoon3() {
           </div>
         </section>
 
+
+        {/* Services Portfolio Section */}
+        <ServicesPortfolio />
 
         {/* Doctor Profile Section */}
         <DoctorProfile />
