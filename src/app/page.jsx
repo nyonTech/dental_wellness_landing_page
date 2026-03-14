@@ -13,13 +13,38 @@ export default function ComingSoon3() {
     e.preventDefault();
     setStatus("sending");
 
+    const formData = new FormData(form.current);
+    const userName = formData.get("user_name");
+    const userEmail = formData.get("user_email");
+    const userMessage = formData.get("message");
+
+    const htmlMessage = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: #ffffff;">
+        <h2 style="color: #0f172a; border-bottom: 2px solid #5ba4a4; padding-bottom: 10px;">New Appointment Request</h2>
+        <p style="color: #334155; font-size: 16px;">You have received a new appointment request from your website.</p>
+        <div style="background-color: #f8fafc; padding: 15px; border-radius: 6px; margin: 20px 0;">
+          <p style="margin: 0 0 10px 0;"><strong style="color: #475569;">Name:</strong> <span style="color: #0f172a;">${userName}</span></p>
+          <p style="margin: 0 0 10px 0;"><strong style="color: #475569;">Contact Details:</strong> <span style="color: #0f172a;">${userEmail}</span></p>
+          <p style="margin: 0 0 5px 0;"><strong style="color: #475569;">Message:</strong></p>
+          <p style="margin: 0; color: #0f172a; padding: 10px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; white-space: pre-wrap;">${userMessage || 'No additional message provided.'}</p>
+        </div>
+        <p style="font-size: 12px; color: #94a3b8; text-align: center; margin-top: 20px;">This automated email was sent securely from <a href="https://dentalwellnessbangalore.com" style="color: #5ba4a4;">Dental Wellness</a>.</p>
+      </div>
+    `;
+
+    const templateParams = {
+      name: userName,
+      to_email: "dentalwellnessbangalore@gmail.com",
+      message_html: htmlMessage
+    };
+
     // Replace the strings below with your actual EmailJS credentials
     emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID", // YOUR_SERVICE_ID
-        "YOUR_TEMPLATE_ID", // YOUR_TEMPLATE_ID
-        form.current,
-        "YOUR_PUBLIC_KEY" // YOUR_PUBLIC_KEY
+      .send(
+        "service_lbdb35d", // YOUR_SERVICE_ID
+        "template_ep8vi5s", // YOUR_TEMPLATE_ID
+        templateParams,
+        "user_ohzcOFe9IBaxtkyBMymez" // YOUR_PUBLIC_KEY
       )
       .then(
         () => {
