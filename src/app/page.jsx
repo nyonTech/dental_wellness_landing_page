@@ -99,7 +99,7 @@ export default function ComingSoon3() {
 
 
         {/* Services Portfolio Section */}
-        <ServicesPortfolio />
+        {/* <ServicesPortfolio /> */}
 
         {/* Doctor Profile Section */}
         <DoctorProfile />
