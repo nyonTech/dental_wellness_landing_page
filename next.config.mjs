@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  /* Keep off while using styled-jsx in client components to avoid hydration class mismatches */
+  reactCompiler: false,
 };
 
 export default nextConfig;
