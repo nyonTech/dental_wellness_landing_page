@@ -3,6 +3,7 @@ import NavBar from "@/components/NavBar";
 import DoctorProfile from "@/components/DoctorProfile";
 import UniqueOfferings from "@/components/UniqueOfferings";
 import EducationCenter from "@/components/EducationCenter";
+import SmileTransformations from "@/components/SmileTransformations";
 
 export default function ComingSoon3() {
 
@@ -106,6 +107,8 @@ export default function ComingSoon3() {
         <UniqueOfferings />
 
         <EducationCenter />
+
+        <SmileTransformations />
 
         {/* Footer */}
         <footer className="mt-auto py-12 px-6 lg:px-20 bg-white border-t border-slate-200">
