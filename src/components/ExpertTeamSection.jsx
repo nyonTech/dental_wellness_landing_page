@@ -4,11 +4,11 @@ import Link from "next/link";
 import { DOCTORS } from "@/data/doctors";
 
 const WORKING_HOURS = [
-  { day: 'Monday',    time: '08:00 - 20:00' },
-  { day: 'Tuesday',   time: '08:00 - 20:00' },
+  { day: 'Monday', time: '08:00 - 20:00' },
+  { day: 'Tuesday', time: '08:00 - 20:00' },
   { day: 'Wednesday', time: '08:00 - 20:00' },
-  { day: 'Friday',    time: '10:00 - 16:00' },
-  { day: 'Saturday',  time: '10:00 - 16:00' },
+  { day: 'Friday', time: '10:00 - 16:00' },
+  { day: 'Saturday', time: '10:00 - 16:00' },
 ];
 
 export default function ExpertTeamSection() {
@@ -49,7 +49,7 @@ export default function ExpertTeamSection() {
               </Link>
             </div>
 
-            <div className="expert-team__doctors">
+            <div className="expert-team__doctors overflow-auto">
               {DOCTORS.slice(0, 3).map((doc) => (
                 <DoctorCard key={doc.name} {...doc} />
               ))}

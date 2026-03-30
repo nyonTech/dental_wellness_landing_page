@@ -19,7 +19,7 @@ const SERVICES = [
     description: "Virtually invisible aligners custom-made to straighten your smile without brackets or wires.",
     image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80",
     cta: "LEARN MORE",
-    href: "/service_listing#invisalign",
+    href: "/service/invisalign",
   },
   {
     category: "RESTORATIVE",
@@ -28,7 +28,7 @@ const SERVICES = [
     description: "The gold standard for tooth replacement. Permanent, natural-looking, and fully functional results.",
     image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80",
     cta: "VIEW GALLERY",
-    href: "/service_listing#dental-implants",
+    href: "/service/dental-implants",
   },
   {
     category: "COSMETIC",
@@ -37,7 +37,7 @@ const SERVICES = [
     description: "Professional-grade brightening that removes years of staining in a single luxury session.",
     image: "https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=900&q=80",
     cta: "BOOK SESSION",
-    href: "/service_listing#teeth-whitening",
+    href: "/service/teeth-whitening",
   },
   {
     category: "COSMETIC",
@@ -46,7 +46,7 @@ const SERVICES = [
     description: "Handcrafted thin shells designed to perfect the shape, color, and alignment of your smile.",
     image: "https://images.unsplash.com/photo-1579684453423-f84349ef60b0?auto=format&fit=crop&w=900&q=80",
     cta: "THE PORTFOLIO",
-    href: "/service_listing#porcelain-veneers",
+    href: "/service/porcelain-veneers",
   },
   {
     category: "SPECIALTY",
@@ -55,7 +55,7 @@ const SERVICES = [
     description: "Immediate relief and urgent care for dental traumas, pain, or accidents when you need it most.",
     image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80",
     cta: "CALL NOW",
-    href: "/service_listing#emergency-care",
+    href: "/service/emergency-care",
   },
   {
     category: "SPECIALTY",
@@ -64,7 +64,7 @@ const SERVICES = [
     description: "Expert surgical precision for extractions, bone grafting, and complex structural repairs.",
     image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80",
     cta: "DETAILS",
-    href: "/service_listing#oral-surgery",
+    href: "/service/oral-surgery",
   },
 ];
 

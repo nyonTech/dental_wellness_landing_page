@@ -34,7 +34,7 @@ const offerings = [
 export default function UniqueOfferings() {
   return (
     <section className="offerings-section">
-      <div className="offerings-container">
+      <div className="offerings-container xl:max-w-7xl xl:m-auto">
         {/* Header row */}
         <div className="offerings-header">
           <div className="offerings-heading-group">
@@ -45,11 +45,11 @@ export default function UniqueOfferings() {
             </p>
           </div>
           <Link href="/service_listing" className="offerings-view-all">
-                View all services
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            View all services
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="#FBBF24" />
             </svg>
-              </Link>
+          </Link>
         </div>
 
         {/* Cards grid */}

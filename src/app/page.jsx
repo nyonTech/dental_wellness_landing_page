@@ -6,6 +6,7 @@ import ClinicTourSection from "@/components/ClinicTourSection";
 import ExpertTeamSection from "@/components/ExpertTeamSection";
 import WhyPeopleLove from "@/components/Whypeoplelove";
 import Footer from "@/components/Footer";
+import SmileTransformations from "@/components/SmileTransformations";
 
 export default function ComingSoon3() {
 
@@ -21,13 +22,13 @@ export default function ComingSoon3() {
           <div className="hero-orb hero-orb--amber"></div>
           <div className="hero-orb hero-orb--yellow"></div>
 
-          <div className="hero-inner">
+          <div className="hero-inner xl:max-w-7xl xl:m-auto">
             {/* Left: text content */}
             <div className="hero-content">
               <div className="hero-heading">
-                <h1 className="hero-title-dark">Comprehensive</h1>
+                <h1 className="hero-title-dark">Trusted Dentist</h1>
                 <div className="hero-title-highlight-wrapper">
-                  <span className="hero-title-amber">Dental Services</span>
+                  <span className="hero-title-amber">Near AECS Layout</span>
                   <svg className="hero-underline-svg" width="498" height="12" viewBox="0 0 498 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_hero)">
                       <path d="M0 6C165.677 10 331.353 10 497.03 6" stroke="black" strokeWidth="6.1703" />
@@ -43,7 +44,7 @@ export default function ComingSoon3() {
 
               <div className="hero-description-wrapper">
                 <p className="hero-description">
-                  Few orthodontists in New York City have treated more patients with the Invisalign appliance than Dr. Adam Goodman. This vast experience leads to efficient treatment with outstanding results.
+                  If you’ve been searching for the best dentist near me or a dental clinic near me in AECS Layout, Whitefield, Brookefield, or Kundalahalli Gate, your search ends here. At Dental Wellness, we blend advanced technology with a caring touch to keep every smile bright, confident, and completely pain-free.
                 </p>
               </div>
 
@@ -113,13 +114,13 @@ export default function ComingSoon3() {
 
         <EducationCenter />
 
+        <SmileTransformations />
 
         <ClinicTourSection />
 
         <ExpertTeamSection />
         <WhyPeopleLove />
 
-        <Footer />
       </div>
     </div>
   );

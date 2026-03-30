@@ -32,7 +32,7 @@ export default function FaqAccordion({ faqs = DEFAULT_FAQS }) {
 
   return (
     <section className="faq-section">
-      <div className="faq-container">
+      <div className="faq-container xl:max-w-7xl mx-auto">
         <div className="faq-heading-wrap">
           <h2 className="faq-heading">Common Queries</h2>
         </div>

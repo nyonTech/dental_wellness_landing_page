@@ -1,0 +1,478 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+/* reset + utility */
+
+.label,
+.group-label {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  display: block;
+  margin-bottom: .2em;
+  cursor: pointer;
+}
+
+.group-label {
+  margin-bottom: -.1em;
+}
+
+.group .label {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 0;
+  width: auto;
+}
+
+/* inputs */
+input[type=text],
+input[type=date],
+textarea,
+select {
+  border-radius: 2px;
+  -webkit-transition: border-color .2s ease, background-color .2s ease;
+  transition: border-color .2s ease, background-color .2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: #fff;
+  border: solid 1px #bbb;
+  font-weight: 600;
+  padding: 8px 10px;
+  line-height: normal;
+  width: 100%;
+}
+
+input[type=text]:hover,
+textarea:hover,
+select:hover {
+  border-color: #666;
+}
+
+input[type=text]:focus,
+textarea:focus,
+select:focus {
+  background: #ECFAFF;
+  outline: none;
+  border-color: #32B4E5;
+}
+
+.path {
+  display: none;
+  margin-top: .5em;
+}
+
+/* input placeholder text color */
+::-webkit-input-placeholder {
+  color: #969B9C;
+}
+
+::-moz-placeholder {
+  color: #969B9C;
+}
+
+:-ms-input-placeholder {
+  color: #969B9C;
+}
+
+input:focus::-webkit-input-placeholder, select:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: #9DB4BC;
+}
+
+input:focus::-moz-placeholder, select:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: #9DB4BC;
+}
+
+input:focus:-ms-input-placeholder, select:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+  color: #9DB4BC;
+}
+
+.radio-wrapper input,
+.checkbox-wrapper input {
+  float: left;
+  margin: 5px 10px 0 0;
+}
+
+.radio-wrapper .label,
+.checkbox-wrapper .label {
+  color: #969B9C;
+}
+
+.radio-wrapper:hover .label,
+.radio-wrapper.is-valid .label,
+.checkbox-wrapper:hover .label,
+.checkbox-wrapper.is-valid .label {
+  color: #2B3437;
+}
+
+.date-wrapper,
+.select-wrapper {
+  position: relative;
+}
+
+#departure {
+  cursor: pointer;
+  padding-right: 45px;
+}
+
+.select {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+select {
+  cursor: pointer;
+  color: #969B9C;
+  padding-right: 35px;
+}
+
+select.is-valid {
+  color: #2B3437;
+}
+
+/* icons */
+.icon {
+  pointer-events: none;
+  /* prevent blocking select interaction */
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  /* select arrow center */
+}
+
+.date-icon {
+  margin-top: 1px;
+}
+
+.select-icon {
+  /* custom select arrow icon */
+  -webkit-transition: border-color .2s ease;
+  transition: border-color .2s ease;
+  border-top: solid 5px #2B3437;
+  border-left: solid 3px transparent;
+  border-right: solid 3px transparent;
+  opacity: .5;
+  margin-right: 4px;
+}
+
+/* buttons */
+.button {
+  border-radius: 0px;
+  -webkit-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+  display: inline-block;
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 16px 24px;
+}
+
+.button-primary {
+  background-color: #32B4E5;
+  border-radius: 0 0 5px 5px;
+  color: #fff;
+  width: 100%;
+  margin: -1px;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  outline: none;
+  background: #1B93C0;
+}
+
+/* 
+  date picker customization 
+
+  CSS included in this pen: https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/css/pikaday.css
+  Pikaday on Gitub: https://github.com/dbushell/Pikaday
+*/
+.pika-table th {
+  color: #999;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+.pika-button {
+  cursor: pointer;
+  display: block;
+  outline: none;
+  border: solid 1px #fff;
+  margin: 0;
+  width: 100%;
+  padding: 5px;
+  color: #2B3437;
+  font-size: 13px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.is-today .pika-button {
+  /* border-top-color: #2B3437; */
+  color: #2B3437;
+  border-radius: 0px;
+  background: #FFF;
+}
+
+.is-selected .pika-button {
+  color: #32B4E5;
+  background: #ECFAFF;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.pika-button:hover {
+  color: #fff;
+  background: #32B4E5;
+  font-weight: bold;
+  border-radius: 0px;
+}
+
+/* Animation */
+.slow {
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+}
+
+.medium {
+  -webkit-animation-duration: .6s;
+          animation-duration: .6s;
+}
+
+.fast {
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
+}
+
+.custom-ease {
+  -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.delay-1 {
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+.delay-2 {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.delay-3 {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+.delay-4 {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.delay-5 {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.delay-6 {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+.delay-7 {
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+
+.delay-8 {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+.delay-9 {
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  background: #fff;
+  border: solid 1px #ccc;
+}
+.modal.show {
+  display: block;
+}
+.visit-simplified {
+  padding: 80px 0;
+  background: #f9f8f4;
+}
+
+.vs-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1d1d1d;
+}
+.vs-title span {
+  color: #d0a246;
+}
+
+.vs-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.vs-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.vs-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #d0a24615;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  font-size: 28px;
+  color: #d0a246;
+}
+
+.vs-box h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.vs-box p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.vs-footer {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.8;
+}
+.mt-4{
+  margin: 20px;
+}
+.testimonial-box {
+  max-width: 750px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 35px rgba(0,0,0,0.08);
+}
+
+.testimonial-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.testimonial-author {
+  font-weight: 700;
+  color: #dcb22e;
+  font-size: 20px;
+}
+
+.stars {
+  font-size: 30px;
+  color: #dcb22e;
+}
+
+/* Fade effect smoother */
+.carousel-fade .carousel-item {
+  transition: opacity 0.8s ease-in-out;
+}
+.comparison-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Georgia, serif;
+  font-size: 16px;
+}
+
+.comparison-table th {
+  background-color: #f4b400; /* Yellow header */
+  color: #ffffff;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #c9a200;
+  font-weight: bold;
+}
+
+.comparison-table td {
+  padding: 12px;
+  border: 1px solid #bfbfbf;
+  background-color: #d9d9d9; /* Grey rows */
+  vertical-align: top;
+}
+
+.comparison-table td:first-child {
+  width: 25%;
+}
+
+.comparison-table td strong {
+  font-weight: bold;
+}.comparison-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+
+.cost-table th {
+  background-color: #f4b400;
+  color: #000;
+  padding: 14px;
+  text-align: center;
+  border: 1px solid #c9a200;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cost-table td {
+  padding: 18px;
+  border: 1px solid #bfbfbf;
+  background-color: #d9d9d9;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.cost-table strong {
+  font-size: 18px;
+}
+td, th {
+    padding: 0;
+    font-family: 'Poppins';
+}

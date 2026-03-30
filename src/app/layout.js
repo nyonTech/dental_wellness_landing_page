@@ -1,6 +1,7 @@
-import { Manrope, Playfair_Display, Lora, Montserrat, Outfit } from "next/font/google";
+import { Manrope, Playfair_Display, Lora, Montserrat, Outfit, Epilogue, Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -24,6 +25,16 @@ const montserrat = Montserrat({
 
 const outfit = Outfit({
   variable: "--font-outfit",
+  subsets: ["latin"],
+});
+
+const epilogue = Epilogue({
+  variable: "--font-epilogue",
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -59,10 +70,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${manrope.variable} ${playfair.variable} ${lora.variable} ${outfit.variable} antialiased`}
+        className={`${montserrat.variable} ${manrope.variable} ${playfair.variable} ${lora.variable} ${outfit.variable} ${epilogue.variable} ${inter.variable} antialiased`}
       >
-        <NavBar/>
+        <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
