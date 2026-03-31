@@ -93,9 +93,9 @@ export default function DoctorDetailsProfile({ doctor }) {
                 <span>NEXT AVAILABLE</span>
                 <strong>{doctor.nextAvailable}</strong>
               </div>
-              <button type="button" className="doctor-details__book">
+              <Link href="/contact" className="doctor-details__book">
                 Book Now
-              </button>
+              </Link>
             </div>
           </article>
         </div>

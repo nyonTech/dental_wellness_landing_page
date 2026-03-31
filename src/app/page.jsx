@@ -73,9 +73,9 @@ export default function ComingSoon3() {
             <div className="hero-image-area">
               <div className="hero-image-circle">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/f67e765b353f5fe921b990e3b4bb2f51073872a0?width=1152"
+                  src="/images/dr-img1.png"
                   alt="Happy dental patient smiling holding a cup"
-                  className="hero-doctor-img"
+                  className="hero-doctor-img w-1/2"
                 />
               </div>
 

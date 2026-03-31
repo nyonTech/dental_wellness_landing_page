@@ -1,222 +1,231 @@
 import React from "react";
+import { TransformationCTA } from "@/components/ServiceListing";
 
 export default function ContactPage() {
   return (
-    <main className="bg-surface text-on-surface font-body selection:bg-primary-container-about selection:text-on-primary-container-about pt-32">
-      {/* Hero Section: Intentional Asymmetry */}
-      <section className="px-8 max-w-screen-2xl mx-auto mb-32 md:mb-56">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-          <div className="md:col-span-8">
-            <span className="inline-block mb-6 font-headline uppercase tracking-[0.3em] text-[10px] font-extrabold text-on-surface-variant">
-              Correspondence
+    <main className="bg-surface text-slate-800 font-display min-h-screen pt-24 lg:pt-32 relative overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-container-about/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-wave-pattern -z-10 opacity-40"></div>
+
+      {/* Hero Section */}
+      <section className="px-6 md:px-12 max-w-[1440px] mx-auto mb-20 md:mb-32 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7">
+            <span className="inline-block mb-4 font-body uppercase tracking-[0.25em] text-xs font-bold text-primary">
+              Get In Touch
             </span>
-            <h1 className="font-headline text-6xl md:text-9xl font-black leading-[0.85] tracking-tighter text-on-surface mb-8">
-              Contact <br /> <span className="text-primary-container-about text-glow italic">Dental Wellness</span>
+            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-slate-900 mb-8">
+              Let's Brighten <br /> <span className="text-primary italic font-light">Your Smile.</span>
             </h1>
+            <p className="text-slate-600 font-body text-lg leading-relaxed max-w-xl">
+              Whether you need to book a general checkup, consult regarding cosmetic dentistry, or require immediate assistance, our team is right here to guide you to optimal dental wellness.
+            </p>
           </div>
-          <div className="md:col-span-4 relative group">
-            <div className="aspect-[4/5] bg-surface-container-highest overflow-hidden rounded-xl">
+          <div className="lg:col-span-5 relative group mt-12 lg:mt-0">
+            <div className="aspect-[4/5] bg-surface-container-highest overflow-hidden rounded-3xl shadow-2xl relative">
               <img
-                alt="Editorial Dental Tool"
-                className="w-full h-full object-cover grayscale brightness-110 contrast-125"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHprNAnckRP8FFPOZrje1PavFcpB0yEO8FAhg74BJNaQZNOmcZljjlmQYuuCHzbNSfHbjtHszmNozNwpzXGMQJqq_Pd81PX3Ni3drY6tbrh8GwJV93SFJ-PflUWe3ADDkLdyi5pWVhaUq7aMCbJNheqCp9Y1tfnOUfe8UHn9zqoAgsQ_44npMWjT_T-xZbTESkp0mnu9Kh_vcC579r4MRf6hROq_pi5yQg0q3FNWyIMu8mZMNZLqEVw-CW4_7nq973egV6jst48r8"
+                alt="Dental Wellness Clinic Reception"
+                className="w-full h-full object-cover grayscale mix-blend-multiply opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                src="/images/facility-img1.jpg"
               />
+              <div className="absolute inset-0 bg-primary-about/10 mix-blend-multiply group-hover:bg-transparent transition-colors duration-700 pointer-events-none"></div>
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-primary-about p-8 rounded-xl hidden md:block">
-              <span className="material-symbols-outlined text-white text-4xl">clinical_notes</span>
+            {/* Floating Card */}
+            <div className="absolute -bottom-8 -left-8 bg-white p-6 md:p-8 rounded-3xl shadow-xl hidden md:flex flex-col gap-2 transform group-hover:-translate-y-2 transition-transform duration-500">
+              <div className="w-12 h-12 bg-primary-container-about rounded-full flex items-center justify-center mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <p className="text-xs uppercase tracking-widest font-extrabold text-slate-500">Emergency Care</p>
+              <p className="font-headline font-bold text-xl text-slate-900">+91 99805 67389</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Form & Details: Editorial Layout */}
-      <section className="bg-surface-container-low py-32 md:py-56">
-        <div className="max-w-screen-2xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row gap-24">
-            {/* Column 1: The Form (2/3 width) */}
-            <div className="flex-1 lg:flex-[2]">
-              <div className="mb-16">
-                <h2 className="font-headline text-4xl font-bold tracking-tight mb-4">Book an Appointment</h2>
-                <p className="text-on-surface-variant max-w-md font-light leading-relaxed">
-                  Describe your dental needs. Our expert team will ensure you get the best treatment for a happy, healthy smile.
-                </p>
-              </div>
-              <form className="space-y-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                  <div className="relative group">
-                    <input
-                      className="peer w-full bg-transparent border-0 border-b-2 border-outline-variant py-4 focus:ring-0 focus:border-primary-about transition-colors text-lg"
-                      id="name"
-                      name="name"
-                      placeholder=" "
-                      type="text"
-                    />
-                    <label
-                      className="absolute left-0 top-4 text-on-surface-variant/60 uppercase tracking-widest text-[10px] font-bold transition-all peer-focus:-top-4 peer-focus:text-primary-about peer-[:not(:placeholder-shown)]:-top-4"
-                      htmlFor="name"
-                    >
-                      Full Name
-                    </label>
-                  </div>
-                  <div className="relative group">
-                    <input
-                      className="peer w-full bg-transparent border-0 border-b-2 border-outline-variant py-4 focus:ring-0 focus:border-primary-about transition-colors text-lg"
-                      id="email"
-                      name="email"
-                      placeholder=" "
-                      type="email"
-                    />
-                    <label
-                      className="absolute left-0 top-4 text-on-surface-variant/60 uppercase tracking-widest text-[10px] font-bold transition-all peer-focus:-top-4 peer-focus:text-primary-about peer-[:not(:placeholder-shown)]:-top-4"
-                      htmlFor="email"
-                    >
-                      Email Address
-                    </label>
-                  </div>
-                </div>
-                <div className="relative group">
-                  <select
-                    className="peer w-full bg-transparent border-0 border-b-2 border-outline-variant py-4 focus:ring-0 focus:border-primary-about transition-colors text-lg appearance-none"
-                    id="service"
-                    name="service"
-                  >
-                    <option disabled defaultValue="" value="">
-                      Select an Interest
-                    </option>
-                    <option>Cosmetic Dentistry</option>
-                    <option>Dental Implants</option>
-                    <option>Root Canal Treatment</option>
-                    <option>Braces & Invisalign</option>
-                  </select>
-                  <label className="absolute left-0 -top-4 text-primary-about uppercase tracking-widest text-[10px] font-bold" htmlFor="service">
-                    Service of Interest
-                  </label>
-                </div>
-                <div className="relative group">
-                  <textarea
-                    className="peer w-full bg-transparent border-0 border-b-2 border-outline-variant py-4 focus:ring-0 focus:border-primary-about transition-colors text-lg resize-none"
-                    id="message"
-                    name="message"
-                    placeholder=" "
-                    rows="4"
-                  ></textarea>
-                  <label
-                    className="absolute left-0 top-4 text-on-surface-variant/60 uppercase tracking-widest text-[10px] font-bold transition-all peer-focus:-top-4 peer-focus:text-primary-about peer-[:not(:placeholder-shown)]:-top-4"
-                    htmlFor="message"
-                  >
-                    Message / Clinical Goals
-                  </label>
-                </div>
-                <button
-                  className="bg-primary-about text-on-primary-about px-12 py-5 rounded-xl font-headline font-bold uppercase tracking-[0.2em] text-xs hover:opacity-90 transition-all flex items-center group"
-                  type="submit"
-                >
-                  Dispatch Inquiry
-                  <span className="material-symbols-outlined ml-4 group-hover:translate-x-2 transition-transform">
-                    arrow_right_alt
-                  </span>
-                </button>
-              </form>
-            </div>
-            {/* Column 2: Working Hours & Contact (1/3 width) */}
-            <div className="flex-1 space-y-24">
-              {/* Working Hours */}
+      {/* Information & Contact Form */}
+      <section className="bg-surface-container-low py-24 md:py-40 relative">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+          <div className="flex flex-col lg:flex-row gap-20">
+
+            {/* Contact Details (Left Column) */}
+            <div className="flex-1 lg:flex-none lg:w-1/3 flex flex-col gap-12">
               <div>
-                <h3 className="font-headline uppercase tracking-widest text-[10px] font-extrabold text-on-surface-variant mb-8 border-b border-outline-variant/30 pb-4">
-                  Availability
-                </h3>
-                <ul className="space-y-4 font-body text-sm">
-                  <li className="flex justify-between items-center">
-                    <span className="text-on-surface-variant">Mon — Fri</span>
-                    <span className="font-bold tracking-tight">09:00 — 22:00</span>
-                  </li>
-                  <li className="flex justify-between items-center">
-                    <span className="text-on-surface-variant">Saturday</span>
-                    <span className="font-bold tracking-tight">09:00 — 22:00</span>
-                  </li>
-                  <li className="flex justify-between items-center">
-                    <span className="text-on-surface-variant">Sunday</span>
-                    <span className="font-bold tracking-tight">09:00 — 22:00</span>
-                  </li>
-                </ul>
-              </div>
-              {/* Contact Grid */}
-              <div className="grid grid-cols-1 gap-8">
-                <div className="p-8 bg-surface-container-highest rounded-xl group hover:bg-inverse-surface hover:text-white transition-all duration-500">
-                  <span className="material-symbols-outlined text-primary-about mb-6 block">call</span>
-                  <p className="text-[10px] uppercase tracking-widest font-black opacity-60 mb-2">Call Us</p>
-                  <p className="font-headline text-xl font-bold">+91 99805 67389</p>
-                </div>
-                <div className="p-8 bg-surface-container-highest rounded-xl group hover:bg-inverse-surface hover:text-white transition-all duration-500">
-                  <span className="material-symbols-outlined text-primary-about mb-6 block">mail</span>
-                  <p className="text-[10px] uppercase tracking-widest font-black opacity-60 mb-2">Email</p>
-                  <p className="font-headline text-xl font-bold">dentalwellnessbangalore@gmail.com</p>
+                <h3 className="font-headline text-3xl font-black mb-8 text-slate-900">Reach Us</h3>
+                <div className="grid gap-6">
+                  {/* Phone */}
+                  <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div className="w-12 h-12 bg-primary-container-about text-white rounded-full flex items-center justify-center mb-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <p className="text-xs uppercase tracking-widest font-bold text-slate-400 mb-1">Call Us</p>
+                    <p className="font-headline font-bold text-xl text-slate-900">+91 99805 67389</p>
+                  </div>
+
+                  {/* Email */}
+                  <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div className="w-12 h-12 bg-primary-container-about text-white rounded-full flex items-center justify-center mb-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                    </div>
+                    <p className="text-xs uppercase tracking-widest font-bold text-slate-400 mb-1">Email</p>
+                    <p className="font-headline font-bold text-lg text-slate-900">dentalwellness@gmail.com</p>
+                  </div>
+
+                  {/* Hours */}
+                  <div className="bg-slate-900 p-8 rounded-3xl shadow-xl text-white">
+                    <div className="w-12 h-12 bg-slate-800 text-primary rounded-full flex items-center justify-center mb-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                    </div>
+                    <p className="text-xs uppercase tracking-widest font-bold text-slate-400 mb-4">Availability</p>
+                    <ul className="space-y-3 font-body text-sm">
+                      <li className="flex justify-between items-center border-b border-slate-700/50 pb-2">
+                        <span className="text-slate-300">Mon &mdash; Sat</span>
+                        <span className="font-bold">10AM - 2PM & 5PM - 8PM</span>
+                      </li>
+                      {/* <li className="flex justify-between items-center pt-1">
+                        <span className="text-slate-300">Sunday</span>
+                        <span className="font-bold text-primary">09:00 &mdash; 22:00</span>
+                      </li> */}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
+
+            {/* Inquiry Form (Right Column) */}
+            <div className="flex-1 lg:w-2/3">
+              <div className="bg-white p-10 md:p-14 rounded-[40px] shadow-2xl border border-slate-100 relative">
+                <div className="mb-10">
+                  <h3 className="font-headline text-3xl font-black mb-4 text-slate-900">Book an Appointment</h3>
+                  <p className="text-slate-500 font-body">Fill out the form below and our receptionist will reach out to confirm your booking.</p>
+                </div>
+
+                <form className="space-y-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                      <label className="text-xs uppercase tracking-widest font-bold text-slate-500 ml-1" htmlFor="name">Full Name</label>
+                      <input
+                        className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-slate-800 font-medium"
+                        id="name"
+                        placeholder="John Doe"
+                        type="text"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs uppercase tracking-widest font-bold text-slate-500 ml-1" htmlFor="email">Email Address</label>
+                      <input
+                        className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-slate-800 font-medium"
+                        id="email"
+                        placeholder="john@example.com"
+                        type="email"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                      <label className="text-xs uppercase tracking-widest font-bold text-slate-500 ml-1" htmlFor="phone">Phone Number</label>
+                      <input
+                        className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-slate-800 font-medium"
+                        id="phone"
+                        placeholder="+91..."
+                        type="tel"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs uppercase tracking-widest font-bold text-slate-500 ml-1" htmlFor="service">Service of Interest</label>
+                      <select
+                        className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-slate-800 font-medium appearance-none"
+                        id="service"
+                        defaultValue=""
+                      >
+                        <option disabled value="">Select a Service</option>
+                        <option>General Checkup</option>
+                        <option>Cosmetic Dentistry</option>
+                        <option>Dental Implants</option>
+                        <option>Root Canal Treatment</option>
+                        <option>Braces & Invisalign</option>
+                        <option>Emergency Care</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs uppercase tracking-widest font-bold text-slate-500 ml-1" htmlFor="message">Message / Clinical Goals</label>
+                    <textarea
+                      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-slate-800 font-medium resize-none"
+                      id="message"
+                      placeholder="How can we help you?"
+                      rows="4"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    className="w-full md:w-auto bg-slate-900 text-white px-10 py-5 rounded-2xl font-headline font-bold hover:bg-primary transition-colors flex items-center justify-center group"
+                    type="submit"
+                  >
+                    Dispatch Inquiry
+                    <svg xmlns="http://www.w3.org/2000/svg" className="ml-3 group-hover:translate-x-1 transition-transform" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* Location Section: High Contrast Map & Address */}
-      <section className="max-w-screen-2xl mx-auto px-8 my-32 md:my-56">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden rounded-xl bg-inverse-surface text-white">
-          <div className="lg:col-span-4 p-12 md:p-20 flex flex-col justify-center">
-            <span className="material-symbols-outlined text-primary-container-about text-5xl mb-12">location_on</span>
-            <h2 className="font-headline text-4xl font-bold mb-8">Dental Wellness Clinic</h2>
-            <address className="not-italic text-zinc-400 font-light text-lg leading-relaxed mb-12">
-              #177, A Block, AECS Layout
-              <br />
-              Next to Kundalahalli P.O. Brookfields
-              <br />
-              Bangalore-560037
+      {/* Location Section */}
+      <section className="max-w-[1440px] mx-auto px-6 md:px-12 my-24 md:my-40">
+        <div className="grid grid-cols-1 lg:grid-cols-12 overflow-hidden rounded-[40px] bg-slate-900 text-white shadow-2xl border border-slate-800">
+          <div className="lg:col-span-5 p-12 md:p-20 flex flex-col justify-center relative z-10">
+            <div className="w-16 h-16 bg-primary-container-about rounded-2xl flex items-center justify-center mb-10 shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+            </div>
+            <h2 className="font-headline text-4xl lg:text-5xl font-black mb-6 leading-tight">Visit Our <br /><span className="text-primary font-light italic">Clinic</span></h2>
+            <address className="not-italic text-slate-300 font-body text-lg leading-relaxed mb-10 border-l-2 border-primary/50 pl-6">
+              #177, A Block, AECS Layout<br />
+              Next to Kundalahalli P.O. Brookefield<br />
+              Bangalore - 560037
             </address>
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <a
-                className="w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-primary-container-about hover:text-on-primary-container-about transition-colors"
-                href="#"
-              >
-                <span className="material-symbols-outlined text-xl">share</span>
-              </a>
-              <a
-                className="px-6 h-12 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-zinc-800 transition-colors uppercase tracking-widest text-[10px] font-bold"
-                href="#"
+                className="px-8 h-14 rounded-full bg-primary text-white flex items-center justify-center hover:bg-yellow-500 transition-colors tracking-wide font-bold shadow-lg shadow-primary/20"
+                href="https://maps.google.com/?q=Dental+Wellness+AECS+Layout+Bangalore" target="_blank" rel="noopener noreferrer"
               >
                 Get Directions
               </a>
             </div>
           </div>
-          <div className="lg:col-span-8 h-[400px] lg:h-auto bg-zinc-800 relative grayscale contrast-150 brightness-75">
-            {/* Stylized Map Placeholder */}
+          <div className="lg:col-span-7 h-[400px] lg:h-auto bg-slate-800 relative">
+            {/* Real Facility Image acting as backdrop */}
             <div
-              className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"
-              style={{}}
+              className="absolute inset-0 bg-[url('/images/facility-img2.jpg')] bg-cover bg-center grayscale mix-blend-overlay opacity-60"
             ></div>
-            <div className="absolute inset-0 bg-primary-about/10 mix-blend-multiply"></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <div className="w-4 h-4 bg-primary-about rounded-full animate-ping absolute"></div>
-              <div className="w-4 h-4 bg-primary-about rounded-full relative shadow-[0_0_20px_rgba(244,196,48,0.8)]"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-900 to-transparent"></div>
+
+            {/* Map Pin Pulse */}
+            <div className="absolute top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary rounded-full animate-ping absolute opacity-80"></div>
+              <div className="w-6 h-6 bg-primary rounded-full relative shadow-[0_0_30px_rgba(244,196,48,1)] border-2 border-white"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mb-32">
-        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto px-8">
-          <div className="bg-inverse-surface text-primary-container-about px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
-            Pain-Free Care
-          </div>
-          <div className="bg-inverse-surface text-primary-container-about px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
-            Experienced Dentists
-          </div>
-          <div className="bg-inverse-surface text-primary-container-about px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
-            Modern Technology
-          </div>
-          <div className="bg-inverse-surface text-primary-container-about px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
-            Honest Prices
-          </div>
+      {/* Trust Badges */}
+      <section className="mb-24 pb-12">
+        <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto px-6">
+          {['Pain-Free Care', 'Experienced Dentists', 'Modern Technology', 'Honest Prices'].map((badge) => (
+            <div key={badge} className="bg-slate-50 border border-slate-200 text-slate-700 px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] shadow-sm flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-primary"></div>
+              {badge}
+            </div>
+          ))}
         </div>
       </section>
+
+      <TransformationCTA />
     </main>
   );
 }

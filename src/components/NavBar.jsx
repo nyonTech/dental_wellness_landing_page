@@ -1,10 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/service", label: "Services" },
+    { href: "/doctor_listing", label: "Doctors" },
+    { href: "/contact", label: "Contact" },
+  ];
 
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-6 lg:px-20 py-4 bg-background-light/80 backdrop-blur-md sticky top-0 z-50">
@@ -12,20 +22,33 @@ export default function NavBar() {
         <div className="w-10 overflow-hidden rounded-lg">
           <img alt="Clinic Logo" className="w-full h-full object-cover" src="/logo.png" />
         </div>
-        <h2 className="text-slate-900 text-xl leading-tight tracking-tight uppercase">
+        <Link href="/" className="text-slate-900 text-xl leading-tight tracking-tight uppercase hover:opacity-80 transition-opacity">
           <span className="font-bold text-[var(--color-primary)]">Dental </span>
           Wellness
-        </h2>
+        </Link>
       </div>
       <div className="flex items-center gap-6">
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="/" className='text-slate-600 text-sm font-medium hover:text-primary transition-colors'>Home</Link>
-          <Link href="/about" className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" >About</Link>
-          <Link href="/service" className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" >Services</Link>
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (pathname.startsWith(link.href) && link.href !== '/');
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium transition-all ${
+                  isActive 
+                    ? "text-primary border-b-2 border-primary pb-1 font-bold" 
+                    : "text-slate-600 hover:text-primary"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
-        <button className="hidden md:flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-white text-sm font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20">
-          Contact Us
-        </button>
+        <Link href="/contact" className="hidden md:flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-white text-sm font-bold transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
+          Book Appointment
+        </Link>
 
         {/* Mobile Menu Toggle */}
         <button
@@ -41,17 +64,30 @@ export default function NavBar() {
 
       {/* Mobile Nav Dropdown */}
       <div
-        className={`absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg md:hidden flex flex-col px-6 gap-6 z-50 overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "max-h-96 py-6 opacity-100" : "max-h-0 py-0 opacity-0 pointer-events-none"
-          }`}
+        className={`absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg md:hidden flex flex-col px-6 gap-6 z-50 overflow-hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? "max-h-96 py-6 opacity-100" : "max-h-0 py-0 opacity-0 pointer-events-none"
+        }`}
       >
         <nav className="flex flex-col gap-4">
-          <a className="text-slate-800 text-base font-semibold hover:text-primary transition-colors" href="#" onClick={() => setIsMobileMenuOpen(false)}>Home</a>
-          <a className="text-slate-800 text-base font-semibold hover:text-primary transition-colors" href="#" onClick={() => setIsMobileMenuOpen(false)}>About</a>
-          <a className="text-slate-800 text-base font-semibold hover:text-primary transition-colors" href="#" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (pathname.startsWith(link.href) && link.href !== '/');
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`text-base font-semibold transition-colors ${
+                  isActive ? "text-primary" : "text-slate-800 hover:text-primary"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
-        <button className="flex w-full cursor-pointer items-center justify-center rounded-full h-12 px-6 bg-primary text-white text-base font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20" onClick={() => setIsMobileMenuOpen(false)}>
-          Contact Us
-        </button>
+        <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="flex w-full cursor-pointer items-center justify-center rounded-full h-12 px-6 bg-primary text-white text-base font-bold transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
+          Book Appointment
+        </Link>
       </div>
     </header>
   );

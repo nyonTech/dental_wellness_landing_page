@@ -9,7 +9,7 @@ export default function ServiceCard({ item }) {
       <img src={item.image} alt={item.title} className="service-card__image" />
       <div className="service-card__footer">
         <Link href={item.href} className="service-card__link">
-          <span className="service-card__cta">{item.cta}</span>
+          <span className="service-card__cta">LEARN MORE</span>
           <span className="service-card__arrow">&rarr;</span>
         </Link>
       </div>

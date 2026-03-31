@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 import ServiceCard from "@/components/ServiceCard";
+import Link from "next/link";
+import services from "@/data/services";
 
 const SOCIAL_CHIPS = [
   { label: "i", className: "service-hero__chip--dark" },
@@ -9,63 +11,20 @@ const SOCIAL_CHIPS = [
   { label: "+2k", className: "service-hero__chip--gold" },
 ];
 
-const SERVICE_TABS = ["ALL SERVICES", "COSMETIC", "ORTHODONTICS", "RESTORATIVE", "SPECIALTY"];
+const mappedServices = services.map((service) => ({
+  id: service.id,
+  category: service.category.toUpperCase(),
+  kicker: (service.badge || service.category).toUpperCase(),
+  title: service.title,
+  description: service.description,
+  image: service.imageSrc || service.heroImage,
+  cta: service.linkText ? service.linkText.toUpperCase() : "LEARN MORE",
+  href: `/service/${service.id}`,
+}));
 
-const SERVICES = [
-  {
-    category: "ORTHODONTICS",
-    kicker: "ORTHODONTICS",
-    title: "Invisalign",
-    description: "Virtually invisible aligners custom-made to straighten your smile without brackets or wires.",
-    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80",
-    cta: "LEARN MORE",
-    href: "/service/invisalign",
-  },
-  {
-    category: "RESTORATIVE",
-    kicker: "RESTORATIVE",
-    title: "Dental Implants",
-    description: "The gold standard for tooth replacement. Permanent, natural-looking, and fully functional results.",
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80",
-    cta: "VIEW GALLERY",
-    href: "/service/dental-implants",
-  },
-  {
-    category: "COSMETIC",
-    kicker: "COSMETIC",
-    title: "Teeth Whitening",
-    description: "Professional-grade brightening that removes years of staining in a single luxury session.",
-    image: "https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=900&q=80",
-    cta: "BOOK SESSION",
-    href: "/service/teeth-whitening",
-  },
-  {
-    category: "COSMETIC",
-    kicker: "SIGNATURE SERVICE",
-    title: "Porcelain Veneers",
-    description: "Handcrafted thin shells designed to perfect the shape, color, and alignment of your smile.",
-    image: "https://images.unsplash.com/photo-1579684453423-f84349ef60b0?auto=format&fit=crop&w=900&q=80",
-    cta: "THE PORTFOLIO",
-    href: "/service/porcelain-veneers",
-  },
-  {
-    category: "SPECIALTY",
-    kicker: "24/7 AVAILABILITY",
-    title: "Emergency Care",
-    description: "Immediate relief and urgent care for dental traumas, pain, or accidents when you need it most.",
-    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80",
-    cta: "CALL NOW",
-    href: "/service/emergency-care",
-  },
-  {
-    category: "SPECIALTY",
-    kicker: "SPECIALTY",
-    title: "Oral Surgery",
-    description: "Expert surgical precision for extractions, bone grafting, and complex structural repairs.",
-    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80",
-    cta: "DETAILS",
-    href: "/service/oral-surgery",
-  },
+const SERVICE_TABS = [
+  "ALL SERVICES",
+  ...Array.from(new Set(mappedServices.map((s) => s.category))),
 ];
 
 function SocialChips() {
@@ -99,7 +58,7 @@ function ServiceTabs({ activeTab, onSelect }) {
   );
 }
 
-function TransformationCTA() {
+export function TransformationCTA() {
   return (
     <section className="service-transform" aria-label="Ready for your transformation">
       <div className="service-transform__bg-word" aria-hidden="true">
@@ -117,12 +76,12 @@ function TransformationCTA() {
           results.
         </p>
         <div className="service-transform__actions">
-          <a href="#" className="service-transform__btn service-transform__btn--gold">
+          <Link href="/contact" className="service-transform__btn service-transform__btn--gold">
             Book Consultation
-          </a>
-          <a href="#" className="service-transform__btn service-transform__btn--dark">
+          </Link>
+          <Link href="/about" className="service-transform__btn service-transform__btn--dark">
             Tour the Clinic
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -134,9 +93,9 @@ export default function ServiceListing() {
 
   const visibleServices = useMemo(() => {
     if (activeTab === "ALL SERVICES") {
-      return SERVICES;
+      return mappedServices;
     }
-    return SERVICES.filter((item) => item.category === activeTab);
+    return mappedServices.filter((item) => item.category === activeTab);
   }, [activeTab]);
 
   return (
@@ -157,10 +116,10 @@ export default function ServiceListing() {
             </p>
 
             <div className="service-hero__actions">
-              <button type="button" className="service-hero__cta">
-                Explore Catalog
-              </button>
-              <SocialChips />
+              <Link href="/contact" className="service-hero__cta">
+                Book Now
+              </Link>
+              {/* <SocialChips /> */}
             </div>
           </div>
 

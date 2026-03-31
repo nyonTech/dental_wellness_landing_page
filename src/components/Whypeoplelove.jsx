@@ -6,21 +6,21 @@ import AreaThumbnail from './AreaThumbnail';
 const reviews = [
   {
     id: 1,
-    name: 'Emily W.',
+    name: 'Mrs. J. Nagamani',
     videoSrc: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-    thumbnailSrc: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80',
+    thumbnailSrc: '/images/tstns/testimonials_1.jpg',
   },
   {
     id: 2,
-    name: 'Sarah D.',
+    name: 'Ashwin',
     videoSrc: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-    thumbnailSrc: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80',
+    thumbnailSrc: '/images/tstns/testimonials_2.jpg',
   },
   {
     id: 3,
-    name: 'Jennifer M.',
+    name: 'Ashwini Changule',
     videoSrc: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4',
-    thumbnailSrc: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80',
+    thumbnailSrc: '/images/tstns/testimonials_3.jpg',
   },
 ];
 

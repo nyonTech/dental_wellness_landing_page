@@ -3,20 +3,20 @@ import EducationCard from "./EducationCard";
 const educationCards = [
   {
     id: 1,
-    title: "Emergencies",
-    description: "Here at Goodman Orthodontics we know how frightening a dental emergency can be.",
+    title: "Root Canal vs Extraction",
+    description: "Confused between a root canal and tooth extraction? Learn the pros, cons, costs, and long-term benefits.",
     featured: true,
   },
   {
     id: 2,
-    title: "Orthodontic Treatment",
-    description: "We believe everyone deserves a smile they're proud to show off.",
+    title: "Myths & Facts",
+    description: "Are root canals painful or unsafe? Learn the truth about common root canal myths, pain, and safety.",
     featured: false,
   },
   {
     id: 3,
-    title: "Foods to Avoid",
-    description: "When you're rocking braces, we are here to provide you with high-quality tips.",
+    title: "When Do I Need One?",
+    description: "Learn about the signs of needing endodontic treatment, such as prolonged sensitivity or deep decay.",
     featured: false,
   },
 ];
@@ -37,9 +37,8 @@ export default function EducationCenter() {
           </div>
           <div className="edu-header__right">
             <p className="edu-header__description">
-              In our Education Center, you'll find a wealth of informative articles, videos, and
-              FAQs covering a wide range of dental topics including emergencies, treatments
-              and food guides.
+              In our Education Center, you'll find a wealth of informative articles, insights, and
+              FAQs covering a wide range of dental topics to help you maintain a healthy smile.
             </p>
           </div>
         </div>

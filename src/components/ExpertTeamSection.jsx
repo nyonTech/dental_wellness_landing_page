@@ -4,11 +4,12 @@ import Link from "next/link";
 import { DOCTORS } from "@/data/doctors";
 
 const WORKING_HOURS = [
-  { day: 'Monday', time: '08:00 - 20:00' },
-  { day: 'Tuesday', time: '08:00 - 20:00' },
-  { day: 'Wednesday', time: '08:00 - 20:00' },
-  { day: 'Friday', time: '10:00 - 16:00' },
-  { day: 'Saturday', time: '10:00 - 16:00' },
+  { day: 'Monday', time: '10 AM - 02 PM   & 5 PM - 08 PM' },
+  { day: 'Tuesday', time: '10 AM - 02 PM   & 5 PM - 08 PM' },
+  { day: 'Wednesday', time: '10 AM - 02 PM   & 5 PM - 08 PM' },
+  { day: 'Thursday', time: '10 AM - 02 PM   & 5 PM - 08 PM' },
+  { day: 'Friday', time: '10 AM - 02 PM   & 5 PM - 08 PM' },
+  { day: 'Saturday', time: '10 AM - 02 PM   & 5 PM - 08 PM' },
 ];
 
 export default function ExpertTeamSection() {

@@ -37,10 +37,10 @@ export default function DoctorListing() {
               Meet the dedicated specialists committed to your perfect smile.
             </p>
           </div>
-          <button type="button" className="doctor-listing__hero-cta">
+          <Link href="/contact" className="doctor-listing__hero-cta">
             Book Consultation
             <ArrowRight size={16} strokeWidth={2.5} />
-          </button>
+          </Link>
         </div>
 
         <div className="doctor-listing__toolbar">
@@ -72,27 +72,27 @@ export default function DoctorListing() {
                 className="doctor-listing__item-link"
                 aria-label={`View details for ${doctor.name}`}
               >
-              <article className="doctor-listing__item doctor-listing__item--clickable">
-                <div className="doctor-listing__item-left">
-                  <div className="doctor-listing__avatar-wrap">
-                    <img src={doctor.image} alt={doctor.name} className="doctor-listing__avatar" />
-                    {doctor.availableToday ? <span className="doctor-listing__status-dot" /> : null}
+                <article className="doctor-listing__item doctor-listing__item--clickable">
+                  <div className="doctor-listing__item-left">
+                    <div className="doctor-listing__avatar-wrap">
+                      <img src={doctor.image} alt={doctor.name} className="doctor-listing__avatar" />
+                      {doctor.availableToday ? <span className="doctor-listing__status-dot" /> : null}
+                    </div>
+                    <div className="doctor-listing__details">
+                      <h4>{doctor.name}</h4>
+                      <p className="doctor-listing__specialty">{doctor.specialty}</p>
+                      <p className="doctor-listing__description">{doctor.description}</p>
+                    </div>
                   </div>
-                  <div className="doctor-listing__details">
-                    <h4>{doctor.name}</h4>
-                    <p className="doctor-listing__specialty">{doctor.specialty}</p>
-                    <p className="doctor-listing__description">{doctor.description}</p>
+                  <div className="doctor-listing__item-right">
+                    {doctor.availableToday ? (
+                      <span className="doctor-listing__availability">AVAILABLE TODAY</span>
+                    ) : null}
+                    <span className="doctor-listing__arrow" aria-hidden="true">
+                      <ChevronRight size={18} />
+                    </span>
                   </div>
-                </div>
-                <div className="doctor-listing__item-right">
-                  {doctor.availableToday ? (
-                    <span className="doctor-listing__availability">AVAILABLE TODAY</span>
-                  ) : null}
-                  <span className="doctor-listing__arrow" aria-hidden="true">
-                    <ChevronRight size={18} />
-                  </span>
-                </div>
-              </article>
+                </article>
               </Link>
             );
           })}

@@ -37,7 +37,7 @@ export default function Footer() {
                 <p className="font-semibold text-slate-800">Dental Wellness</p>
                 <p>#177, A Block, AECS Layout,</p>
                 <p>Next to Kundalahalli P.O.</p>
-                <p>Brookfields, Bangalore-560037</p>
+                <p>Brookefield, Bangalore-560037</p>
               </div>
             </div>
 

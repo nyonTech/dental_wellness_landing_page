@@ -6,7 +6,7 @@ export default function DoctorProfile() {
         {/* Left: Stat Cards */}
         <div className="doctor-stats">
           <div className="stat-card stat-card--yellow">
-            <div className="stat-number">25</div>
+            <div className="stat-number">18+</div>
             <div className="stat-label-group">
               <span className="stat-label">Years of Experience</span>
             </div>
@@ -29,24 +29,24 @@ export default function DoctorProfile() {
           <div className="doctor-image-bg"></div>
           <img
             className="doctor-photo"
-            src="https://api.builder.io/api/v1/image/assets/TEMP/adb7c89c507d6b11aee61061f3cb90795f1e21f6?width=768"
-            alt="Dr. John"
+            src="/images/about-img1.jpg"
+            alt="Dr. Shobha Nangrani"
           />
         </div>
 
         {/* Right: Doctor Info */}
         <div className="doctor-info">
-          <h2 className="doctor-name">Dr. John</h2>
+          <h2 className="doctor-name">Dr. Shobha Nangrani</h2>
 
           <p className="doctor-tagline">
-            Combines cutting-edge diagnostic and therapeutic technology with his more than 25 years of extensive orthodontic experience.
+            Founder of Dental Wellness, achieving state ranks in Endodontics and Oral Surgery, providing gentle care with modern dentistry.
           </p>
 
           <p className="doctor-description">
-            Our extensive experience, beautiful offices, and friendly talented staff make us your premier destination for orthodontic treatment in the Manhattan and Riverdale areas.
+            We very well know that visiting a dentist is a common phobia. Give us an opportunity to help you to change that belief. Be rest assured that when you come to us, you will leave with a happy, healthy smile.
           </p>
 
-          <a href="#" className="doctor-book-btn">
+          <a href="/contact" className="doctor-book-btn">
             Book Online
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25Z" fill="#111827" />
