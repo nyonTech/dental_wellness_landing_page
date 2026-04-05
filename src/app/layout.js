@@ -66,6 +66,9 @@ export const metadata = {
   },
 };
 
+import FloatingCTAs from "@/components/FloatingCTAs";
+import AppointmentModal from "@/components/AppointmentModal";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -75,7 +78,11 @@ export default function RootLayout({ children }) {
         <NavBar />
         {children}
         <Footer />
+        <FloatingCTAs />
+        <AppointmentModal />
       </body>
     </html>
   );
 }
+
+
