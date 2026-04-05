@@ -42,7 +42,16 @@ export default function WhyPeopleLove() {
     return () => clearInterval(timer);
   }, []);
 
-  const offsetVal = window.innerWidth > 768 ? 50 : 100;
+  const [offsetVal, setOffsetVal] = useState(100);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setOffsetVal(window.innerWidth > 768 ? 50 : 100);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <section className="bg-[#FBFBFB] py-24 lg:py-32 overflow-hidden font-montserrat">
