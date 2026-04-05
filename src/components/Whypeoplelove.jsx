@@ -42,6 +42,8 @@ export default function WhyPeopleLove() {
     return () => clearInterval(timer);
   }, []);
 
+  const offsetVal = window.innerWidth > 768 ? 50 : 100;
+
   return (
     <section className="bg-[#FBFBFB] py-24 lg:py-32 overflow-hidden font-montserrat">
       <div className="max-w-7xl mx-auto px-6">
@@ -81,10 +83,10 @@ export default function WhyPeopleLove() {
           {/* Track */}
           <div
             className="flex transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]"
-            style={{ transform: `translateX(-${activeIndex * 50}%)` }}
+            style={{ transform: `translateX(-${activeIndex * offsetVal}%)` }}
           >
             {writtenReviews.map((review) => (
-              <div key={review.id} className="w-1/2 shrink-0 px-2 lg:px-4">
+              <div key={review.id} className="w-full md:w-1/2 shrink-0 px-2 lg:px-4">
                 <div className="bg-white rounded-[40px] p-8 md:p-8 shadow-xl shadow-slate-200/40 relative overflow-hidden group">
                   {/* Decorative Elements */}
                   <div className="absolute top-0 right-0 p-8 text-primary/10 group-hover:text-primary/20 transition-colors duration-500">
