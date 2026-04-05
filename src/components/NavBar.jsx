@@ -19,12 +19,12 @@ export default function NavBar() {
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-6 lg:px-20 py-4 bg-background-light/80 backdrop-blur-md sticky top-0 z-50">
       <div className="flex items-center gap-3">
-        <div className="w-10 overflow-hidden rounded-lg">
-          <img alt="Clinic Logo" className="w-full h-full object-cover" src="/logo.png" />
-        </div>
         <Link href="/" className="text-slate-900 text-xl leading-tight tracking-tight uppercase hover:opacity-80 transition-opacity">
-          <span className="font-bold text-[var(--color-primary)]">Dental </span>
-          Wellness
+          <div className="w-40 overflow-hidden rounded-lg">
+            <img alt="Clinic Logo" className="w-full h-full object-cover" src="/images/logo-2.png" />
+          </div>
+          {/* <span className="font-bold text-[var(--color-primary)]">Dental </span>
+          Wellness */}
         </Link>
       </div>
       <div className="flex items-center gap-6">
@@ -35,11 +35,10 @@ export default function NavBar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-all ${
-                  isActive 
-                    ? "text-primary border-b-2 border-primary pb-1 font-bold" 
-                    : "text-slate-600 hover:text-primary"
-                }`}
+                className={`text-sm font-medium transition-all ${isActive
+                  ? "text-primary border-b-2 border-primary pb-1 font-bold"
+                  : "text-slate-600 hover:text-primary"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -64,9 +63,8 @@ export default function NavBar() {
 
       {/* Mobile Nav Dropdown */}
       <div
-        className={`absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg md:hidden flex flex-col px-6 gap-6 z-50 overflow-hidden transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen ? "max-h-96 py-6 opacity-100" : "max-h-0 py-0 opacity-0 pointer-events-none"
-        }`}
+        className={`absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg md:hidden flex flex-col px-6 gap-6 z-50 overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "max-h-96 py-6 opacity-100" : "max-h-0 py-0 opacity-0 pointer-events-none"
+          }`}
       >
         <nav className="flex flex-col gap-4">
           {navLinks.map((link) => {
@@ -76,9 +74,8 @@ export default function NavBar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-base font-semibold transition-colors ${
-                  isActive ? "text-primary" : "text-slate-800 hover:text-primary"
-                }`}
+                className={`text-base font-semibold transition-colors ${isActive ? "text-primary" : "text-slate-800 hover:text-primary"
+                  }`}
               >
                 {link.label}
               </Link>

@@ -113,7 +113,7 @@ export default function ComingSoon3() {
         {/* Doctor Profile Section */}
         <DoctorProfile />
 
-        {/* Unique Offerings Section */}
+        {/* Signature Services Section */}
         <UniqueOfferings />
 
         <EducationCenter />

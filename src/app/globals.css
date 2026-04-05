@@ -2909,9 +2909,12 @@ body {
   }
 
   .expert-team__doctors {
-    flex-direction: column;
-    overflow: visible;
+    /* Keep horizontal for carousel */
+    flex-direction: row;
+    overflow: hidden;
     border-radius: 24px;
+    padding: 0;
+    margin: 0;
   }
 
   .doctor-card {
@@ -3309,6 +3312,7 @@ body {
     width: 100%;
     flex-direction: row;
     overflow-x: auto;
+    height: auto;
   }
 
   .clinic-tour__thumbnails {
@@ -6198,6 +6202,6 @@ body {
   .article-final-cta__btn {
     width: 100%;
     justify-content: center;
-    font-size: 14px;
+    font-size: 1px;
   }
 }

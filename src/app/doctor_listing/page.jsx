@@ -5,7 +5,7 @@ export default function DoctorListingPage() {
     <div className="bg-white font-display text-slate-900 antialiased  min-h-screen">
       <div className="relative flex min-h-screen w-full flex-col">
         <DoctorListing />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );

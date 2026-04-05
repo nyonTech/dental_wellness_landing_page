@@ -1,42 +1,9 @@
 "use client";
 
-import OfferingCard from "./OfferingCard";
+import ServiceCard from "./ServiceCard";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-
-const offerings = [
-  {
-    id: 1,
-    featured: true,
-    image: "/images/image_7.jpg",
-    title: "Root Canal Treatment",
-    description: "Get expert root canal treatment with our top specialists. We offer pain-free, precise procedures.",
-  },
-  {
-    id: 2,
-    image: "/images/image_6.jpg",
-    title: "Cosmetic Dentistry",
-    description: "Transform your smile with the top cosmetic dentist in AECS Layout. We specialize in smile makeovers.",
-  },
-  {
-    id: 3,
-    image: "/images/image_9.jpg",
-    title: "Cosmetic Fillings",
-    description: "Restore damaged teeth beautifully with advanced cosmetic fillings for a natural, healthy look.",
-  },
-  {
-    id: 4,
-    image: "/images/image_5.jpg",
-    title: "Crowns & Bridges",
-    description: "Get high-quality dental crowns and bridges. Restore damaged or missing teeth with our expert restorative treatments.",
-  },
-  {
-    id: 5,
-    image: "/images/image_7.jpg",
-    title: "Dental Check-ups",
-    description: "Trust our dental clinic for comprehensive dental check-ups. Our experienced team provides personalized care.",
-  },
-];
+import services from "@/data/services";
 
 export default function UniqueOfferings() {
   const scrollContainerRef = useRef(null);
@@ -105,10 +72,10 @@ export default function UniqueOfferings() {
         <div className="offerings-header flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
           <div className="offerings-heading-group max-w-2xl">
             <h2 className="offerings-title font-headline text-4xl md:text-5xl font-black text-slate-900 mb-4">
-              Our Unique Offerings
+              Signature Dental Services
             </h2>
             <p className="offerings-subtitle font-body text-slate-600 text-lg">
-              Dental Wellness takes pride in providing advanced specialized treatments with exceptional personal care.
+              Explore our comprehensive range of specialized dental treatments designed for your ultimate comfort and well-being.
             </p>
           </div>
           <Link href="/service" className="offerings-view-all shrink-0 inline-flex flex-row items-center gap-2 font-bold text-sm tracking-widest uppercase text-slate-900 hover:text-primary transition-colors group">
@@ -127,13 +94,21 @@ export default function UniqueOfferings() {
             ref={scrollContainerRef}
             className="flex items-stretch gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 pt-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] w-full"
           >
-            {offerings.map((offering) => (
+            {services.map((service) => (
               <div
-                key={offering.id}
+                key={service.id}
                 className="snap-start shrink-0 w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] transition-transform duration-300 h-full"
               >
                 <div className="h-full">
-                  <OfferingCard {...offering} />
+                  <ServiceCard
+                    item={{
+                      kicker: service.badge,
+                      title: service.title,
+                      description: service.description,
+                      image: service.imageSrc || service.heroImage,
+                      href: `/service/${service.id}`
+                    }}
+                  />
                 </div>
               </div>
             ))}

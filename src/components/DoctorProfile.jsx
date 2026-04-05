@@ -1,4 +1,10 @@
+import { DOCTORS } from "@/data/doctors";
+
 export default function DoctorProfile() {
+  const shobha = DOCTORS.find(d => d.slug === "shobha-nangrani");
+
+  if (!shobha) return null;
+
   return (
     <section className="doctor-section">
       <div className="doctor-container xl:max-w-7xl xl:m-auto">
@@ -6,7 +12,7 @@ export default function DoctorProfile() {
         {/* Left: Stat Cards */}
         <div className="doctor-stats">
           <div className="stat-card stat-card--yellow">
-            <div className="stat-number">18+</div>
+            <div className="stat-number">{shobha.experienceYears}</div>
             <div className="stat-label-group">
               <span className="stat-label">Years of Experience</span>
             </div>
@@ -15,9 +21,9 @@ export default function DoctorProfile() {
           </div>
 
           <div className="stat-card stat-card--dark">
-            <div className="stat-number stat-number--yellow">+50k</div>
+            <div className="stat-number stat-number--yellow">{shobha.patientsCount}</div>
             <div className="stat-label-group">
-              <span className="stat-label stat-label--light">Satisfied Customers</span>
+              <span className="stat-label stat-label--light">Happy Patients</span>
             </div>
             <div className="stat-accent-bar stat-accent-bar--yellow"></div>
             <div className="stat-blur-orb stat-blur-orb--bottom-left"></div>
@@ -29,27 +35,27 @@ export default function DoctorProfile() {
           <div className="doctor-image-bg"></div>
           <img
             className="doctor-photo"
-            src="/images/about-img1.jpg"
-            alt="Dr. Shobha Nangrani"
+            src={shobha.image}
+            alt={shobha.name}
           />
         </div>
 
         {/* Right: Doctor Info */}
         <div className="doctor-info">
-          <h2 className="doctor-name">Dr. Shobha Nangrani</h2>
+          <h2 className="doctor-name">{shobha.name}</h2>
 
           <div className="doctor-degrees">
-            <span className="doctor-degree-badge">BDS</span>
-            <span className="doctor-degree-badge">MDS — Conservative Dentistry &amp; Endodontics</span>
-            <span className="doctor-degree-badge">Fellowship in Cosmetic Dentistry</span>
+            {shobha.description.split('. ').map((part, i) => (
+              <span key={i} className="doctor-degree-badge">{part}</span>
+            ))}
           </div>
 
           <p className="doctor-tagline">
-            Founder of Dental Wellness with over 18 years of experience in Root Canal Treatment &amp; Cosmetic Dentistry. State rank holder in Endodontics &amp; Oral Surgery from R.V. Dental College, Bangalore.
+            {shobha.profileSummary}
           </p>
 
           <p className="doctor-description">
-            We very well know that visiting a dentist is a common phobia. Give us an opportunity to help you change that belief. Be rest assured that when you come to us, as our tagline goes, you will leave with a happy, healthy smile.
+            {shobha.biography}
           </p>
 
           <a href="/contact" className="doctor-book-btn">
@@ -64,3 +70,4 @@ export default function DoctorProfile() {
     </section>
   );
 }
+
