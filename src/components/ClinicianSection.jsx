@@ -7,35 +7,35 @@ export default function ClinicianSection() {
           <div className="clinician-image-overlay" />
           <img
             className="clinician-photo"
-            src="https://api.builder.io/api/v1/image/assets/TEMP/1ce495f52d7cf34915b17d80b318e79d82f20434?width=1168"
-            alt="Dr. Julian Vane"
+            src="/images/about-img1.jpg"
+            alt="Dr. Shobha Nangrani"
           />
         </div>
 
         {/* Right: Doctor Info */}
         <div className="clinician-info">
-          <span className="clinician-eyebrow">Master Clinician</span>
+          <span className="clinician-eyebrow">Founder & Chief Dentist</span>
 
-          <h2 className="clinician-name">Dr. Julian<br />Vane</h2>
+          <h2 className="clinician-name">Dr. Shobha<br />Nangrani</h2>
 
           <p className="clinician-bio">
-            With over 20 years of focus in aesthetic implantology, Dr. Vane has
-            pioneered the &quot;Minimal Intervention, Maximal Result&quot; protocol used
-            globally.
+            Founder of Dental Wellness with over 18 years of experience. A specialist in 
+            Endodontics and Cosmetic Dentistry, Dr. Shobha is dedicated to providing 
+            painless, ethical, and high-quality dental care.
           </p>
 
           <div className="clinician-credentials">
             <div className="clinician-credential-item">
               <span className="clinician-credential-label">Education</span>
-              <span className="clinician-credential-value">Harvard School of Dental Medicine</span>
+              <span className="clinician-credential-value">MDS (Conservative Dentistry & Endodontics)</span>
             </div>
             <div className="clinician-credential-item">
               <span className="clinician-credential-label">Fellowship</span>
-              <span className="clinician-credential-value">International Congress of Oral Implantologists (FICOI)</span>
+              <span className="clinician-credential-value">Cosmetic Dentistry (ENCODE, Mumbai)</span>
             </div>
           </div>
 
-          <a href="#" className="clinician-cta-btn">Meet the Doctor</a>
+          <a href="/about" className="clinician-cta-btn">View Full Profile</a>
         </div>
       </div>
     </section>

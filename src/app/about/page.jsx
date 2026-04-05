@@ -195,6 +195,181 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Section: Founder Profile */}
+      <section className="py-24 lg:py-36 px-6 lg:px-8 bg-surface relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-primary-container-about/5 rounded-full blur-[120px] pointer-events-none -translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary-fixed/5 rounded-full blur-[80px] pointer-events-none translate-x-1/4 translate-y-1/4"></div>
+
+        <div className="max-w-[1440px] mx-auto relative z-10">
+          {/* Section Header */}
+          <div className="mb-20">
+            <span className="label-md uppercase tracking-[0.2em] text-primary-about font-bold mb-4 block">The Founder</span>
+            <h2 className="font-headline font-black text-5xl md:text-6xl text-primary-about leading-tight">
+              DR. SHOBHA <span className="font-light italic text-primary">NANGRANI.</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+            {/* Left: Photo + Quick Stats */}
+            <div className="lg:col-span-5">
+              <div className="relative">
+                {/* Main Photo */}
+                <div className="aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl group relative">
+                  <img
+                    alt="Dr. Shobha Nangrani — Founder of Dental Wellness"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    src="/images/about-img1.jpg"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  {/* Overlay Info */}
+                  <div className="absolute bottom-0 left-0 right-0 p-8">
+                    <p className="text-white font-headline font-bold text-2xl mb-1">Dr. Shobha Nangrani</p>
+                    <p className="text-primary-container-about text-sm font-bold uppercase tracking-wider">Founder & Chief Dentist</p>
+                  </div>
+                </div>
+
+                {/* Degree Badges */}
+                <div className="flex flex-wrap gap-2 mt-6">
+                  <span className="inline-flex px-4 py-2 rounded-full bg-primary-container-about/20 text-primary-about text-xs font-bold uppercase tracking-wider border border-primary-container-about/30">
+                    BDS
+                  </span>
+                  <span className="inline-flex px-4 py-2 rounded-full bg-primary-container-about/20 text-primary-about text-xs font-bold uppercase tracking-wider border border-primary-container-about/30">
+                    MDS — Conservative Dentistry & Endodontics
+                  </span>
+                  <span className="inline-flex px-4 py-2 rounded-full bg-primary-container-about/20 text-primary-about text-xs font-bold uppercase tracking-wider border border-primary-container-about/30">
+                    Fellowship in Cosmetic Dentistry (ENCODE, Mumbai)
+                  </span>
+                </div>
+
+                {/* Quick Stats Row */}
+                <div className="grid grid-cols-3 gap-4 mt-8">
+                  <div className="bg-surface-container-low rounded-2xl p-5 text-center border border-outline-variant/10">
+                    <p className="font-headline font-black text-2xl text-primary-about">18+</p>
+                    <p className="text-[10px] uppercase tracking-widest text-secondary mt-1">Years Exp.</p>
+                  </div>
+                  <div className="bg-surface-container-low rounded-2xl p-5 text-center border border-outline-variant/10">
+                    <p className="font-headline font-black text-2xl text-primary-about">4</p>
+                    <p className="text-[10px] uppercase tracking-widest text-secondary mt-1">Memberships</p>
+                  </div>
+                  <div className="bg-surface-container-low rounded-2xl p-5 text-center border border-outline-variant/10">
+                    <p className="font-headline font-black text-2xl text-primary">2003</p>
+                    <p className="text-[10px] uppercase tracking-widest text-secondary mt-1">Colgate Award</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Full Bio */}
+            <div className="lg:col-span-7">
+              <div className="space-y-10">
+                {/* Education */}
+                <div>
+                  <h3 className="font-headline font-bold text-2xl text-primary-about mb-4 flex items-center gap-3">
+                    <span className="w-10 h-10 rounded-xl bg-primary-container-about/20 flex items-center justify-center text-primary-about shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 10 3 12 0v-5"/></svg>
+                    </span>
+                    Education & Training
+                  </h3>
+                  <div className="space-y-4 text-secondary leading-relaxed font-light">
+                    <p>
+                      Dr. Shobha graduated from <span className="font-semibold text-primary-about">R.V. Dental College of Dental Sciences, Bangalore</span> — one of the top-rated dental schools in India — securing state ranks in Endodontics and Oral Surgery. She was awarded the prestigious <span className="font-semibold text-primary">Colgate Scholarship</span> for being the best outgoing student in 2003.
+                    </p>
+                    <p>
+                      She completed her post graduation in Conservative Dentistry and Endodontics at <span className="font-semibold text-primary-about">Bangalore Institute of Dental Sciences</span> in 2007, under the guidance of Dr. Ramya Raghu — a well-known name in the Endodontic fraternity and author of numerous textbooks in Conservative Dentistry and Endodontics.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Divider */}
+                <div className="h-px bg-outline-variant/20"></div>
+
+                {/* Teaching & Fellowship */}
+                <div>
+                  <h3 className="font-headline font-bold text-2xl text-primary-about mb-4 flex items-center gap-3">
+                    <span className="w-10 h-10 rounded-xl bg-primary-container-about/20 flex items-center justify-center text-primary-about shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </span>
+                    Academic Career & Fellowship
+                  </h3>
+                  <div className="space-y-4 text-secondary leading-relaxed font-light">
+                    <p>
+                      She served as <span className="font-semibold text-primary-about">Assistant Professor at Dr. Syamala Reddy Dental College</span> from 2007–2009, teaching both graduate and post-graduate students. She subsequently worked as a visiting faculty at Teethankar Mahaveer Dental College, Moradabad until 2013.
+                    </p>
+                    <p>
+                      In 2013, she completed her <span className="font-semibold text-primary">Fellowship Program in Aesthetics & Cosmetic Dentistry</span> at ENCODE Mumbai under Dr. Sandesh Mayekar and his team — a renowned cosmetic dentist in India and abroad, and official dentist to the Miss India pageant.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Divider */}
+                <div className="h-px bg-outline-variant/20"></div>
+
+                {/* Professional Memberships */}
+                <div>
+                  <h3 className="font-headline font-bold text-2xl text-primary-about mb-4 flex items-center gap-3">
+                    <span className="w-10 h-10 rounded-xl bg-primary-container-about/20 flex items-center justify-center text-primary-about shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                    </span>
+                    Professional Memberships
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div className="flex items-center gap-3 p-4 rounded-2xl bg-surface-container-low border border-outline-variant/10 hover:border-primary-container-about/40 transition-colors">
+                      <div className="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+                      <span className="text-sm text-primary-about font-medium">Indian Endodontic Society (IES)</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-4 rounded-2xl bg-surface-container-low border border-outline-variant/10 hover:border-primary-container-about/40 transition-colors">
+                      <div className="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+                      <span className="text-sm text-primary-about font-medium">Indian Dental Association (IDA)</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-4 rounded-2xl bg-surface-container-low border border-outline-variant/10 hover:border-primary-container-about/40 transition-colors">
+                      <div className="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+                      <span className="text-sm text-primary-about font-medium">Indian Academy of Aesthetic & Cosmetic Dentistry (IAACD)</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-4 rounded-2xl bg-surface-container-low border border-outline-variant/10 hover:border-primary-container-about/40 transition-colors">
+                      <div className="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+                      <span className="text-sm text-primary-about font-medium">Academy of Craniofacial Aesthetics in India (ACFAI)</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Divider */}
+                <div className="h-px bg-outline-variant/20"></div>
+
+                {/* Vision */}
+                <div>
+                  <h3 className="font-headline font-bold text-2xl text-primary-about mb-4 flex items-center gap-3">
+                    <span className="w-10 h-10 rounded-xl bg-primary-container-about/20 flex items-center justify-center text-primary-about shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    </span>
+                    Vision & Philosophy
+                  </h3>
+                  <div className="space-y-4 text-secondary leading-relaxed font-light">
+                    <p>
+                      Dr. Shobha confines her work to Endodontics and Cosmetic Dentistry and has assembled a team of well-experienced specialists for all other dental specialities. She has built an office that combines the most advanced technological approach to dentistry with an incredibly skilled and credentialed panel of specialists — hand-picked for their commitment to excellent results and quality patient care.
+                    </p>
+                    <p>
+                      Her aim is to offer a clean, clutter-free, and pleasant ambience clubbed with a treatment experience that begins with truly listening to the patient. Dental Wellness is equipped to evaluate simple and complex oral needs in a personalized and ethical manner, presenting feasible and affordable treatment options following strict ADA sterilization guidelines.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Quote Highlight */}
+                <div className="relative bg-on-surface text-white p-8 rounded-3xl overflow-hidden">
+                  <div className="absolute -right-10 -top-10 w-40 h-40 bg-primary-container-about/10 rounded-full blur-[30px]"></div>
+                  <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-primary/10 rounded-full blur-[30px]"></div>
+                  <svg className="text-primary-container-about/30 mb-4" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M10 11H6C6 7.686 8.686 5 12 5V3C7.582 3 4 6.582 4 11V19H10V11ZM20 11H16C16 7.686 18.686 5 22 5V3C17.582 3 14 6.582 14 11V19H20V11Z"/></svg>
+                  <p className="text-lg font-light leading-relaxed relative z-10 italic">
+                    We very well know that visiting a dentist is a common phobia. Give us an opportunity to help you change that belief. Be rest assured that when you come to us, as our tagline goes, <span className="text-primary-container-about font-semibold not-italic">you will leave with a happy, healthy smile.</span>
+                  </p>
+                  <p className="mt-4 text-sm text-primary-container-about font-bold uppercase tracking-wider relative z-10">— Dr. Shobha Nangrani</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section 3: Mission & Values (3D Feel/Icons) */}
       <section className="py-32 px-8 bg-surface relative overflow-hidden">
         {/* Decorative elements */}

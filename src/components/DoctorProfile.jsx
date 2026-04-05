@@ -38,12 +38,18 @@ export default function DoctorProfile() {
         <div className="doctor-info">
           <h2 className="doctor-name">Dr. Shobha Nangrani</h2>
 
+          <div className="doctor-degrees">
+            <span className="doctor-degree-badge">BDS</span>
+            <span className="doctor-degree-badge">MDS — Conservative Dentistry &amp; Endodontics</span>
+            <span className="doctor-degree-badge">Fellowship in Cosmetic Dentistry</span>
+          </div>
+
           <p className="doctor-tagline">
-            Founder of Dental Wellness, achieving state ranks in Endodontics and Oral Surgery, providing gentle care with modern dentistry.
+            Founder of Dental Wellness with over 18 years of experience in Root Canal Treatment &amp; Cosmetic Dentistry. State rank holder in Endodontics &amp; Oral Surgery from R.V. Dental College, Bangalore.
           </p>
 
           <p className="doctor-description">
-            We very well know that visiting a dentist is a common phobia. Give us an opportunity to help you to change that belief. Be rest assured that when you come to us, you will leave with a happy, healthy smile.
+            We very well know that visiting a dentist is a common phobia. Give us an opportunity to help you change that belief. Be rest assured that when you come to us, as our tagline goes, you will leave with a happy, healthy smile.
           </p>
 
           <a href="/contact" className="doctor-book-btn">

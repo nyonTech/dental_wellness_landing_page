@@ -39,8 +39,8 @@ export default function WhyPeopleLove() {
         <SectionHeader
           title="Why People Love Dental Wellness"
           subtitle="We take pride in providing exceptional dental care and creating positive experiences for our patients."
-          ctaLabel="Add Your Review"
-          onCtaClick={handleAddReview}
+          // ctaLabel="Add Your Review"
+          // onCtaClick={handleAddReview}
           variant="ppl"
         />
         <div className="why-people-love__grid">

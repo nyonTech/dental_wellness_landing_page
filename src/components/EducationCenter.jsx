@@ -1,3 +1,4 @@
+import articles from "@/data/articles";
 import EducationCard from "./EducationCard";
 
 const educationCards = [
@@ -48,7 +49,8 @@ export default function EducationCenter() {
           {/* Dental model image */}
           <div className="edu-image-wrap">
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/5d435561cb806ffa5c21dc29a949f04b97c18017?width=494"
+              // src="https://api.builder.io/api/v1/image/assets/TEMP/5d435561cb806ffa5c21dc29a949f04b97c18017?width=494"
+              src="/images/learning_hero.png"
               alt="3D dental model"
               className="edu-dental-image"
             />
@@ -56,7 +58,7 @@ export default function EducationCenter() {
 
           {/* Cards */}
           <div className="edu-cards">
-            {educationCards.map((card) => (
+            {articles.slice(0, 3).map((card) => (
               <EducationCard key={card.id} {...card} />
             ))}
           </div>

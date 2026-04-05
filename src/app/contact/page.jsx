@@ -1,7 +1,39 @@
-import React from "react";
+"use client";
+
+import React, { useRef, useState } from "react";
 import { TransformationCTA } from "@/components/ServiceListing";
+import emailjs from "@emailjs/browser";
+import services from "@/data/services";
 
 export default function ContactPage() {
+  const form = useRef();
+  const [status, setStatus] = useState(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    emailjs
+      .sendForm(
+        "service_7z6i26k", // Placeholder - User should replace with their ID
+        "template_8l3890r", // Placeholder - User should replace with their ID
+        form.current,
+        "pW0v2k9T7X9Y8Z1A2" // Placeholder - User should replace with their ID
+      )
+      .then(
+        () => {
+          setStatus("success");
+          form.current.reset();
+          setTimeout(() => setStatus(null), 5000);
+        },
+        (error) => {
+          console.error("FAILED...", error.text);
+          setStatus("error");
+          setTimeout(() => setStatus(null), 5000);
+        }
+      );
+  };
+
   return (
     <main className="bg-surface text-slate-800 font-display min-h-screen pt-24 lg:pt-32 relative overflow-hidden">
       {/* Background Decor */}
@@ -82,10 +114,6 @@ export default function ContactPage() {
                         <span className="text-slate-300">Mon &mdash; Sat</span>
                         <span className="font-bold">10AM - 2PM & 5PM - 8PM</span>
                       </li>
-                      {/* <li className="flex justify-between items-center pt-1">
-                        <span className="text-slate-300">Sunday</span>
-                        <span className="font-bold text-primary">09:00 &mdash; 22:00</span>
-                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -100,15 +128,17 @@ export default function ContactPage() {
                   <p className="text-slate-500 font-body">Fill out the form below and our receptionist will reach out to confirm your booking.</p>
                 </div>
 
-                <form className="space-y-8">
+                <form ref={form} onSubmit={sendEmail} className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-2">
                       <label className="text-xs uppercase tracking-widest font-bold text-slate-500 ml-1" htmlFor="name">Full Name</label>
                       <input
                         className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-slate-800 font-medium"
                         id="name"
+                        name="user_name"
                         placeholder="John Doe"
                         type="text"
+                        required
                       />
                     </div>
                     <div className="space-y-2">
@@ -116,8 +146,10 @@ export default function ContactPage() {
                       <input
                         className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-slate-800 font-medium"
                         id="email"
+                        name="user_email"
                         placeholder="john@example.com"
                         type="email"
+                        required
                       />
                     </div>
                   </div>
@@ -128,8 +160,10 @@ export default function ContactPage() {
                       <input
                         className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-slate-800 font-medium"
                         id="phone"
+                        name="user_phone"
                         placeholder="+91..."
                         type="tel"
+                        required
                       />
                     </div>
                     <div className="space-y-2">
@@ -137,15 +171,14 @@ export default function ContactPage() {
                       <select
                         className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-slate-800 font-medium appearance-none"
                         id="service"
+                        name="service"
                         defaultValue=""
+                        required
                       >
                         <option disabled value="">Select a Service</option>
-                        <option>General Checkup</option>
-                        <option>Cosmetic Dentistry</option>
-                        <option>Dental Implants</option>
-                        <option>Root Canal Treatment</option>
-                        <option>Braces & Invisalign</option>
-                        <option>Emergency Care</option>
+                        {services.map(service => (
+                          <option value={service.title}>{service.title}</option>
+                        ))}
                       </select>
                     </div>
                   </div>
@@ -155,18 +188,31 @@ export default function ContactPage() {
                     <textarea
                       className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-slate-800 font-medium resize-none"
                       id="message"
+                      name="message"
                       placeholder="How can we help you?"
                       rows="4"
                     ></textarea>
                   </div>
 
                   <button
-                    className="w-full md:w-auto bg-slate-900 text-white px-10 py-5 rounded-2xl font-headline font-bold hover:bg-primary transition-colors flex items-center justify-center group"
+                    className="w-full md:w-auto bg-slate-900 text-white px-10 py-5 rounded-2xl font-headline font-bold hover:bg-primary transition-colors flex items-center justify-center group disabled:opacity-70 disabled:cursor-not-allowed"
                     type="submit"
+                    disabled={status === "sending"}
                   >
-                    Dispatch Inquiry
+                    {status === "sending" ? "Booking..." : "Book Appointment"}
                     <svg xmlns="http://www.w3.org/2000/svg" className="ml-3 group-hover:translate-x-1 transition-transform" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                   </button>
+
+                  {status === "success" && (
+                    <div className="text-green-600 bg-green-50 p-4 rounded-2xl text-sm font-semibold animate-in fade-in slide-in-from-bottom-2 duration-500">
+                      Inquiry dispatched successfully! Our team will reach out shortly.
+                    </div>
+                  )}
+                  {status === "error" && (
+                    <div className="text-red-600 bg-red-50 p-4 rounded-2xl text-sm font-semibold animate-in fade-in slide-in-from-bottom-2 duration-500">
+                      Failed to dispatch inquiry. Please try again or call us directly.
+                    </div>
+                  )}
                 </form>
               </div>
             </div>

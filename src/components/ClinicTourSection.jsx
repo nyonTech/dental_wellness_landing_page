@@ -1,6 +1,7 @@
 /**
  * ClinicTourSection
- * Interactive clinic tour with video viewer + video thumbnails.
+ * Interactive clinic tour with image/video viewer + thumbnails.
+ * NOTE: Video fields are preserved for future use. Currently displaying images.
  */
 
 'use client';
@@ -16,22 +17,41 @@ const TOUR_AREAS = [
   {
     id: 'reception',
     label: 'Reception Area',
+    // Videos — will replace images once available
     previewVideo: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
     mainVideo: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+    // Images — used as placeholders until videos arrive
+    previewImage: '/images/facility-img2.jpg',
+    mainImage: '/images/facility-img2.jpg',
   },
   {
     id: 'treatment',
     label: 'Treatment Room',
     previewVideo: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
     mainVideo: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+    previewImage: '/images/facility-img1.jpg',
+    mainImage: '/images/facility-img1.jpg',
   },
   {
-    id: 'xray',
-    label: 'X-Ray Suite',
+    id: 'treatment2',
+    label: 'Treatment Room 2',
+    previewVideo: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+    mainVideo: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+    previewImage: '/images/treatment_room_2.jpg',
+    mainImage: '/images/treatment_room_2.jpg',
+  },
+  {
+    id: 'dr_room',
+    label: 'Dr. Room',
     previewVideo: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4',
     mainVideo: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4',
+    previewImage: '/images/facility-img3.jpg',
+    mainImage: '/images/facility-img3.jpg',
   },
 ];
+
+// Toggle this to `true` when real videos are available
+const USE_VIDEO = false;
 
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
@@ -56,6 +76,8 @@ export default function ClinicTourSection() {
   }, []);
 
   useEffect(() => {
+    if (!USE_VIDEO) return;
+
     const video = mainVideoRef.current;
     if (!video) {
       return;
@@ -120,48 +142,58 @@ export default function ClinicTourSection() {
       <div className="clinic-tour__container">
         <SectionHeader
           title="Clinic Visual Tour Experience"
-          subtitle="Explore our high-tech facility from the comfort of your home with our immersive 360 degree interactive tour."
+          subtitle="Explore our high-tech facility from the comfort of your home."
         />
 
         <div className="clinic-tour__content">
           <div className="clinic-tour__viewer" ref={viewerRef}>
-            
+
             <div
               className="clinic-tour__viewer-media"
               style={{ transform: `scale(${zoom})` }}
             >
-              <video
-                key={currentArea.id}
-                ref={mainVideoRef}
-                src={currentArea.mainVideo}
-                className="clinic-tour__viewer-video"
-                playsInline
-                preload="metadata"
-                onEnded={() => setIsPlaying(false)}
-              />
+              {USE_VIDEO ? (
+                <video
+                  key={currentArea.id}
+                  ref={mainVideoRef}
+                  src={currentArea.mainVideo}
+                  className="clinic-tour__viewer-video"
+                  playsInline
+                  preload="metadata"
+                  onEnded={() => setIsPlaying(false)}
+                />
+              ) : (
+                <img
+                  key={currentArea.id}
+                  src={currentArea.mainImage}
+                  alt={currentArea.label}
+                  className="clinic-tour__viewer-video"
+                />
+              )}
             </div>
 
-            {!isPlaying && (
+            {USE_VIDEO && !isPlaying && (
               <div className="clinic-tour__play-wrapper">
                 <PlayButton size={96} onClick={handleTogglePlay} />
               </div>
             )}
-             <div className="clinic-tour__live-badge">
-                <LiveBadge label={`${currentArea.label}${isFullscreen ? ' (Fullscreen)' : ''}`} />
-             </div>
-              
-            <div className="clinic-tour__overlays">
-              
-              <TourControls
-                isPlaying={isPlaying}
-                onTogglePlay={handleTogglePlay}
-                onZoomOut={handleZoomOut}
-                onZoomIn={handleZoomIn}
-                onSeekBackward={handleSeekBackward}
-                onSeekForward={handleSeekForward}
-                onToggleFullscreen={handleToggleFullscreen}
-              />
+            <div className="clinic-tour__live-badge">
+              <LiveBadge label={`${currentArea.label}${isFullscreen ? ' (Fullscreen)' : ''}`} />
             </div>
+
+            {USE_VIDEO && (
+              <div className="clinic-tour__overlays">
+                <TourControls
+                  isPlaying={isPlaying}
+                  onTogglePlay={handleTogglePlay}
+                  onZoomOut={handleZoomOut}
+                  onZoomIn={handleZoomIn}
+                  onSeekBackward={handleSeekBackward}
+                  onSeekForward={handleSeekForward}
+                  onToggleFullscreen={handleToggleFullscreen}
+                />
+              </div>
+            )}
           </div>
 
           <div className="clinic-tour__panel">
@@ -173,7 +205,8 @@ export default function ClinicTourSection() {
               {TOUR_AREAS.map((area, index) => (
                 <AreaThumbnail
                   key={area.id}
-                  videoSrc={area.previewVideo}
+                  videoSrc={USE_VIDEO ? area.previewVideo : undefined}
+                  imageSrc={!USE_VIDEO ? area.previewImage : undefined}
                   label={area.label}
                   isActive={activeArea === index}
                   onClick={() => handleSelectArea(index)}

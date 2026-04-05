@@ -1,10 +1,12 @@
 /**
  * AreaThumbnail - Clickable room/area thumbnail card
  * Figma: 280x160px, border-radius 32px, dark overlay 40%, label text
+ * Supports both video and image backgrounds.
  */
 
 export default function AreaThumbnail({
   videoSrc,
+  imageSrc,
   label,
   isActive = false,
   onClick,
@@ -19,16 +21,24 @@ export default function AreaThumbnail({
       aria-pressed={isActive}
       type="button"
     >
-      {/* Background video preview */}
-      <video
-        src={videoSrc}
-        className="area-thumbnail__video"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-      />
+      {/* Background: video or image */}
+      {videoSrc ? (
+        <video
+          src={videoSrc}
+          className="area-thumbnail__video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        />
+      ) : (
+        <img
+          src={imageSrc}
+          alt={label}
+          className="area-thumbnail__video"
+        />
+      )}
 
       {/* Dark overlay */}
       <div className="area-thumbnail__overlay" />

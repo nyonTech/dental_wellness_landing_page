@@ -44,7 +44,7 @@ export default function SmileTransformations() {
           <div className="smile-accent-bar"></div>
           <div className="smile-subtitle-wrap">
             <p className="smile-subtitle">
-              Experience the power of a perfect smile. Drag the slider to see the incredible results our patients achieve.
+              Experience the power of a perfect smile. View the incredible results our patients achieve.
             </p>
           </div>
         </div>
@@ -71,17 +71,17 @@ export default function SmileTransformations() {
                 src="/images/smile-2.png"
                 alt="Before transformation"
               />
-              <img
+              {/* <img
                 className="smile-comparison__after"
                 src="/images/smile-2.png"
                 alt="After transformation"
-              />
+              /> */}
               <div className="smile-comparison__divider">
-                <div className="smile-comparison__handle">
+                {/* <div className="smile-comparison__handle">
                   <svg width="10" height="24" viewBox="0 0 10 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.6 24L0.025 19.425L1.425 18.025L4.6 21.175L7.775 18L9.175 19.425L4.6 24ZM4.6 19L0.025 14.425L1.425 13.025L4.6 16.175L7.775 13L9.175 14.425L4.6 19ZM1.425 11.025L0 9.6L4.6 5L9.175 9.6L7.75 11.025L4.6 7.85L1.425 11.025ZM1.425 6.025L0 4.6L4.6 0L9.175 4.6L7.75 6.025L4.6 2.85L1.425 6.025Z" fill="black" />
                   </svg>
-                </div>
+                </div> */}
               </div>
               <span className="smile-comparison__label smile-comparison__label--before">BEFORE</span>
               <span className="smile-comparison__label smile-comparison__label--after">AFTER</span>
@@ -112,20 +112,20 @@ export default function SmileTransformations() {
               <div className="smile-comparison smile-comparison--small">
                 <img
                   className="smile-comparison__before"
-                  src="/images/smile-1.png"
+                  src="/images/smile-2.jpg"
                   alt="Before realignment"
                 />
-                <img
+                {/* <img
                   className="smile-comparison__after"
                   src="/images/smile-1.png"
                   alt="After realignment"
-                />
+                /> */}
                 <div className="smile-comparison__divider">
-                  <div className="smile-comparison__handle">
+                  {/* <div className="smile-comparison__handle">
                     <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5 18L0 13L5 8L6.425 9.4L3.825 12H19V14H3.825L6.425 16.6L5 18ZM15 10L13.575 8.6L16.175 6H1V4H16.175L13.575 1.4L15 0L20 5L15 10Z" fill="black" />
                     </svg>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
