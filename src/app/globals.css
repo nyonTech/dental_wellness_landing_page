@@ -4180,7 +4180,7 @@ body {
 
 .doctor-details__book {
   border: none;
-  background: rgba(255, 255, 255, 0.34);
+  /* background: rgba(255, 255, 255, 0.34); */
   color: #1f2937;
   border-radius: 9999px;
   padding: 10px 18px;

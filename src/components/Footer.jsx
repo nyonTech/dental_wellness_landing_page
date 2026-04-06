@@ -6,13 +6,13 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
         <div className="flex flex-col gap-6 items-center md:items-start text-center md:text-left">
           <div className="flex items-center gap-3">
-            <div className="w-8 overflow-hidden rounded-lg">
-              <img alt="Clinic Logo" className="w-full h-full object-cover" src="/logo.png" />
+            <div className="w-26 overflow-hidden rounded-lg">
+              <img alt="Clinic Logo" className="w-full h-full object-cover" src="/images/logo-2.png" />
             </div>
-            <h2 className="text-slate-900 text-lg leading-tight tracking-tight uppercase">
+            {/* <h2 className="text-slate-900 text-lg leading-tight tracking-tight uppercase">
               <span className="font-bold text-[var(--color-primary)]">Dental </span>
               Wellness
-            </h2>
+            </h2> */}
           </div>
           <p className="text-sm text-slate-500 max-w-xs">
             Providing world-class dental care with a focus on your comfort and well-being. Modern technology meets compassionate care.

@@ -62,7 +62,7 @@ export function TransformationCTA() {
   return (
     <section className="service-transform" aria-label="Ready for your transformation">
       <div className="service-transform__bg-word" aria-hidden="true">
-        LUXE
+        DENTAL WELLNESS
       </div>
       <div className="service-transform__inner">
         <h2 className="service-transform__title">
@@ -72,15 +72,14 @@ export function TransformationCTA() {
           </span>
         </h2>
         <p className="service-transform__subtitle">
-          Join thousands of patients who have redefined their smiles at Luxe Dental. Luxury experience, legendary
-          results.
+          Join thousands of patients who have redefined their smiles at Dental Wellness.
         </p>
         <div className="service-transform__actions">
           <Link href="/contact" className="service-transform__btn service-transform__btn--gold">
-            Book Consultation
+            Book Appointment
           </Link>
           <Link href="/about" className="service-transform__btn service-transform__btn--dark">
-            Tour the Clinic
+            About Us
           </Link>
         </div>
       </div>
@@ -132,9 +131,9 @@ export default function ServiceListing() {
               />
               <div className="service-hero__overlay">
                 <p className="service-hero__quote">
-                  "The attention to detail at Luxe is unparalleled. They didn&apos;t just fix my teeth, they designed my confidence."
+                  "The attention to detail at Dental Wellness is unparalleled. They didn&apos;t just fix my teeth, they designed my confidence."
                 </p>
-                <p className="service-hero__author">- Julianne V., Fashion Editor</p>
+                <p className="service-hero__author">- Nagendra Mohan, Patient</p>
               </div>
             </article>
           </div>

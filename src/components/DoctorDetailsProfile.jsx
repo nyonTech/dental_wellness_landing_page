@@ -89,12 +89,8 @@ export default function DoctorDetailsProfile({ doctor }) {
             </div>
 
             <div className="doctor-details__footer">
-              <div className="doctor-details__next">
-                <span>NEXT AVAILABLE</span>
-                <strong>{doctor.nextAvailable}</strong>
-              </div>
               <Link href="/contact" className="doctor-details__book">
-                Book Now
+                Book Appointment
               </Link>
             </div>
           </article>

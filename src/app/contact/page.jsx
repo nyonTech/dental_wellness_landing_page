@@ -35,13 +35,13 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-surface text-slate-800 font-display min-h-screen pt-24 lg:pt-32 relative overflow-hidden">
+    <main className="bg-surface text-slate-800 font-display min-h-screen pt-24 lg:pt-20 relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-container-about/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-wave-pattern -z-10 opacity-40"></div>
 
       {/* Hero Section */}
-      <section className="px-6 md:px-12 max-w-[1440px] mx-auto mb-20 md:mb-32 relative z-10">
+      <section className="px-6 md:px-12 max-w-[1440px] mx-auto mb-20 md:mb-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
             <span className="inline-block mb-4 font-body uppercase tracking-[0.25em] text-xs font-bold text-primary">
@@ -76,7 +76,7 @@ export default function ContactPage() {
       </section>
 
       {/* Information & Contact Form */}
-      <section className="bg-surface-container-low py-24 md:py-40 relative">
+      <section className="bg-surface-container-low py-16 md:py-20 relative">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12">
           <div className="flex flex-col lg:flex-row gap-20">
 
@@ -222,7 +222,7 @@ export default function ContactPage() {
       </section>
 
       {/* Location Section */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-12 my-24 md:my-40">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-12 my-16 md:my-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 overflow-hidden rounded-[40px] bg-slate-900 text-white shadow-2xl border border-slate-800">
           <div className="lg:col-span-5 p-12 md:p-20 flex flex-col justify-center relative z-10">
             <div className="w-16 h-16 bg-primary-container-about rounded-2xl flex items-center justify-center mb-10 shadow-lg">
@@ -251,16 +251,16 @@ export default function ContactPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-slate-900 to-transparent"></div>
 
             {/* Map Pin Pulse */}
-            <div className="absolute top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+            {/* <div className="absolute top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
               <div className="w-8 h-8 bg-primary rounded-full animate-ping absolute opacity-80"></div>
               <div className="w-6 h-6 bg-primary rounded-full relative shadow-[0_0_30px_rgba(244,196,48,1)] border-2 border-white"></div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
       {/* Trust Badges */}
-      <section className="mb-24 pb-12">
+      <section className="mb-20">
         <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto px-6">
           {['Pain-Free Care', 'Experienced Dentists', 'Modern Technology', 'Honest Prices'].map((badge) => (
             <div key={badge} className="bg-slate-50 border border-slate-200 text-slate-700 px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] shadow-sm flex items-center gap-3">

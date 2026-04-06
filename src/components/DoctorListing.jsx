@@ -85,9 +85,9 @@ export default function DoctorListing() {
                     </div>
                   </div>
                   <div className="doctor-listing__item-right">
-                    {doctor.availableToday ? (
+                    {/* {doctor.availableToday ? (
                       <span className="doctor-listing__availability">AVAILABLE TODAY</span>
-                    ) : null}
+                    ) : null} */}
                     <span className="doctor-listing__arrow" aria-hidden="true">
                       <ChevronRight size={18} />
                     </span>
