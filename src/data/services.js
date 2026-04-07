@@ -166,26 +166,87 @@ const services = [
       }
     ]
   },
-  {
-    id: "braces",
-    category: "Orthodontics",
-    title: "Modern Braces",
-    badge: "Orthodontics",
-    tagline: "Proven precision. Perfect alignment.",
-    description:
-      "Traditional and modern orthodontic solutions for a perfectly aligned smile at any age.",
-    longDescription:
-      "While Invisalign is a great option for many, traditional braces remain the most effective way to treat complex alignment issues. We offer both traditional metal braces and modern ceramic (clear) braces that are more discreet, ensuring you reach your smile goals with the most reliable technology available.",
-    imageSrc: "/images/services/braces.png",
-    heroImage: "/images/services/braces.png",
-    linkText: "Consultation",
-    benefits: [
-      "Treats complex cases reliably",
-      "Multiple material options (Metal/Ceramic)",
-      "Precise, predictable results",
-      "Suitable for all ages",
-    ],
-  },
+{
+  id: "braces-orthodontics",
+  category: "Orthodontic",
+  title: "Braces & Orthodontics",
+  badge: "Orthodontics",
+  tagline: "Precision alignment for a healthier, more confident smile at any age.",
+  description:
+    "Achieve a perfectly aligned smile with our expert orthodontists in AECS Layout. We offer a range of personalized dental braces designed to straighten teeth and improve long-term oral health.",
+  longDescription:
+    "Orthodontic treatment is about more than just aesthetics; it’s an investment in a healthier mouth and teeth that are built to last a lifetime. By applying gentle, consistent pressure, braces gradually shift your teeth and jaw into their ideal positions. At our advanced clinic, we are committed to providing effective treatments tailored to your unique facial structure, whether you are looking for traditional solutions or the latest in discreet alignment technology.",
+  detailedHtml: `
+    <p class="mb-4">Braces function through a sophisticated system of small brackets bonded to the teeth, connected by specialized archwires and medical-grade rubber bands. Your orthodontist periodically adjusts these components to guide tooth movement with clinical precision.</p>
+    
+    <h4 class="text-xl font-bold text-gray-900 mt-8 mb-4">Orthodontics for Every Generation</h4>
+    <p class="mb-4">It is a common misconception that braces are only for teenagers. In reality, both children and adults can benefit from orthodontic care in Whitefield. While treatment can start as early as age eight to guide developing jaws, we frequently help adults in their 50s and beyond achieve the smile they’ve always wanted. The primary requirement is healthy bone structure to support the movement of the teeth.</p>
+    
+    <h4 class="text-xl font-bold text-gray-900 mt-8 mb-4">Our Braces Selection</h4>
+    <ul class="list-none space-y-4">
+      <li class="flex items-start">
+        <span class="mr-3 mt-1 text-[#f3bf2c] text-xl leading-none">&bull;</span>
+        <span><strong>Traditional Metal Braces:</strong> Crafted from high-grade stainless steel, these remain the most popular and durable choice for children and teenagers due to their reliability and strength.</span>
+      </li>
+      <li class="flex items-start">
+        <span class="mr-3 mt-1 text-[#f3bf2c] text-xl leading-none">&bull;</span>
+        <span><strong>Ceramic (Clear) Braces:</strong> These translucent brackets are designed to blend seamlessly with your natural tooth color. They offer a more discreet appearance while remaining resistant to staining throughout your treatment.</span>
+      </li>
+      <li class="flex items-start">
+        <span class="mr-3 mt-1 text-[#f3bf2c] text-xl leading-none">&bull;</span>
+        <span><strong>Hidden Braces (Incognito™):</strong> For maximum discretion, these lingual braces are placed on the back of the teeth, making them completely invisible from the outside while delivering powerful results.</span>
+      </li>
+    </ul>
+  `,
+  imageSrc: "/images/services/braces.png",
+  heroImage: "/images/services/braces.png",
+  linkText: "More Info",
+  benefits: [
+    "Corrects overcrowding and spacing issues",
+    "Improves jaw alignment and bite function",
+    "Reduces the risk of tooth decay and gum disease",
+    "Boosts self-esteem with a symmetrical smile",
+  ],
+  faqs: [
+    {
+      question: "What is the best age to start orthodontic treatment?",
+      answer: "We recommend an initial screening by age seven or eight. This allows us to monitor jaw growth and intervene early if necessary, though we successfully treat patients of all ages, including adults."
+    },
+    {
+      question: "How long will I need to wear braces?",
+      answer: "Treatment duration varies depending on the complexity of the case, but most patients wear braces for 18 to 24 months. We provide a more accurate timeline after your initial diagnostic consultation."
+    },
+    {
+      question: "Do braces cause significant pain?",
+      answer: "You may feel some soreness or pressure for a few days after the initial placement or subsequent adjustments. This is a sign that your teeth are moving and can be easily managed with standard over-the-counter pain relief."
+    },
+    {
+      question: "Can I still eat my favorite foods with braces?",
+      answer: "While you should avoid very sticky or hard foods (like caramel or ice) that can damage the brackets, most of your diet will remain the same. We provide a full guide on how to eat comfortably during your treatment."
+    },
+    {
+      question: "Are clear braces as effective as metal ones?",
+      answer: "Yes, ceramic braces are just as effective at moving teeth as traditional metal braces. They simply offer a more aesthetic, low-profile look for patients concerned about the visibility of their treatment."
+    }
+  ],
+  features: [
+    {
+      title: "Individualized Treatment Plans",
+      description: "We use precise diagnostics to map out the exact movement of every tooth for a predictable, perfect result.",
+      icon: <LayoutIcon />
+    },
+    {
+      title: "Advanced Material Science",
+      description: "Utilizing stain-resistant ceramics and high-tech archwires that reduce discomfort and treatment time.",
+      icon: <ShieldCheckIcon />
+    },
+    {
+      title: "Invisible Alignment Options",
+      description: "Specialized in lingual (hidden) braces for professionals and adults seeking a completely discreet transformation.",
+      icon: <EyeOffIcon />
+    }
+  ]
+},
   {
     id: "dental-implants",
     category: "Restorative",
@@ -583,26 +644,26 @@ const services = [
       }
     ]
   },
-  {
-    id: "oral-surgery",
-    category: "Specialty",
-    title: "Oral Surgery",
-    badge: "Specialty",
-    tagline: "Precision surgery, compassionate recovery.",
-    description:
-      "Expert surgical precision for extractions, bone grafting, and complex structural repairs.",
-    longDescription:
-      "Our oral surgery department handles everything from routine extractions to complex bone grafting and jaw reconstruction. Using the latest surgical technology and techniques, we ensure minimal discomfort and optimal healing outcomes for every patient.",
-    imageSrc: "/images/services/oral_surgery.jpg",
-    heroImage: "/images/services/oral_surgery.jpg",
-    linkText: "Details",
-    benefits: [
-      "Board-certified oral surgeons",
-      "Advanced imaging technology",
-      "Sedation options available",
-      "Comprehensive aftercare support",
-    ],
-  },
+  // {
+  //   id: "oral-surgery",
+  //   category: "Specialty",
+  //   title: "Oral Surgery",
+  //   badge: "Specialty",
+  //   tagline: "Precision surgery, compassionate recovery.",
+  //   description:
+  //     "Expert surgical precision for extractions, bone grafting, and complex structural repairs.",
+  //   longDescription:
+  //     "Our oral surgery department handles everything from routine extractions to complex bone grafting and jaw reconstruction. Using the latest surgical technology and techniques, we ensure minimal discomfort and optimal healing outcomes for every patient.",
+  //   imageSrc: "/images/services/oral_surgery.jpg",
+  //   heroImage: "/images/services/oral_surgery.jpg",
+  //   linkText: "Details",
+  //   benefits: [
+  //     "Board-certified oral surgeons",
+  //     "Advanced imaging technology",
+  //     "Sedation options available",
+  //     "Comprehensive aftercare support",
+  //   ],
+  // },
   {
     id: "crowns-and-bridges",
     category: "Restorative",
