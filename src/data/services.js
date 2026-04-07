@@ -1,4 +1,4 @@
-import { MicroscopeIcon, SmileIcon, VerifiedIcon, Sparkles, ShieldCheck, Utensils, ScanIcon, ShieldCheckIcon, ZapIcon, LayersIcon, SparklesIcon, PaletteIcon, TargetIcon, ClockIcon, BrushIcon, ActivityIcon, WindIcon, UsersIcon, UserCheckIcon, HeartPulseIcon, TrendingUpIcon, DropletsIcon } from "lucide-react";
+import { MicroscopeIcon, SmileIcon, VerifiedIcon, Sparkles, ShieldCheck, Utensils, ScanIcon, ShieldCheckIcon, ZapIcon, LayersIcon, SparklesIcon, PaletteIcon, TargetIcon, ClockIcon, BrushIcon, ActivityIcon, WindIcon, UsersIcon, UserCheckIcon, HeartPulseIcon, TrendingUpIcon, DropletsIcon, EyeOffIcon, LayoutIcon } from "lucide-react";
 
 const services = [
   {
