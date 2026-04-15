@@ -16,11 +16,11 @@ export default function ClinicianSection() {
         <div className="clinician-info">
           <span className="clinician-eyebrow">Founder & Chief Dentist</span>
 
-          <h2 className="clinician-name">Dr. Shobha<br />Nangrani</h2>
+          <h2 className="clinician-name">Dr. Shobha Nangrani</h2>
 
           <p className="clinician-bio">
-            Founder of Dental Wellness with over 18 years of experience. A specialist in 
-            Endodontics and Cosmetic Dentistry, Dr. Shobha is dedicated to providing 
+            Founder of Dental Wellness with over 18 years of experience. A specialist in
+            Endodontics and Cosmetic Dentistry, Dr. Shobha is dedicated to providing
             painless, ethical, and high-quality dental care.
           </p>
 

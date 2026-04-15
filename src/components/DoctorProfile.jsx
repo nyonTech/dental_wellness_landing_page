@@ -35,7 +35,7 @@ export default function DoctorProfile() {
           <div className="doctor-image-bg"></div>
           <img
             className="doctor-photo"
-            src={shobha.image}
+            src={'/images/about-img1.jpg'}
             alt={shobha.name}
           />
         </div>

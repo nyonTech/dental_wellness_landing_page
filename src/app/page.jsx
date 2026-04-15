@@ -30,7 +30,7 @@ export default function ComingSoon3() {
                 <h1 className="hero-title-dark">Trusted Dentist</h1>
                 <div className="hero-title-highlight-wrapper">
                   <span className="hero-title-amber">Near AECS Layout</span>
-                  <svg className="hero-underline-svg" width="498" height="12" viewBox="0 0 498 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* <svg className="hero-underline-svg" width="498" height="12" viewBox="0 0 498 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_hero)">
                       <path d="M0 6C165.677 10 331.353 10 497.03 6" stroke="black" strokeWidth="6.1703" />
                     </g>
@@ -39,7 +39,7 @@ export default function ComingSoon3() {
                         <rect width="497.03" height="12" fill="white" />
                       </clipPath>
                     </defs>
-                  </svg>
+                  </svg> */}
                 </div>
               </div>
 

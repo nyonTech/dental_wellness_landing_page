@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function SmileTransformations() {
   return (
     <section className="smile-section">
@@ -121,12 +123,12 @@ export default function SmileTransformations() {
                   Flexible appointment slots, including weekends
                 </li>
               </ul>
-              <a href="#contact" className="smile-cta-card__btn">
+              <Link href="/contact" className="smile-cta-card__btn">
                 Book Your Free Consultation
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginLeft: "8px" }}>
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </a>
+              </Link>
             </div>
 
           </div>

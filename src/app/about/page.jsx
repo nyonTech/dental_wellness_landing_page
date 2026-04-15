@@ -4,7 +4,7 @@ import { TransformationCTA } from "@/components/ServiceListing";
 
 export default function AboutPage() {
   return (
-    <main className="bg-surface text-primary-about font-body selection:bg-primary-container-about">
+    <main className="bg-surface text-primary-about font-outfit selection:bg-primary-container-about">
       {/* Section 1: Hero Editorial */}
       <section className="relative min-h-screen flex flex-col justify-center px-8 pt-20 pb-40 overflow-hidden">
         <div className="max-w-[1440px] mx-auto w-full grid grid-cols-12 gap-8 items-center relative z-10">
@@ -12,11 +12,11 @@ export default function AboutPage() {
             <span className="label-md uppercase tracking-[0.3em] text-primary-about opacity-80 mb-8 block">
               Est. 2008 — Bangalore
             </span>
-            <h1 className="font-headline font-black editorial-text-bleed text-[clamp(4rem,12vw,10rem)] text-black mb-12">
+            <h1 className="font-outfit font-black editorial-text-bleed text-[clamp(4rem,12vw,6rem)] text-black mb-12">
               DENTAL <br />
               <span className="text-primary italic">WELLNESS.</span>
             </h1>
-            <p className="max-w-md text-lg font-light leading-relaxed text-secondary border-l-4 border-primary-container-about pl-8">
+            <p className="max-w-md text-[16px] font-light leading-relaxed text-secondary border-l-4 border-primary-container-about pl-8">
               We don't just practice dentistry; we curate smiles in a clean, clutter-free, and pleasant ambience clubbed with an exceptional treatment experience.
             </p>
           </div>
@@ -58,7 +58,7 @@ export default function AboutPage() {
                 <h2 className="font-headline font-black text-5xl md:text-6xl text-primary-about leading-tight mb-6">
                   OUR <span className="font-light italic text-primary">STORY.</span>
                 </h2>
-                <p className="text-secondary leading-relaxed max-w-md">
+                <p className="text-secondary text-[16px] leading-relaxed max-w-md">
                   From a small specialized clinic to a full-fledged dental wellness center, our journey has been defined by an unwavering commitment to patient care and clinical excellence.
                 </p>
               </div>
@@ -205,7 +205,7 @@ export default function AboutPage() {
           {/* Section Header */}
           <div className="mb-20">
             <span className="label-md uppercase tracking-[0.2em] text-primary-about font-bold mb-4 block">The Founder</span>
-            <h2 className="font-headline font-black text-5xl md:text-6xl text-primary-about leading-tight">
+            <h2 className="font-outfit font-black text-5xl md:text-6xl text-primary-about leading-tight">
               DR. SHOBHA <span className="font-light italic text-primary">NANGRANI.</span>
             </h2>
           </div>
@@ -380,7 +380,7 @@ export default function AboutPage() {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-24 gap-12 border-b border-outline-variant/30 pb-16">
             <div className="max-w-3xl">
               <span className="label-md uppercase tracking-[0.2em] text-primary-about font-bold mb-6 block">Our Philosophy</span>
-              <h2 className="font-headline font-black text-6xl md:text-7xl leading-tight text-primary-about">
+              <h2 className="font-outfit font-black text-6xl md:text-7xl leading-tight text-primary-about">
                 CORE <span className="text-primary-about italic font-light">IDEOLOGY.</span>
               </h2>
             </div>
