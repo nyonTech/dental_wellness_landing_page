@@ -54,14 +54,14 @@ export default function WhyPeopleLove() {
   }, []);
 
   return (
-    <section className="bg-[#FBFBFB] py-24 lg:py-32 overflow-hidden font-montserrat">
+    <section className="bg-[#FBFBFB] py-24 lg:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 lg:mb-24 gap-8">
           <div className="max-w-2xl">
             <span className="inline-block text-primary font-bold tracking-[0.2em] mb-4 text-xs uppercase">
               Patient Experiences
             </span>
-            <h2 className="text-4xl lg:text-6xl font-black text-slate-900 leading-[1.1] mb-6">
+            <h2 className="text-4xl lg:text-6xl font-[600] text-slate-900 leading-[1.1] mb-6">
               Why People Love <br />
               <span className="text-primary italic font-light">Our Care.</span>
             </h2>

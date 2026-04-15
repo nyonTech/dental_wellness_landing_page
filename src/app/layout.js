@@ -1,4 +1,4 @@
-import { Manrope, Playfair_Display, Lora, Montserrat, Outfit, Epilogue, Inter } from "next/font/google";
+import { Manrope, Playfair_Display, Lora, Montserrat, Outfit, Epilogue, Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
@@ -6,6 +6,12 @@ import Footer from "@/components/Footer";
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
 });
 
 const playfair = Playfair_Display({
@@ -73,7 +79,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${manrope.variable} ${playfair.variable} ${lora.variable} ${outfit.variable} ${epilogue.variable} ${inter.variable} antialiased`}
+        className={`${poppins.variable} ${montserrat.variable} ${manrope.variable} ${playfair.variable} ${lora.variable} ${outfit.variable} ${epilogue.variable} ${inter.variable} antialiased`}
       >
         <NavBar />
         {children}

@@ -47,7 +47,7 @@ export default function ContactPage() {
             <span className="inline-block mb-4 font-body uppercase tracking-[0.25em] text-xs font-bold text-primary">
               Get In Touch
             </span>
-            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-slate-900 mb-8">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-[600] leading-tight tracking-tight text-slate-900 mb-8">
               Let's Brighten <br /> <span className="text-primary italic font-light">Your Smile.</span>
             </h1>
             <p className="text-slate-600 font-body text-lg leading-relaxed max-w-xl">
@@ -124,7 +124,7 @@ export default function ContactPage() {
             <div className="flex-1 lg:w-2/3">
               <div className="bg-white p-10 md:p-14 rounded-[40px] shadow-2xl border border-slate-100 relative">
                 <div className="mb-10">
-                  <h3 className="font-headline text-3xl font-black mb-4 text-slate-900">Book an Appointment</h3>
+                  <h3 className="font-headline text-3xl font-[600] mb-4 text-slate-900">Book an Appointment</h3>
                   <p className="text-slate-500 font-body">Fill out the form below and our receptionist will reach out to confirm your booking.</p>
                 </div>
 
