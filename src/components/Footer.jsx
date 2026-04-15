@@ -36,7 +36,7 @@ export default function Footer() {
               <div className="text-sm text-slate-600">
                 <p className="font-semibold text-slate-800">Dental Wellness</p>
                 <p>#177, A Block, AECS Layout,</p>
-                <p>Next to Kundalahalli P.O.</p>
+                <p>Diagonally opposite Bangalore One.</p>
                 <p>Brookefield, Bangalore-560037</p>
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function Footer() {
 
       <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-slate-500">
-          &copy; 2024 Dental Wellness Clinic. All rights reserved.
+          &copy; 2026 Dental Wellness Clinic. All rights reserved.
         </p>
         <p className="text-sm text-slate-400">
           Professional healthcare services.

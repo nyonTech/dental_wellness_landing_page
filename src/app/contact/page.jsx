@@ -231,8 +231,8 @@ export default function ContactPage() {
             <h2 className="font-headline text-4xl lg:text-5xl font-black mb-6 leading-tight">Visit Our <br /><span className="text-primary font-light italic">Clinic</span></h2>
             <address className="not-italic text-slate-300 font-body text-lg leading-relaxed mb-10 border-l-2 border-primary/50 pl-6">
               #177, A Block, AECS Layout<br />
-              Next to Kundalahalli P.O. Brookefield<br />
-              Bangalore - 560037
+              Diagonally opposite Bangalore One.<br />
+              Brookefield, Bangalore - 560037
             </address>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
