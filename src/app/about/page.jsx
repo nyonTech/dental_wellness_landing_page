@@ -29,12 +29,12 @@ export default function AboutPage() {
               />
               <div className="absolute inset-0 bg-primary-about/10 mix-blend-multiply"></div>
             </div>
-            <div className="absolute -bottom-10 -left-10 bg-on-surface text-white p-8 max-w-[240px] hidden md:block">
+            {/* <div className="absolute -bottom-10 -left-10 bg-on-surface text-white p-8 max-w-[240px] hidden md:block">
               <p className="font-headline font-bold text-4xl leading-none">99.8%</p>
               <p className="text-[10px] uppercase tracking-widest mt-2 opacity-60">
                 Accuracy in Prosthetic Alignment
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Background Decorative Text */}
@@ -75,9 +75,9 @@ export default function AboutPage() {
                   </span>
                   <div className="relative z-10">
                     <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">2008</span>
-                    <h3 className="font-headline font-bold text-3xl mb-4 text-primary-about">The Foundation</h3>
+                    <h3 className="font-headline font-bold text-3xl mb-4 text-primary-about">The Inception</h3>
                     <p className="text-on-surface-variant leading-relaxed font-light">
-                      Founded by Dr. Shobha Nangrani, Dental Wellness was established to bridge the gap between advanced specialized care and personal, empathetic patient interactions.
+                      Founded by Dr. Shobha Nangrani, Dental Wellness was established to bridge the gap between empathetic patient interactions and advanced specialized care.
                     </p>
                   </div>
                 </div>
@@ -267,7 +267,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="font-headline font-bold text-2xl text-primary-about mb-4 flex items-center gap-3">
                     <span className="w-10 h-10 rounded-xl bg-primary-container-about/20 flex items-center justify-center text-primary-about shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 10 3 12 0v-5"/></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 10 3 12 0v-5" /></svg>
                     </span>
                     Education & Training
                   </h3>
@@ -288,7 +288,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="font-headline font-bold text-2xl text-primary-about mb-4 flex items-center gap-3">
                     <span className="w-10 h-10 rounded-xl bg-primary-container-about/20 flex items-center justify-center text-primary-about shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>
                     </span>
                     Academic Career & Fellowship
                   </h3>
@@ -309,7 +309,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="font-headline font-bold text-2xl text-primary-about mb-4 flex items-center gap-3">
                     <span className="w-10 h-10 rounded-xl bg-primary-container-about/20 flex items-center justify-center text-primary-about shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" /><path d="m9 12 2 2 4-4" /></svg>
                     </span>
                     Professional Memberships
                   </h3>
@@ -340,7 +340,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="font-headline font-bold text-2xl text-primary-about mb-4 flex items-center gap-3">
                     <span className="w-10 h-10 rounded-xl bg-primary-container-about/20 flex items-center justify-center text-primary-about shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
                     </span>
                     Vision & Philosophy
                   </h3>
@@ -358,7 +358,7 @@ export default function AboutPage() {
                 <div className="relative bg-on-surface text-white p-8 rounded-3xl overflow-hidden">
                   <div className="absolute -right-10 -top-10 w-40 h-40 bg-primary-container-about/10 rounded-full blur-[30px]"></div>
                   <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-primary/10 rounded-full blur-[30px]"></div>
-                  <svg className="text-primary-container-about/30 mb-4" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M10 11H6C6 7.686 8.686 5 12 5V3C7.582 3 4 6.582 4 11V19H10V11ZM20 11H16C16 7.686 18.686 5 22 5V3C17.582 3 14 6.582 14 11V19H20V11Z"/></svg>
+                  <svg className="text-primary-container-about/30 mb-4" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M10 11H6C6 7.686 8.686 5 12 5V3C7.582 3 4 6.582 4 11V19H10V11ZM20 11H16C16 7.686 18.686 5 22 5V3C17.582 3 14 6.582 14 11V19H20V11Z" /></svg>
                   <p className="text-lg font-light leading-relaxed relative z-10 italic">
                     We very well know that visiting a dentist is a common phobia. Give us an opportunity to help you change that belief. Be rest assured that when you come to us, as our tagline goes, <span className="text-primary-container-about font-semibold not-italic">you will leave with a happy, healthy smile.</span>
                   </p>

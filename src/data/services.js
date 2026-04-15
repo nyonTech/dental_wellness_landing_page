@@ -3,9 +3,9 @@ import { MicroscopeIcon, SmileIcon, VerifiedIcon, Sparkles, ShieldCheck, Utensil
 const services = [
   {
     id: "root-canal",
-    category: "Restorative",
+    category: "Restorative Dentistry",
     title: "Root Canal Treatment (RCT)",
-    badge: "Restorative",
+    badge: "Restorative Dentistry",
     tagline: "Save teeth with minimal time and discomfort.",
     description:
       "At our state-of-the-art dental clinic, we specialize in providing expert root canal treatment in AECS Layout to help you preserve your natural teeth.",
@@ -166,17 +166,17 @@ const services = [
       }
     ]
   },
-{
-  id: "braces-orthodontics",
-  category: "Orthodontic",
-  title: "Braces",
-  badge: "Orthodontics",
-  tagline: "Precision alignment for a healthier, more confident smile at any age.",
-  description:
-    "Achieve a perfectly aligned smile with our expert orthodontists in AECS Layout. We offer a range of personalized dental braces designed to straighten teeth and improve long-term oral health.",
-  longDescription:
-    "Orthodontic treatment is about more than just aesthetics; it’s an investment in a healthier mouth and teeth that are built to last a lifetime. By applying gentle, consistent pressure, braces gradually shift your teeth and jaw into their ideal positions. At our advanced clinic, we are committed to providing effective treatments tailored to your unique facial structure, whether you are looking for traditional solutions or the latest in discreet alignment technology.",
-  detailedHtml: `
+  {
+    id: "braces-orthodontics",
+    category: "Orthodontics",
+    title: "Braces",
+    badge: "Orthodontics",
+    tagline: "Precision alignment for a healthier, more confident smile at any age.",
+    description:
+      "Achieve a perfectly aligned smile with our expert orthodontists in AECS Layout. We offer a range of personalized dental braces designed to straighten teeth and improve long-term oral health.",
+    longDescription:
+      "Orthodontic treatment is about more than just aesthetics; it’s an investment in a healthier mouth and teeth that are built to last a lifetime. By applying gentle, consistent pressure, braces gradually shift your teeth and jaw into their ideal positions. At our advanced clinic, we are committed to providing effective treatments tailored to your unique facial structure, whether you are looking for traditional solutions or the latest in discreet alignment technology.",
+    detailedHtml: `
     <p class="mb-4">Braces function through a sophisticated system of small brackets bonded to the teeth, connected by specialized archwires and medical-grade rubber bands. Your orthodontist periodically adjusts these components to guide tooth movement with clinical precision.</p>
     
     <h4 class="text-xl font-bold text-gray-900 mt-8 mb-4">Orthodontics for Every Generation</h4>
@@ -198,60 +198,60 @@ const services = [
       </li>
     </ul>
   `,
-  imageSrc: "/images/services/braces.png",
-  heroImage: "/images/services/braces.png",
-  linkText: "More Info",
-  benefits: [
-    "Corrects overcrowding and spacing issues",
-    "Improves jaw alignment and bite function",
-    "Reduces the risk of tooth decay and gum disease",
-    "Boosts self-esteem with a symmetrical smile",
-  ],
-  faqs: [
-    {
-      question: "What is the best age to start orthodontic treatment?",
-      answer: "We recommend an initial screening by age seven or eight. This allows us to monitor jaw growth and intervene early if necessary, though we successfully treat patients of all ages, including adults."
-    },
-    {
-      question: "How long will I need to wear braces?",
-      answer: "Treatment duration varies depending on the complexity of the case, but most patients wear braces for 18 to 24 months. We provide a more accurate timeline after your initial diagnostic consultation."
-    },
-    {
-      question: "Do braces cause significant pain?",
-      answer: "You may feel some soreness or pressure for a few days after the initial placement or subsequent adjustments. This is a sign that your teeth are moving and can be easily managed with standard over-the-counter pain relief."
-    },
-    {
-      question: "Can I still eat my favorite foods with braces?",
-      answer: "While you should avoid very sticky or hard foods (like caramel or ice) that can damage the brackets, most of your diet will remain the same. We provide a full guide on how to eat comfortably during your treatment."
-    },
-    {
-      question: "Are clear braces as effective as metal ones?",
-      answer: "Yes, ceramic braces are just as effective at moving teeth as traditional metal braces. They simply offer a more aesthetic, low-profile look for patients concerned about the visibility of their treatment."
-    }
-  ],
-  features: [
-    {
-      title: "Individualized Treatment Plans",
-      description: "We use precise diagnostics to map out the exact movement of every tooth for a predictable, perfect result.",
-      icon: <LayoutIcon />
-    },
-    {
-      title: "Advanced Material Science",
-      description: "Utilizing stain-resistant ceramics and high-tech archwires that reduce discomfort and treatment time.",
-      icon: <ShieldCheckIcon />
-    },
-    {
-      title: "Invisible Alignment Options",
-      description: "Specialized in lingual (hidden) braces for professionals and adults seeking a completely discreet transformation.",
-      icon: <EyeOffIcon />
-    }
-  ]
-},
+    imageSrc: "/images/services/braces.png",
+    heroImage: "/images/services/braces.png",
+    linkText: "More Info",
+    benefits: [
+      "Corrects overcrowding and spacing issues",
+      "Improves jaw alignment and bite function",
+      "Reduces the risk of tooth decay and gum disease",
+      "Boosts self-esteem with a symmetrical smile",
+    ],
+    faqs: [
+      {
+        question: "What is the best age to start orthodontic treatment?",
+        answer: "We recommend an initial screening by age seven or eight. This allows us to monitor jaw growth and intervene early if necessary, though we successfully treat patients of all ages, including adults."
+      },
+      {
+        question: "How long will I need to wear braces?",
+        answer: "Treatment duration varies depending on the complexity of the case, but most patients wear braces for 18 to 24 months. We provide a more accurate timeline after your initial diagnostic consultation."
+      },
+      {
+        question: "Do braces cause significant pain?",
+        answer: "You may feel some soreness or pressure for a few days after the initial placement or subsequent adjustments. This is a sign that your teeth are moving and can be easily managed with standard over-the-counter pain relief."
+      },
+      {
+        question: "Can I still eat my favorite foods with braces?",
+        answer: "While you should avoid very sticky or hard foods (like caramel or ice) that can damage the brackets, most of your diet will remain the same. We provide a full guide on how to eat comfortably during your treatment."
+      },
+      {
+        question: "Are clear braces as effective as metal ones?",
+        answer: "Yes, ceramic braces are just as effective at moving teeth as traditional metal braces. They simply offer a more aesthetic, low-profile look for patients concerned about the visibility of their treatment."
+      }
+    ],
+    features: [
+      {
+        title: "Individualized Treatment Plans",
+        description: "We use precise diagnostics to map out the exact movement of every tooth for a predictable, perfect result.",
+        icon: <LayoutIcon />
+      },
+      {
+        title: "Advanced Material Science",
+        description: "Utilizing stain-resistant ceramics and high-tech archwires that reduce discomfort and treatment time.",
+        icon: <ShieldCheckIcon />
+      },
+      {
+        title: "Invisible Alignment Options",
+        description: "Specialized in lingual (hidden) braces for professionals and adults seeking a completely discreet transformation.",
+        icon: <EyeOffIcon />
+      }
+    ]
+  },
   {
     id: "dental-implants",
-    category: "Restorative",
+    category: "Restorative Dentistry",
     title: "Dental Implants",
-    badge: "Restorative",
+    badge: "Restorative Dentistry",
     tagline: "The gold standard for permanent tooth replacement.",
     description:
       "At our dental clinic, we specialize in providing premium dental implants in AECS Layout to help you regain your confidence and enjoy a healthy, beautiful smile.",
@@ -488,9 +488,9 @@ const services = [
   },
   {
     id: "dental-veneers",
-    category: "Cosmetic",
+    category: "Cosmetic Dentistry",
     title: "Dental Veneers",
-    badge: "Cosmetic",
+    badge: "Cosmetic Dentistry",
     tagline: "The ultimate smile makeover for a flawless, movie-star finish.",
     description:
       "Transform your appearance with high-quality dental veneers in AECS Layout. Our advanced clinic specializes in crafting thin, durable shells that create a perfectly aligned and radiant smile.",
@@ -666,9 +666,9 @@ const services = [
   // },
   {
     id: "crowns-and-bridges",
-    category: "Restorative",
+    category: "Restorative Dentistry",
     title: "Crowns & Bridges",
-    badge: "Restorative",
+    badge: "Restorative Dentistry",
     tagline: "Restore strength, function, and aesthetics to damaged or missing teeth.",
     description:
       "At our advanced dental clinic in AECS Layout, we specialize in high-quality dental crowns and bridges designed to restore your smile’s integrity with durable, natural-looking materials.",
@@ -831,7 +831,7 @@ const services = [
     id: "pediatric-dentistry",
     category: "Preventative",
     title: "Pediatric Dentistry",
-    badge: "Pediatric",
+    badge: "Pediatric Dentistry",
     tagline: "Gentle, expert dental care designed specifically for growing smiles.",
     description:
       "As a leading pediatric dentist in Whitefield, Dental Wellness offers comprehensive oral healthcare for children in a fun, stress-free, and kid-friendly environment.",
@@ -912,9 +912,9 @@ const services = [
   },
   {
     id: "laser-dentistry",
-    category: "Advanced Technology",
+    category: "Advanced Dental Treatment",
     title: "Laser Dentistry",
-    badge: "Advanced",
+    badge: "Advanced Dental Treatment",
     tagline: "High-precision, minimally invasive care for a faster, painless recovery.",
     description:
       "As the leading clinic for laser dental treatment in AECS Layout, Dental Wellness utilizes advanced light-beam technology to perform precise procedures with significantly less discomfort than traditional methods.",
@@ -988,6 +988,176 @@ const services = [
         title: "Precise Tissue Sculpting",
         description: "Unmatched accuracy in removing damaged tissue while preserving the integrity of surrounding healthy structures.",
         icon: <TargetIcon />
+      }
+    ]
+  },
+  {
+    id: "gum-treatment",
+    category: "Periodontics",
+    title: "Gum Treatment",
+    badge: "Periodontics",
+    tagline: "Restore healthy gums and protect your teeth at their foundation.",
+    description:
+      "At Dental Wellness in AECS Layout, our periodontists specialize in diagnosing and treating all stages of gum disease, helping you preserve your natural teeth and maintain a strong, healthy smile.",
+    longDescription:
+      "Healthy gums are the foundation of every great smile. Gum disease—ranging from mild gingivitis to advanced periodontitis—is one of the leading causes of tooth loss in adults, yet it is largely preventable and highly treatable when caught early. Our team of expert periodontists in Whitefield uses the latest diagnostic tools and evidence-based therapies to stop the progression of gum disease, reverse early-stage damage, and restore your gum tissue to full health. Whether you are experiencing bleeding gums, persistent bad breath, or gum recession, we offer a tailored treatment plan to address your specific needs.",
+    detailedHtml: `
+      <p class="mb-4">Gum disease is a chronic bacterial infection that destroys the gum tissue and bone supporting your teeth. It progresses through two primary stages, each requiring a different level of intervention. Early diagnosis is key—our periodontists use precision probing and digital X-rays to map every millimeter of your gum health.</p>
+
+      <h4 class="text-xl font-bold text-gray-900 mt-8 mb-4">Stages of Gum Disease & Our Treatments</h4>
+      <ul class="list-none space-y-4">
+        <li class="flex items-start">
+          <span class="mr-3 mt-1 text-[#f3bf2c] text-xl leading-none">&bull;</span>
+          <span><strong>Stage 1 – Gingivitis:</strong> The earliest and fully reversible stage, characterized by red, swollen, or bleeding gums. It is treated with a professional deep cleaning (scaling and root planing) combined with improved at-home oral hygiene. Most patients see significant improvement within a few weeks.</span>
+        </li>
+        <li class="flex items-start">
+          <span class="mr-3 mt-1 text-[#f3bf2c] text-xl leading-none">&bull;</span>
+          <span><strong>Stage 2 – Periodontitis:</strong> When gingivitis is left untreated, bacteria penetrate below the gum line and form deep pockets around the roots. Our specialists perform non-surgical root planing to smooth the root surfaces, remove deep deposits, and eliminate the environment bacteria need to survive.</span>
+        </li>
+        <li class="flex items-start">
+          <span class="mr-3 mt-1 text-[#f3bf2c] text-xl leading-none">&bull;</span>
+          <span><strong>Stage 3 – Advanced Periodontitis:</strong> Significant bone and tissue loss may require surgical intervention. Our team offers flap surgery to directly access and clean deep pockets, as well as bone and tissue grafting to regenerate lost structural support.</span>
+        </li>
+      </ul>
+
+      <h4 class="text-xl font-bold text-gray-900 mt-8 mb-4">Gum Recession & Cosmetic Periodontics</h4>
+      <p class="mb-4">Receding gums expose sensitive root surfaces and can make teeth appear longer than normal. We offer gum grafting procedures to cover exposed roots, reduce sensitivity, and restore a natural, even gum line. Additionally, a 'gummy smile'—where too much gum tissue is visible—can be reshaped with a simple gum contouring procedure for a more balanced and aesthetic appearance.</p>
+    `,
+    imageSrc: "/images/services/gum.webp",
+    heroImage: "/images/services/gum.webp",
+    linkText: "More Info",
+    benefits: [
+      "Stops and reverses early-stage gum disease",
+      "Prevents tooth loss from bone deterioration",
+      "Eliminates persistent bad breath at the source",
+      "Restores a healthy, even gum line",
+    ],
+    faqs: [
+      {
+        question: "What are the early warning signs of gum disease?",
+        answer: "The most common early signs include gums that bleed when you brush or floss, persistent bad breath, red or swollen gum tissue, and increased tooth sensitivity. If you notice any of these symptoms, it is important to book a consultation as soon as possible."
+      },
+      {
+        question: "Is scaling and root planing painful?",
+        answer: "The procedure is performed under local anesthesia, so you will not feel pain during the treatment. Some mild tenderness and sensitivity for a day or two afterward is normal and can be managed with standard over-the-counter pain relief."
+      },
+      {
+        question: "How many sessions will I need?",
+        answer: "For mild gingivitis, a single professional cleaning session is often sufficient. For moderate to advanced periodontitis, treatment is typically performed in two to four quadrant sessions, followed by a review appointment to assess your response to therapy."
+      },
+      {
+        question: "Can gum disease be completely cured?",
+        answer: "Gingivitis is fully reversible. Periodontitis, once bone loss has occurred, cannot be 'cured' in the traditional sense, but it can be effectively controlled and managed with professional treatment and excellent at-home care, preventing any further progression."
+      },
+      {
+        question: "Is there a link between gum disease and my overall health?",
+        answer: "Yes. Research strongly links untreated gum disease to systemic conditions including heart disease, diabetes, and respiratory issues. Treating gum disease is not just about saving your teeth—it is an investment in your whole-body health."
+      },
+      {
+        question: "How can I prevent gum disease from returning?",
+        answer: "After treatment, we place you on a tailored periodontal maintenance schedule—typically every three to four months—to prevent the bacteria from re-colonizing. Consistent brushing, flossing, and these follow-up visits are key to keeping your gums healthy long term."
+      }
+    ],
+    features: [
+      {
+        title: "Precision Periodontal Probing",
+        description: "We use digital mapping tools to measure pocket depths at every tooth, giving us a precise picture of your gum health.",
+        icon: <ActivityIcon />
+      },
+      {
+        title: "Deep Cleaning & Root Planing",
+        description: "Thorough removal of bacterial deposits from below the gum line to eliminate infection and allow healthy tissue to reattach.",
+        icon: <ShieldCheckIcon />
+      },
+      {
+        title: "Tissue Regeneration Therapy",
+        description: "Advanced grafting and surgical techniques to rebuild lost gum and bone tissue, restoring both function and aesthetics.",
+        icon: <HeartPulseIcon />
+      }
+    ]
+  },
+  {
+    id: "dentures",
+    category: "Prosthodontics",
+    title: "Dentures",
+    badge: "Prosthodontics",
+    tagline: "Comfortable, natural-looking tooth replacement for a confident smile.",
+    description:
+      "At Dental Wellness in AECS Layout, we craft custom-fitted complete and partial dentures that restore your ability to eat, speak, and smile with complete confidence.",
+    longDescription:
+      "Losing teeth—whether due to decay, gum disease, or injury—can have a profound impact on both your quality of life and your self-confidence. Modern dentures are far removed from the uncomfortable, ill-fitting appliances of the past. Today's prosthetics are meticulously crafted from high-quality materials to closely mimic the appearance and function of natural teeth. Our prosthodontists in Whitefield take a highly personalized approach, designing each set of dentures to complement your facial structure, skin tone, and bite, so your smile looks entirely natural.",
+    detailedHtml: `
+      <p class="mb-4">Dentures are removable prosthetic appliances that replace missing teeth and the surrounding tissue. Whether you have lost all of your teeth or just a few, we have a solution designed to restore your smile's full function and aesthetic appeal.</p>
+
+      <h4 class="text-xl font-bold text-gray-900 mt-8 mb-4">Types of Dentures We Offer</h4>
+      <ul class="list-none space-y-4">
+        <li class="flex items-start">
+          <span class="mr-3 mt-1 text-[#f3bf2c] text-xl leading-none">&bull;</span>
+          <span><strong>Complete (Full) Dentures:</strong> Designed for patients who have lost all of their teeth in the upper or lower jaw. These rest directly on the gum ridge and are held in place by natural suction and the oral muscles. We offer both conventional dentures—crafted after the gum tissue has healed—and immediate dentures, placed on the same day as extractions.</span>
+        </li>
+        <li class="flex items-start">
+          <span class="mr-3 mt-1 text-[#f3bf2c] text-xl leading-none">&bull;</span>
+          <span><strong>Partial Dentures:</strong> An ideal solution when you still have some healthy natural teeth remaining. A partial denture fills the gaps with prosthetic teeth attached to a gum-colored acrylic base, often connected by a discreet metal framework that clasps onto adjacent teeth to keep it stable.</span>
+        </li>
+        <li class="flex items-start">
+          <span class="mr-3 mt-1 text-[#f3bf2c] text-xl leading-none">&bull;</span>
+          <span><strong>Implant-Supported Dentures:</strong> For the most secure and natural-feeling result, dentures can be anchored to dental implants placed in the jawbone. This eliminates any risk of slipping, allows for stronger chewing force, and prevents the bone loss that occurs with traditional dentures over time.</span>
+        </li>
+      </ul>
+
+      <h4 class="text-xl font-bold text-gray-900 mt-8 mb-4">The Fitting & Fabrication Process</h4>
+      <p class="mb-4">Getting well-fitted dentures is a multi-step process that we handle entirely in-house. We begin with precise impressions and bite registrations to capture the exact shape of your mouth. These measurements are sent to our dental laboratory, where your custom prosthetic is fabricated. Before final delivery, we conduct a try-in appointment to verify the fit, comfort, and aesthetics—making all necessary adjustments to ensure a perfect result.</p>
+    `,
+    imageSrc: "/images/services/dentures.jpg",
+    heroImage: "/images/services/dentures.jpg",
+    linkText: "More Info",
+    benefits: [
+      "Restores full chewing ability and speech clarity",
+      "Prevents facial sagging from missing teeth",
+      "Custom-crafted to match your natural smile",
+      "Implant-supported options for superior stability",
+    ],
+    faqs: [
+      {
+        question: "How long does it take to get dentures?",
+        answer: "The process typically requires several appointments over four to six weeks. This includes impressions, bite measurements, a try-in fitting, and the final delivery. Immediate dentures can be placed on the same day as extractions, but these will require relining once the gums have fully healed."
+      },
+      {
+        question: "Will dentures look natural?",
+        answer: "Absolutely. Modern denture teeth are made from high-quality acrylic resin that closely replicates the color, translucency, and texture of natural teeth. We carefully select shades and shapes that complement your complexion and facial structure so the result looks entirely authentic."
+      },
+      {
+        question: "Will it be difficult to eat with dentures?",
+        answer: "There is a short adjustment period, typically a few weeks, during which we recommend starting with softer foods. As you become accustomed to your new dentures, you can gradually reintroduce most of your favorite foods. Implant-supported dentures restore near-complete chewing strength immediately."
+      },
+      {
+        question: "How do I care for my dentures?",
+        answer: "Remove and rinse your dentures after every meal. Brush them daily with a soft-bristle denture brush and a non-abrasive cleaner—never regular toothpaste, which is too harsh. Always soak them in water or a denture solution overnight to prevent them from drying out and warping."
+      },
+      {
+        question: "How long do dentures last?",
+        answer: "With proper care, a set of dentures typically lasts between five and eight years before requiring replacement. Over time, the shape of your jaw and gums changes, which can cause the denture to fit less securely. Regular check-ups allow us to monitor the fit and reline them as needed."
+      },
+      {
+        question: "Can I sleep with my dentures in?",
+        answer: "It is generally recommended to remove your dentures at night. This gives your gum tissues time to rest and recover, reduces the risk of bacterial buildup, and helps the dentures maintain their shape. Soaking them overnight keeps them clean and retains their fit."
+      }
+    ],
+    features: [
+      {
+        title: "Lifelike Aesthetics",
+        description: "Premium acrylic teeth and gum-colored bases are shade-matched to your complexion for a completely natural appearance.",
+        icon: <SmileIcon />
+      },
+      {
+        title: "Precision Custom Fit",
+        description: "Every denture is built from detailed impressions of your unique oral anatomy to ensure stability, comfort, and proper bite alignment.",
+        icon: <UserCheckIcon />
+      },
+      {
+        title: "Implant-Retained Options",
+        description: "We offer implant-supported dentures for patients who want the ultimate in stability, chewing strength, and jawbone preservation.",
+        icon: <ShieldCheckIcon />
       }
     ]
   }

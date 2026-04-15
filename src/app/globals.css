@@ -2069,44 +2069,34 @@ body {
   color: #000;
 }
 
-/* Testimonial card */
-.smile-testimonial {
+/* Trust badges strip */
+.smile-trust-strip {
   display: flex;
-  padding: 24px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
+  flex-wrap: wrap;
   align-self: stretch;
-  border-radius: 32px;
-  border-left: 4px solid #FBBF24;
-  background: #FAFAFA;
+  gap: 10px;
 }
 
-.smile-testimonial__stars {
+.smile-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  font-family: var(--font-outfit), Outfit, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.smile-trust-badge__icon {
   display: flex;
   align-items: center;
-  gap: 4px;
-}
-
-.smile-testimonial__quote {
-  font-family: var(--font-outfit), Outfit, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #374151;
-  margin: 0;
-  align-self: stretch;
-}
-
-.smile-testimonial__author {
-  font-family: var(--font-outfit), Outfit, sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000;
-  margin: 0;
-  padding-top: 4px;
-  align-self: stretch;
+  flex-shrink: 0;
 }
 
 /* Decorative amber glow */
@@ -2184,61 +2174,82 @@ body {
   color: #111827;
 }
 
-/* Feature cards row */
-.smile-feature-row {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 16px;
-  align-self: stretch;
-}
-
-/* ─── Feature Card ──────────────────────────────────────────── */
-.feature-card {
-  flex: 1;
-  border-radius: 24px;
-  padding: 24px;
+/* CTA card — Our Promise */
+.smile-cta-card {
   display: flex;
   flex-direction: column;
-  min-height: 160px;
-}
-
-.feature-card--yellow {
-  background: #FBBF24;
-}
-
-.feature-card--dark {
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  padding: 32px;
+  border-radius: 32px;
   background: #000;
 }
 
-.feature-card__icon {
-  margin-bottom: 20px;
-}
-
-.feature-card__title {
+.smile-cta-card__title {
   font-family: var(--font-outfit), Outfit, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 800;
+  font-size: 22px;
   line-height: 28px;
-  color: #000;
-  margin: 0 0 4px;
-}
-
-.feature-card--dark .feature-card__title {
-  color: #fff;
-}
-
-.feature-card__description {
-  font-family: var(--font-outfit), Outfit, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: rgba(0, 0, 0, 0.70);
+  color: #FBBF24;
   margin: 0;
 }
 
-.feature-card--dark .feature-card__description {
-  color: #9CA3AF;
+.smile-cta-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-self: stretch;
+}
+
+.smile-cta-card__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-outfit), Outfit, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #D1D5DB;
+}
+
+.smile-cta-card__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #FBBF24;
+  color: #000;
+  font-weight: 900;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.smile-cta-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  background: #FBBF24;
+  color: #000;
+  font-family: var(--font-outfit), Outfit, sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 20px;
+  text-decoration: none;
+  align-self: stretch;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.smile-cta-card__btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
 /* Smile section responsive */
@@ -2275,8 +2286,9 @@ body {
     height: 200px;
   }
 
-  .smile-feature-row {
-    flex-direction: column;
+  /* trust badges already wrap naturally on mobile */
+  .smile-trust-strip {
+    gap: 8px;
   }
 }
 
@@ -3215,115 +3227,69 @@ body {
   gap: 32px;
 }
 
-.clinic-tour__viewer {
-  flex: 1;
-  min-width: 0;
-  height: 600px;
-  border-radius: 48px;
-  background: #000000;
-  overflow: hidden;
-  position: relative;
-}
-
-.clinic-tour__viewer-media {
+/* ── Infinite-scroll carousel ─────────────────────────────── */
+.clinic-tour__carousel-viewport {
   width: 100%;
-  height: 100%;
-  transform-origin: center;
-  transition: transform 0.22s ease;
+  overflow: hidden;
+  cursor: grab;
+  /* Fade edges for a polished look */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
 }
 
-.clinic-tour__viewer-video {
+.clinic-tour__carousel-viewport:active {
+  cursor: grabbing;
+}
+
+.clinic-tour__carousel-track {
+  display: flex;
+  gap: 24px;
+  /* will-change keeps GPU compositing smooth */
+  will-change: transform;
+}
+
+.clinic-tour__carousel-slide {
+  /* 2 slides visible at a time, accounting for gap */
+  flex: 0 0 calc(50% - 12px);
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  height: 460px;
+  background: #000;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.clinic-tour__carousel-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  pointer-events: none;
+  user-select: none;
 }
 
-.clinic-tour__play-wrapper {
+.clinic-tour__carousel-label {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-
-.clinic-tour__overlays {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  right: auto;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  z-index: 3;
-}
-
-.clinic-tour__live-badge {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  z-index: 3;
-}
-
-.clinic-tour__panel {
-  width: 280px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  height: 60vh;
-  overflow: auto;
-}
-
-.clinic-tour__panel-header {
-  padding-bottom: 8px;
-}
-
-.clinic-tour__panel-label {
-  font-family: 'Outfit', sans-serif;
+  bottom: 20px;
+  left: 20px;
+  display: inline-flex;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-family: var(--font-outfit), Outfit, sans-serif;
   font-weight: 600;
-  font-size: 14px;
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.clinic-tour__thumbnails {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  font-size: 13px;
+  color: #fff;
+  pointer-events: none;
 }
 
 @media (max-width: 1024px) {
-  .clinic-tour__content {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .clinic-tour__viewer {
-    height: 400px;
-  }
-
-  .clinic-tour__panel {
-    width: 100%;
-    flex-direction: row;
-    overflow-x: auto;
-    height: auto;
-  }
-
-  .clinic-tour__thumbnails {
-    flex-direction: row;
-    gap: 16px;
-    overflow-x: auto;
-    padding-bottom: 4px;
-  }
-
-  .area-thumbnail {
-    min-width: 240px;
+  .clinic-tour__carousel-slide {
+    flex: 0 0 calc(50% - 12px);
+    height: 340px;
+    border-radius: 24px;
   }
 }
 
@@ -3351,26 +3317,15 @@ body {
     line-height: 1.4;
   }
 
-  .clinic-tour__viewer {
-    height: 280px;
-    border-radius: 24px;
+  .clinic-tour__carousel-slide {
+    /* Show ~1.5 slides on mobile to hint at scrollability */
+    flex: 0 0 80%;
+    height: 260px;
+    border-radius: 20px;
   }
-
-  .clinic-tour__overlays {
-    bottom: 12px;
-  }
-
-  .clinic-tour__live-badge {
-    top: 12px;
-    left: 12px;
-  }
-
-  .tour-controls {
-    transform: scale(0.9);
-    transform-origin: center;
-  }
-
 }
+
+
 
 /* ===== Why People Love ===== */
 .why-people-love {

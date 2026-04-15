@@ -16,7 +16,7 @@ export default function DoctorDetailsProfile({ doctor }) {
             <div className="doctor-details__media-content">
               <span className="doctor-details__badge">TOP RATED</span>
               <h1 className="doctor-details__name">{doctor.name}</h1>
-              <p className="doctor-details__role">DDS, {doctor.specialty}</p>
+              <p className="doctor-details__role">MDS, {doctor.specialty}</p>
             </div>
           </aside>
 
