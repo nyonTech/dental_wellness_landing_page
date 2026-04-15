@@ -84,16 +84,16 @@ export default function ComingSoon3() {
               </div>
 
               {/* Floating tooth icon card */}
-              <div className="hero-tooth-card">
+              {/* <div className="hero-tooth-card">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/7f1696c1025b3dbde1cdedd7e1c83b14152f8fdb?width=128"
                   alt="3D Tooth Icon"
                   className="hero-tooth-icon"
                 />
-              </div>
+              </div> */}
 
               {/* Floating patients stats card */}
-              <div className="hero-stats-card">
+              {/* <div className="hero-stats-card">
                 <div className="hero-stats-avatars">
                   <div className="hero-avatar hero-avatar--1"></div>
                   <div className="hero-avatar hero-avatar--2"></div>
@@ -101,7 +101,7 @@ export default function ComingSoon3() {
                   <span className="hero-stats-count">+2k</span>
                 </div>
                 <p className="hero-stats-label">Happy patients served this year.</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

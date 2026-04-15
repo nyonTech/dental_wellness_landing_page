@@ -42,7 +42,7 @@ export default function DoctorProfile() {
 
         {/* Right: Doctor Info */}
         <div className="doctor-info">
-          <h2 className="doctor-name">{shobha.name}</h2>
+          <h2 className="doctor-name whitespace-nowrap">{shobha.name}</h2>
 
           <div className="doctor-degrees">
             {shobha.description.split('. ').map((part, i) => (

@@ -4,7 +4,7 @@ const services = [
   {
     id: "root-canal",
     category: "Restorative",
-    title: "Root Canal",
+    title: "Root Canal Treatment (RCT)",
     badge: "Restorative",
     tagline: "Save teeth with minimal time and discomfort.",
     description:
@@ -169,7 +169,7 @@ const services = [
 {
   id: "braces-orthodontics",
   category: "Orthodontic",
-  title: "Braces & Orthodontics",
+  title: "Braces",
   badge: "Orthodontics",
   tagline: "Precision alignment for a healthier, more confident smile at any age.",
   description:
@@ -330,9 +330,9 @@ const services = [
   },
   {
     id: "teeth-whitening",
-    category: "Cosmetic",
+    category: "Cosmetic Dentistry",
     title: "Teeth Whitening",
-    badge: "Cosmetic",
+    badge: "Cosmetic Dentistry",
     tagline: "Brighten your smile by up to 8 shades in just one hour.",
     description:
       "Achieve a brighter, whiter smile with our professional teeth whitening services in AECS Layout. We offer safe and effective treatments to remove deep-set stains and discoloration, giving you a radiant smile you'll love to show off.",
@@ -407,9 +407,9 @@ const services = [
   },
   {
     id: "cosmetic-fillings",
-    category: "Cosmetic",
-    title: "Cosmetic Fillings",
-    badge: "Cosmetic",
+    category: "Cosmetic Dentistry",
+    title: "Cosmetic Dentistry",
+    badge: "Cosmetic Dentistry",
     tagline: "Seamlessly repair chips, gaps, and decay with natural aesthetics.",
     description:
       "At our clinic in AECS Layout, we use advanced tooth-colored resin to provide cosmetic fillings that blend perfectly with your natural smile, replacing outdated metal restorations.",
