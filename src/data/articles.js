@@ -5,8 +5,8 @@ const articles = [
     category: "Restorative",
     title: "Root Canal vs Extraction: Which Is Right for You?",
     subtitle: "Understanding your options when a tooth is severely damaged",
-    author: "Dr. Priya Sharma",
-    authorRole: "Endodontist",
+    author: "Dr. Shobha Nangrani",
+    authorRole: "Endodontist & Cosmetic Dentist",
     date: "2026-03-15",
     readTime: "8 min read",
     heroImage:
@@ -216,8 +216,8 @@ const articles = [
     title: "5 Signs You Might Need a Root Canal",
     subtitle:
       "Recognise these warning signs before a small problem becomes a big one",
-    author: "Dr. Priya Sharma",
-    authorRole: "Endodontist",
+    author: "Dr. Shobha Nangrani",
+    authorRole: "Endodontist & Cosmetic Dentist",
     date: "2026-02-18",
     readTime: "5 min read",
     heroImage:

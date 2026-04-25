@@ -2,6 +2,12 @@ import React from "react";
 import ExpertTeamSection from "@/components/ExpertTeamSection";
 import { TransformationCTA } from "@/components/ServiceListing";
 
+export const metadata = {
+  title: "About Dr. Shobha Nangrani & Dental Wellness Clinic",
+  description: "Learn about Dental Wellness, established in 2008 by Dr. Shobha Nangrani in AECS Layout, Bangalore. 18+ years of clinical excellence in endodontics, cosmetic dentistry & patient-centric care.",
+  alternates: { canonical: "/about" },
+};
+
 export default function AboutPage() {
   return (
     <main className="bg-surface text-primary-about font-outfit selection:bg-primary-container-about">

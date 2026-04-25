@@ -4,6 +4,7 @@ import ClinicianSection from "@/components/ClinicianSection";
 import FaqAccordion from "@/components/FaqAccordion";
 import services from "@/data/services";
 import Link from "next/link";
+import SchemaMarkup from "@/components/SchemaMarkup";
 
 const DEFAULT_FEATURES = [
   {
@@ -28,11 +29,13 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const service = services.find((s) => s.id === params.id);
+  const { id } = await params;
+  const service = services.find((s) => s.id === id);
   if (!service) return {};
   return {
-    title: `${service.title} | Dental Wellness`,
+    title: `${service.title} in AECS Layout, Bangalore`,
     description: service.description,
+    alternates: { canonical: `/service/${service.id}` },
   };
 }
 
@@ -42,8 +45,55 @@ export default async function ServiceDetailPage({ params }) {
   const service = services.find((s) => s.id === id);
 
   if (!service) notFound();
+
+  // Build Service schema
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.title,
+    "description": service.description,
+    "provider": {
+      "@type": "Dentist",
+      "name": "Dental Wellness",
+      "url": "https://www.dentalwellnessbangalore.com"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Bangalore"
+    },
+    "url": `https://www.dentalwellnessbangalore.com/service/${service.id}`
+  };
+
+  // Build FAQPage schema if FAQs exist
+  const faqSchema = service.faqs && service.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": service.faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  } : null;
+
+  // BreadcrumbList schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dentalwellnessbangalore.com" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dentalwellnessbangalore.com/service" },
+      { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://www.dentalwellnessbangalore.com/service/${service.id}` }
+    ]
+  };
+
   return (
     <div className="service-detail-page">
+      <SchemaMarkup schema={serviceSchema} />
+      {faqSchema && <SchemaMarkup schema={faqSchema} />}
+      <SchemaMarkup schema={breadcrumbSchema} />
       {/* Hero Section */}
       <section className="service-hero">
         {/* Background image */}

@@ -217,8 +217,53 @@ export default function LearningArticlePage({ params }) {
     ?.map((id) => articles.find((a) => a.id === id))
     .filter(Boolean);
 
+  // Build Article JSON-LD schema
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.excerpt,
+    "image": article.heroImage,
+    "datePublished": article.date,
+    "dateModified": article.date,
+    "author": {
+      "@type": "Person",
+      "name": article.author,
+      "jobTitle": article.authorRole,
+      "worksFor": {
+        "@type": "Dentist",
+        "name": "Dental Wellness",
+        "url": "https://www.dentalwellnessbangalore.com"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Dental Wellness",
+      "url": "https://www.dentalwellnessbangalore.com"
+    },
+    "mainEntityOfPage": `https://www.dentalwellnessbangalore.com/learning/${article.id}`
+  };
+
+  const articleBreadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dentalwellnessbangalore.com" },
+      { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://www.dentalwellnessbangalore.com/learning" },
+      { "@type": "ListItem", "position": 3, "name": article.title, "item": `https://www.dentalwellnessbangalore.com/learning/${article.id}` }
+    ]
+  };
+
   return (
     <div className="bg-background-light font-display text-slate-900 min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleBreadcrumbSchema) }}
+      />
       {/* Reading Progress Bar */}
       <div className="article-progress" style={{ width: `${scrollProgress}%` }} />
 
