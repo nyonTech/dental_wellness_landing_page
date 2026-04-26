@@ -2,6 +2,7 @@ import { Manrope, Playfair_Display, Lora, Montserrat, Outfit, Epilogue, Inter, P
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import SchemaMarkup from "@/components/SchemaMarkup";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -45,31 +46,33 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Dental Wellness | Premium Dental Clinic in AECS Layout, Brookefield, Bangalore",
-  description: "Experience world-class dental care at Dental Wellness in AECS Layout, Brookefield, Bangalore. We offer general dentistry, cosmetic care, and emergency dental services.",
-  keywords: ["Dental Clinic", "Dentist in AECS Layout", "Dentist in Brookefield", "Bangalore Dentist", "Dental Wellness", "Cosmetic Dentistry", "General Dentistry", "Emergency Dental Care", "Teeth Whitening", "Root Canal", "Dental Excellence Clinic"],
+  title: {
+    default: "Dental Wellness — Premium Dental Clinic AECS Layout, Bangalore",
+    template: "%s | Dental Wellness",
+  },
+  description: "Experience world-class dental care at Dental Wellness in AECS Layout, Brookefield, Bangalore. 18+ years of excellence in general dentistry, cosmetic care, root canal, implants & emergency services.",
+  keywords: ["Dental Clinic", "Dentist in AECS Layout", "Dentist in Brookefield", "Bangalore Dentist", "Dental Wellness", "Cosmetic Dentistry", "General Dentistry", "Emergency Dental Care", "Teeth Whitening", "Root Canal", "Dental Excellence Clinic", "Dentist near me", "Dental clinic near me"],
+  applicationName: "Dental Wellness Bangalore",
   authors: [{ name: "Dental Wellness" }],
   openGraph: {
-    title: "Dental Wellness | Premium Dental Clinic in Bangalore",
+    title: "Dental Wellness — Premium Dental Clinic AECS Layout, Bangalore",
     description: "Experience world-class dental care at Dental Wellness in AECS Layout, Brookefield, Bangalore. Book your appointment today.",
-    url: "https://dentalwellness.com",
-    siteName: "Dental Wellness",
+    url: "https://www.dentalwellnessbangalore.com",
+    siteName: "Dental Wellness Bangalore",
     locale: "en_IN",
     type: "website",
+    images: [{ url: "/images/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dental Wellness | Premium Dental Clinic in Bangalore",
+    title: "Dental Wellness — Premium Dental Clinic AECS Layout, Bangalore",
     description: "Experience world-class dental care at Dental Wellness in AECS Layout, Brookefield, Bangalore. Contact us for the best dental care.",
   },
   robots: {
     index: true,
     follow: true,
   },
-  metadataBase: new URL("https://dentalwellness.com"),
-  alternates: {
-    canonical: "/",
-  },
+  metadataBase: new URL("https://www.dentalwellnessbangalore.com"),
 };
 
 import FloatingCTAs from "@/components/FloatingCTAs";

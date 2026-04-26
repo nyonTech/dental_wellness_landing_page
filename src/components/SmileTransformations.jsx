@@ -26,7 +26,7 @@ export default function SmileTransformations() {
             <div className="smile-decor-tool">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/355c4848bb465082ddaeef6e6ee767eb5c8be83f?width=192"
-                alt=""
+                alt="Dental tool decoration"
                 className="smile-decor-tool-img"
               />
             </div>
