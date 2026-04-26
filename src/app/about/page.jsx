@@ -1,16 +1,33 @@
 import React from "react";
 import ExpertTeamSection from "@/components/ExpertTeamSection";
 import { TransformationCTA } from "@/components/ServiceListing";
+import SchemaMarkup from "@/components/SchemaMarkup";
 
 export const metadata = {
   title: "About Dr. Shobha Nangrani & Dental Wellness Clinic",
   description: "Learn about Dental Wellness, established in 2008 by Dr. Shobha Nangrani in AECS Layout, Bangalore. 18+ years of clinical excellence in endodontics, cosmetic dentistry & patient-centric care.",
   alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Dr. Shobha Nangrani & Dental Wellness Clinic",
+    description: "Learn about Dental Wellness, established in 2008 by Dr. Shobha Nangrani in AECS Layout, Bangalore. 18+ years of clinical excellence in endodontics, cosmetic dentistry & patient-centric care.",
+    url: "https://www.dentalwellnessbangalore.com/about",
+    images: [{ url: "/images/og-image.png", width: 1200, height: 630 }],
+  }
 };
 
 export default function AboutPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dentalwellnessbangalore.com" },
+      { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.dentalwellnessbangalore.com/about" }
+    ]
+  };
+
   return (
     <main className="bg-surface text-primary-about font-outfit selection:bg-primary-container-about">
+      <SchemaMarkup schema={breadcrumbSchema} />
       {/* Section 1: Hero Editorial */}
       <section className="relative min-h-screen flex flex-col justify-center px-8 pt-20 pb-40 overflow-hidden">
         <div className="max-w-[1440px] mx-auto w-full grid grid-cols-12 gap-8 items-center relative z-10">

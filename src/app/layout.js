@@ -52,14 +52,16 @@ export const metadata = {
   },
   description: "Experience world-class dental care at Dental Wellness in AECS Layout, Brookefield, Bangalore. 18+ years of excellence in general dentistry, cosmetic care, root canal, implants & emergency services.",
   keywords: ["Dental Clinic", "Dentist in AECS Layout", "Dentist in Brookefield", "Bangalore Dentist", "Dental Wellness", "Cosmetic Dentistry", "General Dentistry", "Emergency Dental Care", "Teeth Whitening", "Root Canal", "Dental Excellence Clinic", "Dentist near me", "Dental clinic near me"],
+  applicationName: "Dental Wellness Bangalore",
   authors: [{ name: "Dental Wellness" }],
   openGraph: {
     title: "Dental Wellness — Premium Dental Clinic AECS Layout, Bangalore",
     description: "Experience world-class dental care at Dental Wellness in AECS Layout, Brookefield, Bangalore. Book your appointment today.",
     url: "https://www.dentalwellnessbangalore.com",
-    siteName: "Dental Wellness",
+    siteName: "Dental Wellness Bangalore",
     locale: "en_IN",
     type: "website",
+    images: [{ url: "/images/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
@@ -71,69 +73,10 @@ export const metadata = {
     follow: true,
   },
   metadataBase: new URL("https://www.dentalwellnessbangalore.com"),
-  alternates: {
-    canonical: "/",
-  },
 };
 
 import FloatingCTAs from "@/components/FloatingCTAs";
 import AppointmentModal from "@/components/AppointmentModal";
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "Dentist",
-  "name": "Dental Wellness",
-  "image": "https://www.dentalwellnessbangalore.com/logo.png",
-  "url": "https://www.dentalwellnessbangalore.com",
-  "telephone": "+919980567389",
-  "email": "dentalwellnessbangalore@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "#177, A Block, AECS Layout",
-    "addressLocality": "Brookefield, Bangalore",
-    "addressRegion": "Karnataka",
-    "postalCode": "560037",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 12.96524,
-    "longitude": 77.7135086
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "10:00",
-      "closes": "14:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "17:00",
-      "closes": "20:00"
-    }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/dentalwellnessclinic/",
-    "https://www.instagram.com/dentalwellnessbangalore/"
-  ],
-  "priceRange": "$$",
-  "founder": {
-    "@type": "Person",
-    "name": "Dr. Shobha Nangrani",
-    "jobTitle": "Founder & Chief Dentist"
-  },
-  "description": "Premium multi-specialty dental clinic in AECS Layout, Brookefield, Bangalore. 18+ years of excellence in root canal, implants, cosmetic dentistry, braces & more.",
-  "areaServed": [
-    "AECS Layout",
-    "Brookefield",
-    "Whitefield",
-    "Kundalahalli Gate",
-    "Marathahalli",
-    "Bangalore"
-  ]
-};
 
 export default function RootLayout({ children }) {
   return (
@@ -141,7 +84,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.variable} ${montserrat.variable} ${manrope.variable} ${playfair.variable} ${lora.variable} ${outfit.variable} ${epilogue.variable} ${inter.variable} antialiased`}
       >
-        <SchemaMarkup schema={localBusinessSchema} />
         <NavBar />
         {children}
         <Footer />

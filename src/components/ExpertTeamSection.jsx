@@ -60,7 +60,7 @@ export default function ExpertTeamSection() {
               <div className="absolute -left-8 -top-8 opacity-40 select-none pointer-events-none">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/cd76bf9f2270567f7cb277c46e31ef06fbe06161?width=96"
-                  alt=""
+                  alt="Clear aligner icon"
                   width={96}
                   height={96}
                   className="rotate-[-12deg]"

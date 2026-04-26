@@ -4,6 +4,54 @@ import React, { useRef, useState } from "react";
 import { TransformationCTA } from "@/components/ServiceListing";
 import emailjs from "@emailjs/browser";
 import services from "@/data/services";
+import SchemaMarkup from "@/components/SchemaMarkup";
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Dental Wellness",
+  "image": "https://www.dentalwellnessbangalore.com/logo.png",
+  "url": "https://www.dentalwellnessbangalore.com",
+  "telephone": "+919980567389",
+  "email": "dentalwellnessbangalore@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "#177, A Block, AECS Layout",
+    "addressLocality": "Brookefield, Bangalore",
+    "addressRegion": "Karnataka",
+    "postalCode": "560037",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 12.96524,
+    "longitude": 77.7135086
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "10:00",
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "17:00",
+      "closes": "20:00"
+    }
+  ],
+  "priceRange": "$$"
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dentalwellnessbangalore.com" },
+    { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://www.dentalwellnessbangalore.com/contact" }
+  ]
+};
 
 export default function ContactPage() {
   const form = useRef();
@@ -36,6 +84,8 @@ export default function ContactPage() {
 
   return (
     <main className="bg-surface text-slate-800 font-display min-h-screen pt-24 lg:pt-20 relative overflow-hidden">
+      <SchemaMarkup schema={localBusinessSchema} />
+      <SchemaMarkup schema={breadcrumbSchema} />
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-container-about/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-wave-pattern -z-10 opacity-40"></div>

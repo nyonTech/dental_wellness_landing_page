@@ -36,6 +36,12 @@ export async function generateMetadata({ params }) {
     title: `${service.title} in AECS Layout, Bangalore`,
     description: service.description,
     alternates: { canonical: `/service/${service.id}` },
+    openGraph: {
+      title: `${service.title} in AECS Layout, Bangalore`,
+      description: service.description,
+      url: `https://www.dentalwellnessbangalore.com/service/${service.id}`,
+      images: [{ url: "/images/og-image.png", width: 1200, height: 630 }],
+    }
   };
 }
 
@@ -216,7 +222,7 @@ export default async function ServiceDetailPage({ params }) {
       <section className="final-cta">
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/e29e82b3fd58f391674dcf14b27f46b690fdf0de?width=2560"
-          alt=""
+          alt="Dental clinic background"
           className="final-cta__bg"
         />
         <div className="final-cta__content">

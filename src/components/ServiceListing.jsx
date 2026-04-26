@@ -99,7 +99,7 @@ export default function ServiceListing() {
 
   return (
     <>
-      <section className="service-hero" aria-label="Artistry in every smile">
+      <section className="service-hero" aria-label="Our Dental Services">
         <div className="service-hero__container">
           <div className="service-hero__content">
             <span className="service-hero__eyebrow">WORLD-CLASS DENTISTRY</span>
