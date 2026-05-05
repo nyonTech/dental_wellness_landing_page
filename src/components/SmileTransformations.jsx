@@ -23,13 +23,13 @@ export default function SmileTransformations() {
           <div className="smile-left-col">
 
             {/* Decorative floating tool icon */}
-            <div className="smile-decor-tool">
+            {/* <div className="smile-decor-tool">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/355c4848bb465082ddaeef6e6ee767eb5c8be83f?width=192"
                 alt="Dental tool decoration"
                 className="smile-decor-tool-img"
               />
-            </div>
+            </div> */}
 
             {/* Before / After comparison — large */}
             <div className="smile-comparison smile-comparison--large">

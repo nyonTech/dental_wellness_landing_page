@@ -17,7 +17,7 @@ export default function NavBar() {
   ];
 
   return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-6 lg:px-20 py-4 bg-background-light/80 backdrop-blur-md sticky top-0 z-50">
+    <header className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-6 lg:px-20 py-4 bg-background-light/80 backdrop-blur-md sticky top-0 z-50 font-Poppins">
       <div className="flex items-center gap-3">
         <Link href="/" aria-label="Dental Wellness Bangalore Home" className="text-slate-900 text-xl leading-tight tracking-tight uppercase hover:opacity-80 transition-opacity">
           <div className="w-40 overflow-hidden rounded-lg">

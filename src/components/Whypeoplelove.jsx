@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import SectionHeader from './SectionHeader';
 import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
 
@@ -9,38 +9,43 @@ const writtenReviews = [
     id: 1,
     author: 'Nagendra Mohan',
     location: 'Bangalore',
-    text: '“Toothache? Gone in no time! I visited Dental Wellness and had a great experience with Dr. Shobha Nangrani. She helped me get rid of my toothache with great care. The clinic was clean, hygienic, and made the whole visit comfortable. I’ll definitely keep coming back for my dental needs!”',
+    text: '\u201CToothache? Gone in no time! I visited Dental Wellness and had a great experience with Dr. Shobha Nangrani. She helped me get rid of my toothache with great care. The clinic was clean, hygienic, and made the whole visit comfortable. I\u2019ll definitely keep coming back for my dental needs!\u201D',
   },
   {
     id: 2,
     author: 'Godhuli Chanda',
     location: 'Whitefield',
-    text: '“Root canals made easy! Dr. Shobha is a wonderful doctor who truly knows her work. She handled my multiple root canal treatments with zero pain and zero hassle! The clinic is spotless and well maintained. She’s an expert, and I would absolutely recommend her treatment.”',
+    text: '\u201CRoot canals made easy! Dr. Shobha is a wonderful doctor who truly knows her work. She handled my multiple root canal treatments with zero pain and zero hassle! The clinic is spotless and well maintained. She\u2019s an expert, and I would absolutely recommend her treatment.\u201D',
   },
   {
     id: 3,
     author: 'Amit Tamang',
     location: 'AECS Layout',
-    text: '“A smile I can’t stop showing off! I visited Dental Wellness for the gaps in my front teeth. Dr. Shobha explained all my options clearly, and I chose six ceramic veneers. I’m beyond happy with my new smile! Thanks to Dr. Shobha and the team for the excellent work, highly recommended for all dental needs.”',
+    text: '\u201CA smile I can\u2019t stop showing off! I visited Dental Wellness for the gaps in my front teeth. Dr. Shobha explained all my options clearly, and I chose six ceramic veneers. I\u2019m beyond happy with my new smile! Thanks to Dr. Shobha and the team for the excellent work, highly recommended for all dental needs.\u201D',
   },
+  {
+    id: 4,
+    author: 'KV Bhavana',
+    location: 'Brookefield',
+    text: `"Amazing service! I got my braces and retainers done at this clinic, and I also had a tooth fixed. The doctors were very patient and made me feel comfortable throughout the process. The clinic is clean, well-organized, and the results turned out great. Definitely a place you can trust."`
+  }
 ];
 
 export default function WhyPeopleLove() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const totalSlides = writtenReviews.length;
+  // Clone 2 slides at each end to fill both visible slots on desktop
+  const clonesPerSide = 2;
+  const [currentIndex, setCurrentIndex] = useState(clonesPerSide);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+  const trackRef = useRef(null);
+  const autoPlayRef = useRef(null);
 
-  const nextSlide = () => {
-    setActiveIndex((prev) => (prev + 1) % writtenReviews.length);
-  };
-
-  const prevSlide = () => {
-    setActiveIndex((prev) => (prev - 1 + writtenReviews.length) % writtenReviews.length);
-  };
-
-  // Optional: Auto-slide
-  useEffect(() => {
-    const timer = setInterval(nextSlide, 6000);
-    return () => clearInterval(timer);
-  }, []);
+  // [clone3, clone4, slide1, slide2, slide3, slide4, clone1, clone2]
+  const extendedReviews = [
+    ...writtenReviews.slice(-clonesPerSide),
+    ...writtenReviews,
+    ...writtenReviews.slice(0, clonesPerSide),
+  ];
 
   const [offsetVal, setOffsetVal] = useState(100);
 
@@ -52,6 +57,56 @@ export default function WhyPeopleLove() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const getRealIndex = useCallback(() => {
+    let real = currentIndex - clonesPerSide;
+    if (real < 0) real = totalSlides + real;
+    if (real >= totalSlides) real = real - totalSlides;
+    return real;
+  }, [currentIndex, totalSlides]);
+
+  const nextSlide = useCallback(() => {
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => prev + 1);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => prev - 1);
+  }, []);
+
+  // Handle seamless jump when landing on a clone
+  const handleTransitionEnd = useCallback(() => {
+    if (currentIndex >= totalSlides + clonesPerSide) {
+      setIsTransitioning(false);
+      setCurrentIndex(clonesPerSide);
+    } else if (currentIndex < clonesPerSide) {
+      setIsTransitioning(false);
+      setCurrentIndex(totalSlides + clonesPerSide - 1);
+    }
+  }, [currentIndex, totalSlides]);
+
+  // Auto-slide
+  useEffect(() => {
+    autoPlayRef.current = setInterval(nextSlide, 6000);
+    return () => clearInterval(autoPlayRef.current);
+  }, [nextSlide]);
+
+  // Reset auto-play on manual interaction
+  const handleManualNav = (direction) => {
+    clearInterval(autoPlayRef.current);
+    direction === 'next' ? nextSlide() : prevSlide();
+    autoPlayRef.current = setInterval(nextSlide, 6000);
+  };
+
+  const goToSlide = (realIndex) => {
+    clearInterval(autoPlayRef.current);
+    setIsTransitioning(true);
+    setCurrentIndex(realIndex + clonesPerSide);
+    autoPlayRef.current = setInterval(nextSlide, 6000);
+  };
+
+  const realIndex = getRealIndex();
 
   return (
     <section className="bg-[#FBFBFB] py-24 lg:py-32 overflow-hidden">
@@ -72,14 +127,14 @@ export default function WhyPeopleLove() {
 
           <div className="flex gap-4">
             <button
-              onClick={prevSlide}
+              onClick={() => handleManualNav('prev')}
               className="w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all active:scale-95 group"
               aria-label="Previous slide"
             >
               <ChevronLeft size={24} className="group-hover:-translate-x-0.5 transition-transform" />
             </button>
             <button
-              onClick={nextSlide}
+              onClick={() => handleManualNav('next')}
               className="w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all active:scale-95 group"
               aria-label="Next slide"
             >
@@ -91,11 +146,13 @@ export default function WhyPeopleLove() {
         <div className="relative mt-8">
           {/* Track */}
           <div
-            className="flex transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]"
-            style={{ transform: `translateX(-${activeIndex * offsetVal}%)` }}
+            ref={trackRef}
+            className={`flex ${isTransitioning ? 'transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]' : ''}`}
+            style={{ transform: `translateX(-${currentIndex * offsetVal}%)` }}
+            onTransitionEnd={handleTransitionEnd}
           >
-            {writtenReviews.map((review) => (
-              <div key={review.id} className="w-full md:w-1/2 shrink-0 px-2 lg:px-4">
+            {extendedReviews.map((review, idx) => (
+              <div key={`slide-${idx}`} className="w-full md:w-1/2 shrink-0 px-2 lg:px-4">
                 <div className="bg-white rounded-[40px] p-8 md:p-8 shadow-xl shadow-slate-200/40 relative overflow-hidden group">
                   {/* Decorative Elements */}
                   <div className="absolute top-0 right-0 p-8 text-primary/10 group-hover:text-primary/20 transition-colors duration-500">
@@ -137,8 +194,8 @@ export default function WhyPeopleLove() {
             {writtenReviews.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setActiveIndex(index)}
-                className={`h-2 rounded-full transition-all duration-500 ${index === activeIndex ? 'w-12 bg-primary' : 'w-2 bg-slate-200'
+                onClick={() => goToSlide(index)}
+                className={`h-2 rounded-full transition-all duration-500 ${index === realIndex ? 'w-12 bg-primary' : 'w-2 bg-slate-200'
                   }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -146,17 +203,6 @@ export default function WhyPeopleLove() {
           </div>
         </div>
       </div>
-
-      {/* Video section kept for future use */}
-      {/* 
-      <div className="mt-32 max-w-7xl mx-auto px-6 hidden">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {reviews.map((video) => (
-             <div key={video.id} className="...">Video card here</div>
-          ))}
-        </div>
-      </div>
-      */}
     </section>
   );
 }

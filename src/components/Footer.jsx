@@ -2,7 +2,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto py-12 px-6 lg:px-20 bg-white border-t border-slate-200">
+    <footer className="mt-auto py-12 px-6 lg:px-20 bg-white border-t border-slate-200 font-Poppins">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
         <div className="flex flex-col gap-6 items-center md:items-start text-center md:text-left">
           <div className="flex items-center gap-3">
@@ -56,12 +56,12 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-slate-500">
-          &copy; 2026 Dental Wellness Clinic. All rights reserved.
-        </p>
-        <p className="text-sm text-slate-400">
-          Professional healthcare services.
+      <div className="mt-12 bg-[#f5f0e8] py-2 -mx-6 lg:-mx-20 -mb-12 px-2 sm:px-4">
+        <p className="text-[9px] sm:text-xs text-center font-medium text-slate-600 tracking-wide whitespace-nowrap" style={{ fontFamily: 'var(--font-poppins), sans-serif' }}>
+          © 2026 Dental Wellness Clinic. All rights reserved | Powered by{' '}
+          <a href="https://nyon.co.in/" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline font-semibold">
+            Nyon
+          </a>
         </p>
       </div>
     </footer>

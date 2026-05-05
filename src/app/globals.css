@@ -2525,25 +2525,26 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-radius: 24px;
   border: 1px solid rgba(39, 39, 42, 0.50);
   background: rgba(24, 24, 27, 0.50);
+  white-space: nowrap;
 }
 
 .working-hours__day {
   font-family: var(--font-poppins), sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
   color: #FFF;
 }
 
 .working-hours__time {
   font-family: var(--font-poppins), sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
   color: #9CA3AF;
 }
 
@@ -2836,16 +2837,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px 16px;
+  padding: 10px 14px;
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: #0b0f17;
+  white-space: nowrap;
 }
 
 .working-hours__day {
   font-family: var(--font-poppins), sans-serif;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.2;
   color: #fff;
 }
@@ -2853,7 +2855,7 @@ body {
 .working-hours__time {
   font-family: var(--font-poppins), sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.2;
   color: #9ca3af;
 }

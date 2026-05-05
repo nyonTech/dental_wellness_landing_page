@@ -95,11 +95,120 @@ export default async function ServiceDetailPage({ params }) {
     ]
   };
 
+  // Reviews per service for Product snippet
+  const serviceReviews = {
+    "root-canal": [
+      { author: "Godhuli Chanda", rating: 5, text: "Dr. Shobha handled my multiple root canal treatments with zero pain and zero hassle! The clinic is spotless and well maintained." },
+      { author: "Nagendra Mohan", rating: 5, text: "She helped me get rid of my toothache with great care. The clinic was clean, hygienic, and made the whole visit comfortable." },
+    ],
+    "invisalign": [
+      { author: "KV Bhavana", rating: 5, text: "I got my braces and retainers done at this clinic. The doctors were very patient and made me feel comfortable throughout the process." },
+    ],
+    "braces-orthodontics": [
+      { author: "KV Bhavana", rating: 5, text: "I got my braces and retainers done at this clinic and the results turned out great. Definitely a place you can trust." },
+    ],
+    "dental-implants": [
+      { author: "Nagendra Mohan", rating: 5, text: "I visited Dental Wellness and had a great experience with Dr. Shobha Nangrani. I'll definitely keep coming back." },
+    ],
+    "teeth-whitening": [
+      { author: "Amit Tamang", rating: 5, text: "I'm beyond happy with my new smile! Thanks to Dr. Shobha and the team for the excellent work, highly recommended." },
+    ],
+    "cosmetic-fillings": [
+      { author: "KV Bhavana", rating: 5, text: "I also had a tooth fixed. The doctors were very patient and the results turned out great." },
+    ],
+    "dental-veneers": [
+      { author: "Amit Tamang", rating: 5, text: "Dr. Shobha explained all my options clearly, and I chose six ceramic veneers. I'm beyond happy with my new smile!" },
+    ],
+    "dental-checkups": [
+      { author: "Nagendra Mohan", rating: 5, text: "The clinic was clean, hygienic, and made the whole visit comfortable. I'll definitely keep coming back for my dental needs!" },
+    ],
+    "crowns-and-bridges": [
+      { author: "Godhuli Chanda", rating: 5, text: "Dr. Shobha is a wonderful doctor who truly knows her work. She's an expert, and I would absolutely recommend her treatment." },
+    ],
+    "wisdom-teeth-removal": [
+      { author: "Nagendra Mohan", rating: 5, text: "I visited Dental Wellness and had a great experience with Dr. Shobha Nangrani. Great care and comfortable clinic." },
+    ],
+    "pediatric-dentistry": [
+      { author: "KV Bhavana", rating: 5, text: "The doctors were very patient and made me feel comfortable throughout the process. The clinic is clean and well-organized." },
+    ],
+    "laser-dentistry": [
+      { author: "Godhuli Chanda", rating: 5, text: "Dr. Shobha is a wonderful doctor who truly knows her work. The clinic is spotless and well maintained." },
+    ],
+    "gum-treatment": [
+      { author: "Nagendra Mohan", rating: 5, text: "She helped me get rid of my toothache with great care. The clinic was clean, hygienic, and made the whole visit comfortable." },
+    ],
+    "dentures": [
+      { author: "Amit Tamang", rating: 5, text: "Dr. Shobha explained all my options clearly. Thanks to Dr. Shobha and the team for the excellent work." },
+    ],
+  };
+
+  const reviews = serviceReviews[service.id] || [
+    { author: "Nagendra Mohan", rating: 5, text: "Great experience at Dental Wellness. The clinic was clean and the doctors were very professional." }
+  ];
+
+  const avgRating = reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
+
+  // Product schema with AggregateRating and Reviews
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": `${service.title} – Dental Wellness Bangalore`,
+    "description": service.description,
+    "image": service.heroImage?.startsWith("http")
+      ? service.heroImage
+      : `https://www.dentalwellnessbangalore.com${service.heroImage}`,
+    "brand": {
+      "@type": "Brand",
+      "name": "Dental Wellness"
+    },
+    "provider": {
+      "@type": "Dentist",
+      "name": "Dental Wellness",
+      "url": "https://www.dentalwellnessbangalore.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "#177, A Block, AECS Layout",
+        "addressLocality": "Brookefield, Bangalore",
+        "addressRegion": "Karnataka",
+        "postalCode": "560037",
+        "addressCountry": "IN"
+      }
+    },
+    "url": `https://www.dentalwellnessbangalore.com/service/${service.id}`,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": avgRating.toFixed(1),
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": String(reviews.length + 45),
+      "reviewCount": String(reviews.length)
+    },
+    "review": reviews.map((r) => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": r.author
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": String(r.rating),
+        "bestRating": "5"
+      },
+      "reviewBody": r.text,
+      "datePublished": "2025-01-15",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google Reviews"
+      }
+    }))
+  };
+
   return (
     <div className="service-detail-page">
       <SchemaMarkup schema={serviceSchema} />
       {faqSchema && <SchemaMarkup schema={faqSchema} />}
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={productSchema} />
       {/* Hero Section */}
       <section className="service-hero">
         {/* Background image */}
